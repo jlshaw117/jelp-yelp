@@ -1,0 +1,205 @@
+.home-header {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+    height: 570px;
+    padding-top: 30px;
+    background-size: cover;
+    background-position: 50%;
+    background-image: url(image_path('cover_page_img.jpg'));
+}
+
+.home-nav-bar {
+    z-index: 2;
+    width: 996px;
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.overlay {
+    z-index: 1;
+    height: 600px;
+    width: 100%;
+    position: fixed;
+    overflow: auto;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.7); /*can be anything, of course*/
+}
+
+.home-logo {
+    z-index: 2;
+    height: 156px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.search-bar {
+    z-index: 2;
+    color: red;
+}
+
+.home-logo .logo-link {
+    font-size: 50px;
+}
+
+.session-links {
+    display: flex;
+    justify-content: space-between;
+    width: 186px;
+    height: 36px;
+}
+
+.menu {
+    position: relative;
+    top: -14px;
+    right: 97px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 131px;
+    height: 114px;
+    padding: 12px;
+    border-radius: 3px;
+    margin-top: 10px;
+    color: #0073bb;
+
+}
+
+.drop-down-button {
+    display: flex;
+    border-radius: 3px;
+    height: 36px;
+    width: 36px;
+    padding-right: 22px;
+    background: rgba(37, 36, 36, 0.397);
+}
+
+.drop-down-button:hover {
+    background: rgba(20, 20, 20, 0.459);
+}
+
+.fas.fa-caret-down {
+    position: relative;
+    top: 4px;
+}
+
+.menu-user-name {
+    height: 20px;
+}
+
+.menu-user-name:hover {
+    text-decoration: underline;
+}
+
+.menu-btn:hover {
+    text-decoration: underline;
+}
+
+.menu-log-out {
+    margin-top: 12px;
+    border-top: 1px solid #e6e6e6;
+    padding-top: 11px;
+}
+
+.menu-user-info {
+    display: flex;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.menu-profile-pic {
+    height: 60px;
+    width: 60px;
+    padding-right: 12px;
+}
+
+.arrow-up {
+    position: relative;
+    top: -4px;
+    left: 12px;
+    width: 0; 
+    height: 0; 
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    
+    border-bottom: 8px solid white;
+}
+
+.menu-btn {
+    height: 30px;
+}
+
+.menu-link {
+    height: 30px;
+
+}
+
+.sprites {
+    display: flex;
+    justify-content: flex-end;
+    width: 150px;
+    height: 36px;
+}
+
+.session-links .signup {
+    padding: 7px 24px 8px 24px;
+    border: 2px solid white;
+    border-radius: 3px;
+}
+
+.session-links .fas {
+    width: 24px;
+    height: 24px;
+    padding: 6px;
+}
+
+.session-links .signup:hover {
+    background-color: white;
+    color: #666666;
+    text-decoration: none;
+}
+
+.session-links li a {
+    color: white;
+    height: 100%;
+    width: 100%;
+    padding: 9px 12px 8px 12px;
+    font-weight: 400;
+}
+
+.session-links li a:hover {
+    border-bottom: 1px solid white;
+    text-decoration: none;
+}
+
+.home-drop-down {
+    height: 33px;
+    width: 33px;
+}
+
+.page-links {
+    display: flex;
+    width: 261px;
+    height: 36px;
+}
+
+.page-links li a {
+    color: white;
+    height: 100%;
+    width: 100%;
+    padding: 9px 12px 8px 12px;
+    font-weight: 400;
+}
+
+.logo-link:hover {
+    text-decoration: none;
+}
+
+.page-links li a:hover {
+    border-bottom: 1px solid white;
+    text-decoration: none;
+}

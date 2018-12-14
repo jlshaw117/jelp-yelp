@@ -1,0 +1,75 @@
+// Place all the styles related to the Businesses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+//##### Header #####//
+
+.business-index-header {
+    display: flex;
+    justify-content: space-around;
+    background: #d32323;
+    height: 40px;
+    padding: 12px 0px;
+}
+
+.business-index-nav {
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    width: 996px;
+    height: 40px;
+    margin: 0px -18px;
+}
+
+.index-sprites {
+    display: flex;
+    justify-content: space-evenly;
+    width: 75px;
+    align-items: center;
+}
+
+.index-session-links {
+    display: flex;
+    justify-content: space-evenly;
+    width: 130px;
+    height: 40px;
+}
+
+.index-search-bar {
+    width: 705px;
+    height: 36px;
+}
+
+////####### CATEGORIES BAR ########//////
+
+.categories {
+    display: flex;
+    justify-content: space-around;
+    height: 40px;
+    border-bottom: 1px solid #e6e6e6;
+    background: #fafafa;
+}
+
+.categories-bar {
+    display: flex;
+    height: 40px;
+    width: 1020px;
+    border-left: 1px solid #e6e6e6;
+}
+
+.category-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 16.7%;
+    height: 40px;
+    border-right: 1px solid #e6e6e6;
+    
+}
+
+.category-fill {
+    height: 40px;
+    width: 33.3%;
+    border-right: 1px solid #e6e6e6;
+}

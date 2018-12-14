@@ -1,0 +1,132 @@
+header.form-header {
+    display: flex;
+    justify-content: space-around;
+    background: #d32323;
+    padding: 12px;
+    padding: 12px;
+    height: 40px;
+}
+
+.logo-link {
+    font-family: 'Concert One';
+    font-size: 32px;
+    color: black;
+    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+}
+
+.form-errors {
+    list-style: square;
+    background: #fcd6d3;
+    padding: 18px 18px 18px 24px;
+}
+
+.logo-contaier {
+    text-align: center;
+}
+
+
+
+.form-main {
+    display: flex;
+    justify-content: center;
+    height: 771px;
+}
+
+.form-small {
+    display: flex;
+    justify-content: end;
+}
+
+.form-wrapper {
+    min-width: 405px;
+    height: 411px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px;
+
+}
+
+.error {
+    border: 2px solid red;
+}
+
+input:focus {
+    border: 1px solid #0073bb;
+}
+
+small {
+    text-align: end;
+    width: 73%;
+}
+
+#auth-img {
+    height: 342px;
+    width: 382px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: center;
+    width: 300px;
+    height: 650px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height:190px;
+    justify-content: space-between;
+}
+
+.full-name-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    height: 18px;
+    padding: 9px 9px;
+
+}
+.full-name-container input {
+    width: 42%;
+}
+
+.form-title {
+    display: flex;
+    justify-content: space-around;
+    color: #d32323;
+    font-weight: 700;
+}
+
+.form-paragraph {
+    justify-content: space-around;
+    display: flex;
+}
+
+#form-btn {
+    background-color: #d32323;
+    border: 1px solid #8d0005;
+    border-radius: 3px;
+    color: white;
+    width: 87%;
+    cursor: pointer;
+    text-align: center;
+    padding: 12px 18px 13px 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
+.form-side {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 465px;
+    height: 471px;
+    padding: 0px, 15px;
+}
