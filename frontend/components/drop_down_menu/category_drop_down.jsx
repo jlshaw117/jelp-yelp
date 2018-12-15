@@ -48,7 +48,7 @@ class CategoryDropDown extends React.Component {
                 <button className='category-button' onMouseOver={this.showMenu}>
                     <div className='category-icon'>{this.props.icon}</div>
                     <div className='category-name'>{this.props.name}</div>
-                    <i className="fas fa-angle-down"></i>
+                    <i className="fas fa-angle-down category"></i>
                 </button>
                 {
                     this.state.showMenu ? (

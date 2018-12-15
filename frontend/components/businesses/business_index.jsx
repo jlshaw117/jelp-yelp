@@ -2,6 +2,7 @@ import React from 'react';
 import BusinessIndexItem from './business_index_item';
 import { Link } from 'react-router-dom';
 import DropDownMenuContainer from '../greeting/drop_down_menu_container';
+import CategoryDropDwon from '../drop_down_menu/category_drop_down';
 
 class BusinessIndex extends React.Component {
 
@@ -10,6 +11,13 @@ class BusinessIndex extends React.Component {
     }
 
     render () {
+
+        const restaurants = [
+            [<i class="fas fa-utensils"></i>, 'Burgers'],
+            [<i class="fas fa-utensils"></i>, 'Mexican'],
+            [<i class="fas fa-utensils"></i>, 'Italian'],
+            [<i class="fas fa-utensils"></i>, 'Sushi']
+        ]
 
         let indexItems = this.props.businesses.map((biz, idx) => {
             return (
@@ -57,7 +65,11 @@ class BusinessIndex extends React.Component {
                 </header>
                 <div className='categories'>
                     <div className='categories-bar'>
-                        <div className='category-item'><span>Home Services</span></div>
+                        {/* <div className='category-item'><span>Home Services</span></div> */}
+                        <div className='category-item'><CategoryDropDwon 
+                            icon={<i className="fas fa-utensils category"></i>}
+                            name='Restaurants'
+                            subCats={restaurants}/></div>
                         <div className='category-item'><span>Restaurants</span></div>
                         <div className='category-item'><span>Auto Services</span></div>
                         <div className='category-fill'></div>
