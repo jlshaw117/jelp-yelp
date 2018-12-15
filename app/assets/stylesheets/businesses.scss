@@ -77,6 +77,19 @@
     
 }
 
+.category-button {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+}
+
+.category-name {
+    padding: 10px 5px;
+}
+.fas.category {
+    padding: 14px 0px 10px 9px;
+}
+
 .category-fill {
     height: 40px;
     width: 33.3%;
