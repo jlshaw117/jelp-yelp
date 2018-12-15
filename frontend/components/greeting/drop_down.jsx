@@ -24,11 +24,14 @@ class DropDownMenu extends React.Component {
     }
 
     closeMenu() {
-        this.setState({
-            showMenu: false
-        }, () => {
-            document.removeEventListener('click', this.closeMenu);
-        });
+
+        if (!this.dropdownMenu.contains(event.target)) {
+            this.setState({
+                showMenu: false
+            }, () => {
+                document.removeEventListener('click', this.closeMenu);
+            });
+        }
     }
 
     render () {
@@ -45,7 +48,11 @@ class DropDownMenu extends React.Component {
                 this.state.showMenu ? (
                     <div>
                         <div className='arrow-up'></div>
-                        <div className="menu">
+                        <div 
+                        className="menu" 
+                        ref={(element) => {
+                            this.dropdownMenu = element;
+                        }}>
                             <div className='menu-user-info'>
                                 <div className='menu-profile-pic'>
                                     <Link to='/'><img src={window.default_profile_img} /></Link>
