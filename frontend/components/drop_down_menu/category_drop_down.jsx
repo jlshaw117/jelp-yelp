@@ -35,9 +35,9 @@ class CategoryDropDown extends React.Component {
 
     render () {
 
-        let subCategories = this.props.subCats.map((sub) => {
+        let subCategories = this.props.subCats.map((sub, idx) => {
             return (
-                <div className='sub'>
+                <div key={idx} className='sub'>
                     <div className='sub-icon'>{sub[0]}</div>
                     <div className='sub-name'>{sub[1]}</div>
                 </div>

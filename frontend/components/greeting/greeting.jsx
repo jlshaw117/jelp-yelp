@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import DropDownMenuContainer from './drop_down_menu_container';
+import DropDownMenuContainer from '../drop_down_menu/drop_down_menu_container';
 
 const Greeting = ({ currentUser, logout }) => {
     const sessionLinks = () => {

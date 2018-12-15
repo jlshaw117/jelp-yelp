@@ -1,7 +1,7 @@
 import React from 'react';
 import BusinessIndexItem from './business_index_item';
 import { Link } from 'react-router-dom';
-import DropDownMenuContainer from '../greeting/drop_down_menu_container';
+import DropDownMenuContainer from '../drop_down_menu/drop_down_menu_container';
 import CategoryDropDwon from '../drop_down_menu/category_drop_down';
 
 class BusinessIndex extends React.Component {
@@ -13,10 +13,10 @@ class BusinessIndex extends React.Component {
     render () {
 
         const restaurants = [
-            [<i class="fas fa-utensils"></i>, 'Burgers'],
-            [<i class="fas fa-utensils"></i>, 'Mexican'],
-            [<i class="fas fa-utensils"></i>, 'Italian'],
-            [<i class="fas fa-utensils"></i>, 'Sushi']
+            [<i className="fas fa-utensils"></i>, 'Burgers'],
+            [<i className="fas fa-utensils"></i>, 'Mexican'],
+            [<i className="fas fa-utensils"></i>, 'Italian'],
+            [<i className="fas fa-utensils"></i>, 'Sushi']
         ];
 
         const homeServices = [
@@ -88,7 +88,7 @@ class BusinessIndex extends React.Component {
                             name='Home Services'
                             subCats={homeServices}/></div>
                         <div className='category-item'><CategoryDropDwon 
-                            icon={<i class="fas fa-car category"></i>}
+                            icon={<i className="fas fa-car category"></i>}
                             name='Auto Services'
                             subCats={autoServices}/></div>
                         <div className='category-fill'></div>
