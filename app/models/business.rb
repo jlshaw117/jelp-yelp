@@ -29,4 +29,6 @@ class Business < ApplicationRecord
         foreign_key: :owner_id,
         class_name: :User,
         optional: true
+
+    has_one_attached :photo
 end
