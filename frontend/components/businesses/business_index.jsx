@@ -11,9 +11,11 @@ class BusinessIndex extends React.Component {
 
     render () {
 
-        let indexItem = this.props.businesses.map((biz, idx) => {
+        let indexItems = this.props.businesses.map((biz, idx) => {
             return (
-                <li key={idx}><BusinessIndexItem biz={biz} /></li>
+                <div key={idx}>
+                    <BusinessIndexItem index={idx} biz={biz} />
+                </div>
             )
         });
 
@@ -62,10 +64,33 @@ class BusinessIndex extends React.Component {
                         <div className='category-item'><span>Write a Review</span></div>
                     </div>
                 </div>
-                <div className='search-params-container'></div>
-                <ul className='business-index'>
-                    {indexItem}
-                </ul>
+                <div className='search-params-container'>
+                
+                </div>
+                <div className='index-main-content'>
+                    <div className='index-main-content-container'>
+                        <ul className='business-index'>
+                            {indexItems}
+                            {indexItems}
+                            {indexItems}
+                            {indexItems}
+                            {indexItems}
+                            {indexItems}
+                            {indexItems}
+                            {indexItems}
+                            {indexItems}
+                            {indexItems}
+                            {indexItems}
+                            {indexItems}
+                            {indexItems}
+                            {indexItems}
+                            {indexItems}
+                            {indexItems}
+                            {indexItems}
+                        </ul>
+                        <div className='index-map'></div>                
+                    </div>
+                </div>
             </div>
         );
     }
