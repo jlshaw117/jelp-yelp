@@ -69,7 +69,7 @@ class BusinessIndex extends React.Component {
                 <header className='business-index-header'>
                     <nav className='business-index-nav'>
                         <div className='index-logo'>
-                            <Link className='logo-link' to='/'>Jelp</Link>
+                            <Link className='logo-link' to='/'><img className='logo-img' src={window.logo} /></Link>
                         </div>
                         <div className='index-search-bar'></div>
                         <nav className="index-nav-bar">
