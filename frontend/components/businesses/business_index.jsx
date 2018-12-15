@@ -12,26 +12,26 @@ class BusinessIndex extends React.Component {
 
     render () {
 
-        const restaurants = [
-            [<i className="fas fa-utensils"></i>, 'Burgers'],
-            [<i className="fas fa-utensils"></i>, 'Mexican'],
-            [<i className="fas fa-utensils"></i>, 'Italian'],
-            [<i className="fas fa-utensils"></i>, 'Sushi']
-        ];
+        // const restaurants = [
+        //     [<i className="fas fa-utensils"></i>, 'Burgers'],
+        //     [<i className="fas fa-utensils"></i>, 'Mexican'],
+        //     [<i className="fas fa-utensils"></i>, 'Italian'],
+        //     [<i className="fas fa-utensils"></i>, 'Sushi']
+        // ];
 
-        const homeServices = [
-            [<i className="fas fa-home"></i>, "Contracters"],
-            [<i className="fas fa-home"></i>, 'Electricians'],
-            [<i className="fas fa-home"></i>, 'Landscaping'],
-            [<i className="fas fa-home"></i>, 'Movers']
-        ];
+        // const homeServices = [
+        //     [<i className="fas fa-home"></i>, "Contracters"],
+        //     [<i className="fas fa-home"></i>, 'Electricians'],
+        //     [<i className="fas fa-home"></i>, 'Landscaping'],
+        //     [<i className="fas fa-home"></i>, 'Movers']
+        // ];
 
-        const autoServices = [
-            [<i className="fas fa-car"></i>, 'Auto Repair'],
-            [<i className="fas fa-car"></i>, 'Car Dealers'],
-            [<i className="fas fa-car"></i>, 'Auto Detailing'],
-            [<i className="fas fa-car"></i>, 'Towing']
-        ];
+        // const autoServices = [
+        //     [<i className="fas fa-car"></i>, 'Auto Repair'],
+        //     [<i className="fas fa-car"></i>, 'Car Dealers'],
+        //     [<i className="fas fa-car"></i>, 'Auto Detailing'],
+        //     [<i className="fas fa-car"></i>, 'Towing']
+        // ];
 
         let indexItems = this.props.businesses.map((biz, idx) => {
             return (
@@ -79,7 +79,7 @@ class BusinessIndex extends React.Component {
                 </header>
                 <div className='categories'>
                     <div className='categories-bar'>
-                        <div className='category-item'><CategoryDropDwon 
+                        {/* <div className='category-item'><CategoryDropDwon 
                             icon={<i className="fas fa-utensils category"></i>}
                             name='Restaurants'
                             subCats={restaurants}/></div>
@@ -90,9 +90,90 @@ class BusinessIndex extends React.Component {
                         <div className='category-item'><CategoryDropDwon 
                             icon={<i className="fas fa-car category"></i>}
                             name='Auto Services'
-                            subCats={autoServices}/></div>
+                            subCats={autoServices}/></div> */}
+                        <div className='category-container'>
+                            <div className='category-item'>
+                                <button className='category-button'>
+                                    <div className='category-icon'><i className="fas fa-utensils category"></i></div>
+                                    <div className='category-name'>Restaurants</div>
+                                    <i className="fas fa-angle-down category"></i>
+                                </button>
+                                <div className='sub-cats'>
+                                    <div className='sub-cat'>
+                                        <i className="fas fa-utensils category"></i>
+                                        <div className='sub-cat-name'>Burgers</div>
+                                    </div>
+                                    <div className='sub-cat'>
+                                        <i className="fas fa-utensils category"></i>
+                                        <div className='sub-cat-name'>Mexican</div>
+                                    </div>
+                                    <div className='sub-cat'>
+                                        <i className="fas fa-utensils category"></i>
+                                        <div className='sub-cat-name'>Italian</div>
+                                    </div>
+                                    <div className='sub-cat'>
+                                        <i className="fas fa-utensils category"></i>
+                                        <div className='sub-cat-name'>Sushi</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='category-container'>
+                            <div className='category-item'>
+                                <button className='category-button'>
+                                    <div className='category-icon'><i className="fas fa-home category"></i></div>
+                                    <div className='category-name'>Home Services</div>
+                                    <i className="fas fa-angle-down category"></i>
+                                </button>
+                                <div className='sub-cats'>
+                                    <div className='sub-cat'>
+                                        <i className="fas fa-home category"></i>
+                                        <div className='sub-cat-name'>Contracters</div>
+                                    </div>
+                                    <div className='sub-cat'>
+                                        <i className="fas fa-home category"></i>
+                                        <div className='sub-cat-name'>Landscaping</div>
+                                    </div>
+                                    <div className='sub-cat'>
+                                        <i className="fas fa-home category"></i>
+                                        <div className='sub-cat-name'>Electricians</div>
+                                    </div>
+                                    <div className='sub-cat'>
+                                        <i className="fas fa-home category"></i>
+                                        <div className='sub-cat-name'>Movers</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='category-container'>
+                            <div className='category-item'>
+                                <button className='category-button'>
+                                    <div className='category-icon'><i className="fas fa-car category"></i></div>
+                                    <div className='category-name'>Auto Services</div>
+                                    <i className="fas fa-angle-down category"></i>
+                                </button>
+                                <div className='sub-cats'>
+                                    <div className='sub-cat'>
+                                        <i className="fas fa-car category"></i>
+                                        <div className='sub-cat-name'>Auto Repair</div>
+                                    </div>
+                                    <div className='sub-cat'>
+                                        <i className="fas fa-car category"></i>
+                                        <div className='sub-cat-name'>Auto Sales</div>
+                                    </div>
+                                    <div className='sub-cat'>
+                                        <i className="fas fa-car category"></i>
+                                        <div className='sub-cat-name'>Auto Detail</div>
+                                    </div>
+                                    <div className='sub-cat'>
+                                        <i className="fas fa-car category"></i>
+                                        <div className='sub-cat-name'>Towing</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div className='category-fill'></div>
-                        <div className='category-item'><span>Write a Review</span></div>
+                        <div className='category-item write-review'><span>Write a Review</span></div>
                     </div>
                 </div>
                 <div className='search-params-container'>

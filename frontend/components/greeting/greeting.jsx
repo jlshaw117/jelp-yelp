@@ -38,7 +38,7 @@ const Greeting = ({ currentUser, logout }) => {
                 {currentUser ? greeting() : sessionLinks()}
             </nav>
             <div className='home-logo'>
-                <Link className='logo-link' to='/'>Jelp</Link>
+                <Link className='logo-link' to='/'><img src={window.logo} alt=""/></Link>
             </div>
             <div className="search-bar">
                 <Link to='/businesses'>All Businesses</Link>
