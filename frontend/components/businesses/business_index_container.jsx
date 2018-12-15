@@ -14,7 +14,7 @@ const mapStateToProps = ({ session, entities }) => {
 const mapDisptchToProps = dispatch => {
 
     return ({
-        fetchAllBusinesses: () => dispatch(fetchAllBusinesses)
+        fetchAllBusinesses: () => dispatch(fetchAllBusinesses())
     });
 };
 
