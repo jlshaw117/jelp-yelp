@@ -14,7 +14,10 @@ const indexItem = ({ biz, index }) => {
                 <div className='index-item-details'>
                     <div className='index-item-info-main'>
                         <div className='info biz-title'>{index + 1}. <Link to={`/businesses/${biz.id}`} >{biz.name}</Link></div>
-                        <div className='info biz-avg-review'>*****</div>
+                        <div className='info biz-avg-review'>
+                            <div className='biz-raiting-star'></div>
+                            <div className='index-item-biz-raiting-count'>0 Reviews</div>
+                        </div>
                         <div className='info biz-price'>{biz.price}</div>
                     </div>
                     <div className='index-item-info-side'>
