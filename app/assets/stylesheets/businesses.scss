@@ -263,6 +263,25 @@
     height: 210px;
 }
 
+.biz-raiting-star {
+    background-image: url(image_path('stars.png'));
+    overflow: hidden;
+    background-repeat: no-repeat;
+    height: 18px;
+    min-width: 110px;
+    background-position: 0 -240px;
+    margin-top: 5px;
+}
+
+.biz-avg-review {
+    display: flex;
+}
+
+.index-item-biz-raiting-count {
+    padding-top: 3px;
+    font-size: 15px;
+    color: #666;
+}
 
 .index-item-details {
     display: flex;
