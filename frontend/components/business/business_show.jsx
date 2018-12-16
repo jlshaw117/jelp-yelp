@@ -38,6 +38,7 @@ class BusinessShow extends React.Component {
 
             return (
                 <div className='biz-show-new-review-container'>
+                    <div className='biz-show-review-left'></div>
                     <div className='biz-show-review-right'>
                         <div className='five-stars'>
                             <div id='one' className='star'></div>
@@ -46,13 +47,33 @@ class BusinessShow extends React.Component {
                             <div id='four' className='star'></div>
                             <div id='five' className='star'></div>
                         </div>
+                        <div className='biz-show-start-review'>
+                            <Link to='/' className='biz-show-strat-review-text'>Start your review of <span>Business Name</span></Link>
+                        </div>
                     </div>
-                    <div className='biz-show-review-left'></div>
                 </div>
             );
         };
         
         const loggedOutReview = () => {
+
+            return (
+                <div className='biz-show-new-review-container'>
+                    <div className='biz-show-review-left'></div>
+                    <div className='biz-show-review-right'>
+                        <div className='five-stars'>
+                            <div id='one' className='star'></div>
+                            <div id='two' className='star'></div>
+                            <div id='three' className='star'></div>
+                            <div id='four' className='star'></div>
+                            <div id='five' className='star'></div>
+                        </div>
+                        <div className='biz-show-start-review'>
+                            <Link to='/' className='biz-show-strat-review-text'>Start your review of <span>Business Name</span></Link>
+                        </div>
+                    </div>
+                </div>
+            );
         };
 
         return (
