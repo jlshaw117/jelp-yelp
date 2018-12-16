@@ -167,7 +167,8 @@
 
 .five-stars {
     width: 147px;
-    // display: flex
+    height: 24px;
+    display: flex
 }
 
 .star {
@@ -181,74 +182,100 @@
     // margin-top: 5px;
 }
 
-.star#one {
-    position: absolute;
-    z-index: 5;
-    background-position: 0 0;
-    
-}
 
-.star#two {
-    position: absolute;
-    z-index: 4;
-    width: 51px;
-    background-position: 0 0;
-    
-}
-
-.star#three {
-    position: absolute;
-    width: 78px;
-    z-index: 3;
-    background-position: 0 0;
-    
-}
-
-.star#four {
-    width: 105px;
-    position: absolute;
-    z-index: 2;
-    background-position: 0 0;
-    
-}
-
-.star#five {
-    width: 132px;
-    position: absolute;
-    z-index: 1;
-    background-position: 0 0;
-    
-}
-
-.star#one:hover {
-    z-index: 6;
-    cursor: pointer;
+#one.star:hover {
     background-position: 0 -24px;
+    cursor: pointer;
 }
 
-.star#two:hover {
-    z-index: 6;
-    cursor: pointer;
+#two.star:hover {
     background-position: 0 -72px;
+    cursor: pointer;
 }
 
-.star#three:hover {
-    z-index: 6;
-    cursor: pointer;
+#three.star:hover {
     background-position: 0 -120px;
+    cursor: pointer;
 }
 
-.star#four:hover {
-    z-index: 6;
-    cursor: pointer;
+#four.star:hover {
     background-position: 0 -168px;
+    cursor: pointer;
 }
 
-.star#five:hover {
-    z-index: 6;
-    cursor: pointer;
+#five.star:hover {
     background-position: 0 -216px;
+    cursor: pointer;
 }
+
+// .star#one {
+//     position: absolute;
+//     z-index: 5;
+//     background-position: 0 0;
+    
+// }
+
+// .star#two {
+//     position: absolute;
+//     z-index: 4;
+//     width: 51px;
+//     background-position: 0 0;
+    
+// }
+
+// .star#three {
+//     position: absolute;
+//     width: 78px;
+//     z-index: 3;
+//     background-position: 0 0;
+    
+// }
+
+// .star#four {
+//     width: 105px;
+//     position: absolute;
+//     z-index: 2;
+//     background-position: 0 0;
+    
+// }
+
+// .star#five {
+//     width: 132px;
+//     position: absolute;
+//     z-index: 1;
+//     background-position: 0 0;
+    
+// }
+
+// .star#one:hover {
+//     z-index: 6;
+//     cursor: pointer;
+//     background-position: 0 -24px;
+// }
+
+// .star#two:hover {
+//     z-index: 6;
+//     cursor: pointer;
+//     background-position: 0 -72px;
+// }
+
+// .star#three:hover {
+//     z-index: 6;
+//     cursor: pointer;
+//     background-position: 0 -120px;
+// }
+
+// .star#four:hover {
+//     z-index: 6;
+//     cursor: pointer;
+//     background-position: 0 -168px;
+// }
+
+// .star#five:hover {
+//     z-index: 6;
+//     cursor: pointer;
+//     background-position: 0 -216px;
+// }
 
 
 
