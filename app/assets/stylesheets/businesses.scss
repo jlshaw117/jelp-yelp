@@ -39,9 +39,52 @@
     height: 40px;
 }
 
-.index-session-links li a {
-    color: white;
+.index-session-links li.log {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 45%;
 }
+
+.index-session-links li.sign {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 55%;
+}
+
+.index-login {
+    color: white;
+    background: #d32323;
+    border: 1px solid #bd1f1f;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 7px;
+}
+
+.index-session-links li .index-login:hover {
+    background: #bd1f1f;
+    border-bottom: 1px solid #bd1f1f;
+}
+
+.index-signup {
+    color: black;
+    background: #f5f5f5;
+    border: 1px solid #bd1f1f;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 7px;
+}
+
+.index-session-links li .index-signup:hover {
+    border: 1px solid #bd1f1f;
+}
+
+// .index-session-links li a {
+//     color: white;
+// }
 
 .index-session-links li a:hover {
     border-bottom: 1px solid white;

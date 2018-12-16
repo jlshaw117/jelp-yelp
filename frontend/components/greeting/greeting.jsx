@@ -7,7 +7,7 @@ const Greeting = ({ currentUser, logout }) => {
 
         return (
             <ul className='session-links'>
-                <li><Link to='/login'>Login</Link></li>
+                <li><Link className='home-login' to='/login'>Login</Link></li>
                 <li><Link className='signup' to='/signup'>Signup</Link></li>
             </ul>
         );

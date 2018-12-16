@@ -45,8 +45,8 @@ class BusinessIndex extends React.Component {
 
             return (
                 <ul className='index-session-links'>
-                    <li><Link to='/login'>Login</Link></li>
-                    <li><Link className='signup' to='/signup'>Signup</Link></li>
+                    <li className='log'><Link className='index-login' to='/login'>Log In</Link></li>
+                    <li className='sign'><Link className='index-signup' to='/signup'>Sign Up</Link></li>
                 </ul>
             );
         }
