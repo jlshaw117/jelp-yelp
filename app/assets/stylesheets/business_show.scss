@@ -1,0 +1,113 @@
+
+////////####### PAGE WRAPER ########///////
+
+.biz-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.biz-content-wrapper {
+    min-width: 1020px;
+}
+
+.background-grey {
+    position: absolute;
+    z-index: -1;
+    background: #f5f5f5;
+    border-bottom: 1px solid #e6e6e6;
+    min-height: 420px;
+    width: 100%;
+
+}
+
+
+
+//////######## MAIN CONTAINER ######//////
+
+.biz-main-container {
+    padding: 15px 0px;
+    border: 1px solid black;
+}
+
+////######## BIZ TOP INFO #########/////////
+
+.biz-top-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.biz-name {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.biz-show-reviews {
+    display: flex;
+}
+
+.biz-avg-raiting {
+    background-image: url(image_path('stars.png'));
+    overflow: hidden;
+    background-repeat: no-repeat;
+    height: 24px;
+    min-width: 132px;
+    background-position: 0 0px;
+    margin-top: 5px;
+}
+
+.biz-show-review-count {
+    padding: 6px 0px 0px 7px;
+    font-size: 16px;
+}
+
+.biz-price {
+    margin-top: 5px;
+    font-size: 19px;
+}
+
+.biz-top-content-right {
+    display: flex;
+    align-items: center;
+}
+
+.biz-review-button {
+    display: flex;
+    background: #d90007;
+    border: 1px solid #8d0005;
+    border-radius: 3px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
+.biz-review-button:hover {
+    background: red;
+}
+
+.biz-review-button div {
+    padding: 6px 18px 0 0;
+}
+
+.fas.biz-star-review {
+        padding: 10px 0px 2px 18px;
+}
+
+
+
+///////////###########  BIZ BOTTEM INFO #########///////
+
+.biz-bottom-content {
+    display: flex;
+}
+
+.biz-show-map {
+    width: 300px;
+    height: 355px;
+    border: 1px solid black;
+}
+
+.biz-show-bottem-content-right {
+    width: 300px;
+    height: 355px;
+    border: 1px solid black;
+}
