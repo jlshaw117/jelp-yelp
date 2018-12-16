@@ -123,7 +123,7 @@
 .biz-content-bottem-main {
     width: calc(100% / 3 * 2);
     border: 1px solid black;
-    // height: 100px;
+    padding-right: 30px;
 }
 
 .biz-content-bottem-reviews-title {
@@ -135,7 +135,120 @@
     font-weight: 700;
 }
 
+.biz-show-new-review-contaier {
+    padding: 18px 0;
+    border-top: 1px solid #e6e6e6;
+    display: flex;
+}
+
+.biz-show-review-left {
+    width: 37.5%;
+}
+
+.biz-show-review-right {
+    width: 62.5%;
+    padding: 11px;
+    background: #f5f5f5;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .biz-content-bottem-side {
     width: calc(100% / 3);
     border: 1px solid black;
 }
+
+
+///////########### STAR REVIEWS ######////////
+
+.five-stars {
+    width: 147px;
+    // display: flex
+}
+
+.star {
+    background-image: url(image_path('stars.png'));
+    overflow: hidden;
+    background-repeat: no-repeat;
+    height: 24px;
+    width: 24px;
+    margin-right: 3px;
+    background-position: 0 0px;
+    // margin-top: 5px;
+}
+
+.star#one {
+    position: absolute;
+    z-index: 5;
+    background-position: 0 0;
+    
+}
+
+.star#two {
+    position: absolute;
+    z-index: 4;
+    width: 51px;
+    background-position: 0 0;
+    
+}
+
+.star#three {
+    position: absolute;
+    width: 78px;
+    z-index: 3;
+    background-position: 0 0;
+    
+}
+
+.star#four {
+    width: 105px;
+    position: absolute;
+    z-index: 2;
+    background-position: 0 0;
+    
+}
+
+.star#five {
+    width: 132px;
+    position: absolute;
+    z-index: 1;
+    background-position: 0 0;
+    
+}
+
+.star#one:hover {
+    z-index: 6;
+    cursor: pointer;
+    background-position: 0 -24px;
+}
+
+.star#two:hover {
+    z-index: 6;
+    cursor: pointer;
+    background-position: 0 -72px;
+}
+
+.star#three:hover {
+    z-index: 6;
+    cursor: pointer;
+    background-position: 0 -120px;
+}
+
+.star#four:hover {
+    z-index: 6;
+    cursor: pointer;
+    background-position: 0 -168px;
+}
+
+.star#five:hover {
+    z-index: 6;
+    cursor: pointer;
+    background-position: 0 -216px;
+}
+
+
+

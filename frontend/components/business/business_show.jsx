@@ -34,6 +34,27 @@ class BusinessShow extends React.Component {
             );
         };
 
+        const loggedInReview = () => {
+
+            return (
+                <div className='biz-show-new-review-container'>
+                    <div className='biz-show-review-right'>
+                        <div className='five-stars'>
+                            <div id='one' className='star'></div>
+                            <div id='two' className='star'></div>
+                            <div id='three' className='star'></div>
+                            <div id='four' className='star'></div>
+                            <div id='five' className='star'></div>
+                        </div>
+                    </div>
+                    <div className='biz-show-review-left'></div>
+                </div>
+            );
+        };
+        
+        const loggedOutReview = () => {
+        };
+
         return (
             <div>
                 <header className='business-index-header'>
@@ -164,6 +185,17 @@ class BusinessShow extends React.Component {
                             <div className='biz-bottom-content'>
                                 <div className='biz-show-map'></div>
                                 <div className='biz-show-bottem-content-right'></div>
+                            </div>
+                        </div>
+                        <div className='biz-content-bottem'>
+                            <div className='biz-content-bottem-main'>
+                                <div className='biz-content-bottem-reviews-title'>
+                                    <div className='recomended-reviews'><span>Recommended Reviews</span> for Business Name</div>
+                                </div>
+                                {this.props.currentUser ? loggedInReview() : loggedOutReview()}
+                            </div>
+                            <div className='biz-content-bottem-side'>
+                            
                             </div>
                         </div>
                     </div>
