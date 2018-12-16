@@ -173,7 +173,12 @@ class BusinessIndex extends React.Component {
                             </div>
                         </div>
                         <div className='category-fill'></div>
-                        <div className='category-item write-review'><span>Write a Review</span></div>
+                        <div className='category-item write-review'>
+                            <Link className='review-link' to='/businesses'>
+                                <i className="fas fa-pencil-alt category"></i>
+                                <div className='review-font'>Write a Review</div>
+                            </Link>
+                        </div>
                     </div>
                 </div>
                 <div className='search-params-container'>
