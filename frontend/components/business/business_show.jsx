@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import DropDownMenuContainer from '../drop_down_menu/drop_down_menu_container';
 
 class BusinessShow extends React.Component {
 
@@ -32,9 +33,142 @@ class BusinessShow extends React.Component {
                 </div>
             );
         };
-        
+
         return (
-            <h1>{this.props.biz.name}</h1>
+            <div>
+                <header className='business-index-header'>
+                    <nav className='business-index-nav'>
+                        <div className='index-logo'>
+                            <Link className='logo-link' to='/'><img className='logo-img' src={window.logo} /></Link>
+                        </div>
+                        <div className='index-search-bar'></div>
+                        <nav className="index-nav-bar">
+                            {this.props.currentUser ? greeting() : sessionLinks()}
+                        </nav>
+                    </nav>
+                </header>
+                <div className='categories'>
+                    <div className='categories-bar'>
+                        <div className='category-container'>
+                            <div className='category-item'>
+                                <button className='category-button'>
+                                    <div className='category-icon'><i className="fas fa-utensils category"></i></div>
+                                    <div className='category-name'>Restaurants</div>
+                                    <i className="fas fa-angle-down category"></i>
+                                </button>
+                                <div className='sub-cats'>
+                                    <div className='sub-cat'>
+                                        <i className="fas fa-utensils category"></i>
+                                        <div className='sub-cat-name'>Burgers</div>
+                                    </div>
+                                    <div className='sub-cat'>
+                                        <i className="fas fa-utensils category"></i>
+                                        <div className='sub-cat-name'>Mexican</div>
+                                    </div>
+                                    <div className='sub-cat'>
+                                        <i className="fas fa-utensils category"></i>
+                                        <div className='sub-cat-name'>Italian</div>
+                                    </div>
+                                    <div className='sub-cat'>
+                                        <i className="fas fa-utensils category"></i>
+                                        <div className='sub-cat-name'>Sushi</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='category-container'>
+                            <div className='category-item'>
+                                <button className='category-button'>
+                                    <div className='category-icon'><i className="fas fa-home category"></i></div>
+                                    <div className='category-name'>Home Services</div>
+                                    <i className="fas fa-angle-down category"></i>
+                                </button>
+                                <div className='sub-cats'>
+                                    <div className='sub-cat'>
+                                        <i className="fas fa-home category"></i>
+                                        <div className='sub-cat-name'>Contracters</div>
+                                    </div>
+                                    <div className='sub-cat'>
+                                        <i className="fas fa-home category"></i>
+                                        <div className='sub-cat-name'>Landscaping</div>
+                                    </div>
+                                    <div className='sub-cat'>
+                                        <i className="fas fa-home category"></i>
+                                        <div className='sub-cat-name'>Electricians</div>
+                                    </div>
+                                    <div className='sub-cat'>
+                                        <i className="fas fa-home category"></i>
+                                        <div className='sub-cat-name'>Movers</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='category-container'>
+                            <div className='category-item'>
+                                <button className='category-button'>
+                                    <div className='category-icon'><i className="fas fa-car category"></i></div>
+                                    <div className='category-name'>Auto Services</div>
+                                    <i className="fas fa-angle-down category"></i>
+                                </button>
+                                <div className='sub-cats'>
+                                    <div className='sub-cat'>
+                                        <i className="fas fa-car category"></i>
+                                        <div className='sub-cat-name'>Auto Repair</div>
+                                    </div>
+                                    <div className='sub-cat'>
+                                        <i className="fas fa-car category"></i>
+                                        <div className='sub-cat-name'>Auto Sales</div>
+                                    </div>
+                                    <div className='sub-cat'>
+                                        <i className="fas fa-car category"></i>
+                                        <div className='sub-cat-name'>Auto Detail</div>
+                                    </div>
+                                    <div className='sub-cat'>
+                                        <i className="fas fa-car category"></i>
+                                        <div className='sub-cat-name'>Towing</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='category-fill'></div>
+                        <div className='category-item write-review'>
+                            <Link className='review-link' to='/businesses'>
+                                <i className="fas fa-pencil-alt category"></i>
+                                <div className='review-font'>Write a Review</div>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+                <div className='biz-wrapper'>
+                    <div className='background-grey'></div>
+                    <div className='biz-content-wrapper'>
+                        <div className='biz-main-container'>
+                            <div className='biz-top-content'>
+                                <div className='biz-top-content-left'>
+                                    <div className='biz-name'>{this.props.biz.name}</div>
+                                    <div className='biz-show-reviews'>
+                                        <div className='biz-avg-raiting'></div>
+                                        <div className='biz-show-review-count'>0 Reviews</div>
+                                    </div>
+                                    <div className='biz-price'>{this.props.biz.price}</div>
+                                </div>
+                                <div className='biz-top-content-right'>
+                                    <div className='biz-buttons'>
+                                        <button className='biz-review-button'>
+                                            <i className="fas fa-star biz-star-review"></i>
+                                            <div>Write a Review</div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='biz-bottom-content'>
+                                <div className='biz-show-map'></div>
+                                <div className='biz-show-bottem-content-right'></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         )
     }
 }
