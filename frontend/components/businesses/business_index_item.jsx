@@ -9,11 +9,11 @@ const indexItem = ({ biz, index }) => {
 
     return (
         <header className='business-item-container'>
-            <div className='index-item-img'><Link to={`/businesses`} ><img className='business-index-img' src={biz.photo}/></Link></div>
+            <div className='index-item-img'><Link to={`/businesses/${biz.id}`} ><img className='business-index-img' src={biz.photo}/></Link></div>
             <div className='index-item-info'>
                 <div className='index-item-details'>
                     <div className='index-item-info-main'>
-                        <div className='info biz-title'>{index + 1}. <Link to={`/businesses`} >{biz.name}</Link></div>
+                        <div className='info biz-title'>{index + 1}. <Link to={`/businesses/${biz.id}`} >{biz.name}</Link></div>
                         <div className='info biz-avg-review'>*****</div>
                         <div className='info biz-price'>{biz.price}</div>
                     </div>
