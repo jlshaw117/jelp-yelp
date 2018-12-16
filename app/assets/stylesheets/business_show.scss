@@ -147,6 +147,20 @@
 
 .biz-show-review-left {
     width: 37.5%;
+    display: flex;
+}
+
+.biz-show-user-profile-img {
+    width:25%;
+    height: auto;
+}
+
+.biz-show-user-details {
+    margin-left: 9px;
+}
+
+.biz-show-user-details a {
+    font-weight: 700;
 }
 
 .biz-show-review-right {

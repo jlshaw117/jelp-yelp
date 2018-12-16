@@ -38,7 +38,12 @@ class BusinessShow extends React.Component {
 
             return (
                 <div className='biz-show-new-review-container'>
-                    <div className='biz-show-review-left'></div>
+                    <div className='biz-show-review-left'>
+                        <div className='biz-show-user-profile-img'><Link to='/'><img src={window.dog} /></Link></div>
+                        <div className='biz-show-user-details'>
+                            <div className='biz-show-user-name'><Link to='/'>Demo U.</Link></div>                            
+                        </div>
+                    </div>
                     <div className='biz-show-review-right'>
                         <div className='five-stars'>
                             <div id='one' className='star'></div>
