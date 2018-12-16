@@ -145,12 +145,12 @@ class BusinessShow extends React.Component {
                         <div className='biz-main-container'>
                             <div className='biz-top-content'>
                                 <div className='biz-top-content-left'>
-                                    <div className='biz-name'>{this.props.biz.name}</div>
+                                    <div className='biz-name'>Business Name{/*this.props.biz.name*/}</div>
                                     <div className='biz-show-reviews'>
                                         <div className='biz-avg-raiting'></div>
                                         <div className='biz-show-review-count'>0 Reviews</div>
                                     </div>
-                                    <div className='biz-price'>{this.props.biz.price}</div>
+                                    <div className='biz-price'>$$$${/*this.props.biz.price*/}</div>
                                 </div>
                                 <div className='biz-top-content-right'>
                                     <div className='biz-buttons'>
