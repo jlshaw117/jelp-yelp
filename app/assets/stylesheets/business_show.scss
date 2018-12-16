@@ -112,3 +112,30 @@
     height: 355px;
     border: 1px solid black;
 }
+
+
+///////########### BIZ BOTTEM CONTAINER ########///////
+
+.biz-content-bottem {
+    display: flex
+}
+
+.biz-content-bottem-main {
+    width: calc(100% / 3 * 2);
+    border: 1px solid black;
+    // height: 100px;
+}
+
+.biz-content-bottem-reviews-title {
+    font-size: 21px;
+}
+
+.recomended-reviews span{
+    color: #d32323;
+    font-weight: 700;
+}
+
+.biz-content-bottem-side {
+    width: calc(100% / 3);
+    border: 1px solid black;
+}
