@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 import { login } from './actions/session_actions';
-import { createReview, deleteReview, updateReview } from './util/reviews_api_utils';
+import { createReview, deleteReview, updateReview } from './actions/review_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
 
