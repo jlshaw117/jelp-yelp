@@ -21,7 +21,7 @@ class ReviewForm extends React.Component {
 
     handleSubmit (e) {
         e.preventDefault();
-        this.props.action(this.state.review)//.then(this.setState({redirect: true}));
+        this.props.action(this.state)//.then(this.setState({redirect: true}));
     }
 
     update(field) {
