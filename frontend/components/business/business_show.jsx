@@ -5,7 +5,6 @@ import DropDownMenuContainer from '../drop_down_menu/drop_down_menu_container';
 class BusinessShow extends React.Component {
 
     componentDidMount () {
-        // debugger
         this.props.fetchBusiness(this.props.match.params.businessId);
     }
 
@@ -46,11 +45,11 @@ class BusinessShow extends React.Component {
                     </div>
                     <div className='biz-show-review-right'>
                         <div className='five-stars'>
-                            <div id='one' className='star'></div>
-                            <div id='two' className='star'></div>
-                            <div id='three' className='star'></div>
-                            <div id='four' className='star'></div>
                             <div id='five' className='star'></div>
+                            <div id='four' className='star'></div>
+                            <div id='three' className='star'></div>
+                            <div id='two' className='star'></div>
+                            <div id='one' className='star'></div>
                         </div>
                         <div className='biz-show-start-review'>
                             <Link to='/' className='biz-show-strat-review-text'>Start your review of <span>Business Name</span></Link>
@@ -83,7 +82,7 @@ class BusinessShow extends React.Component {
                 </div>
             );
         };
-
+        if (this.props.biz === undefined) return null
         return (
             <div>
                 <header className='business-index-header'>
@@ -195,7 +194,7 @@ class BusinessShow extends React.Component {
                         <div className='biz-main-container'>
                             <div className='biz-top-content'>
                                 <div className='biz-top-content-left'>
-                                    <div className='biz-name'>Business Name{/*this.props.biz.name*/}</div>
+                                    <div className='biz-name'>Business Name{this.props.biz.name}</div>
                                     <div className='biz-show-reviews'>
                                         <div className='biz-avg-raiting'></div>
                                         <div className='biz-show-review-count'>0 Reviews</div>
