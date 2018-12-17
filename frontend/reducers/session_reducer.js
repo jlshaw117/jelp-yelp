@@ -13,9 +13,9 @@ export default (state = {id: null}, action) => {
         case LOGOUT_USER:
             newState.id = null;
             return newState;
-        case RECEIVE_BUSINESS:
-            newState.businessId = action.business.id;
-            return newState;
+        // case RECEIVE_BUSINESS:
+        //     newState.businessId = action.business.id;
+        //     return newState;
         default:
             return state;
     }
