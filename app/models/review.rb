@@ -13,7 +13,7 @@
 
 class Review < ApplicationRecord
 
-    validates :body presence: true
+    validates :body, presence: true
     validates :rating, presence: true, inclusion: {in: [1,2,3,4,5]}
     validates :user_id, :business_id, presence: true
     validates :user_id, uniqueness: { scope: :business_id }
