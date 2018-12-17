@@ -205,45 +205,66 @@
 ///////########### STAR REVIEWS ######////////
 
 .five-stars {
-    width: 147px;
+    width: 165px;
     height: 24px;
-    display: flex
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 .star {
-    background-image: url(image_path('stars.png'));
+    background-image: url(image_path('big_stars.png'));
     overflow: hidden;
     background-repeat: no-repeat;
-    height: 24px;
-    width: 24px;
-    margin-right: 3px;
+    height: 30px;
+    width: 30px;
+    padding-right: 3px;
     background-position: 0 0px;
     // margin-top: 5px;
 }
 
 
-#one.star:hover {
-    background-position: 0 -24px;
+#two.star:hover ~ .star {
+    background-position: 0 -60px;
     cursor: pointer;
 }
 
-#two.star:hover {
-    background-position: 0 -72px;
+#three.star:hover ~ .star {
+    background-position: 0 -90px;
     cursor: pointer;
 }
 
-#three.star:hover {
+#four.star:hover ~ .star {
     background-position: 0 -120px;
     cursor: pointer;
 }
 
+#five.star:hover ~ .star {
+    background-position: 0 -150px;
+    cursor: pointer;
+}
+
+#one.star:hover {
+    background-position: 0 -30px;
+    cursor: pointer;
+}
+
+#two.star:hover {
+    background-position: 0 -60px;
+    cursor: pointer;
+}
+
+#three.star:hover {
+    background-position: 0 -90px;
+    cursor: pointer;
+}
+
 #four.star:hover {
-    background-position: 0 -168px;
+    background-position: 0 -120px;
     cursor: pointer;
 }
 
 #five.star:hover {
-    background-position: 0 -216px;
+    background-position: 0 -150px;
     cursor: pointer;
 }
 
