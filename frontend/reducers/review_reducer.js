@@ -1,5 +1,5 @@
 import { merge } from 'lodash';
-import { RECIEVE_REVIEW, REMOVE_REVIEW, } from '../actions/review_actions';
+import { RECIEVE_REVIEW, REMOVE_REVIEW } from '../actions/review_actions';
 
 export default (state = {}, action) => {
     Object.freeze(state);
