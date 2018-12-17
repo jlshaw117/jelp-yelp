@@ -1,0 +1,36 @@
+//////######### HEADER ########/////////
+
+.review-form-header {
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    background: #d32323;
+    padding: 12px 0px;
+}
+
+.review-form-header-bar {
+    min-width: 1020px;
+    display: flex;
+    // justify-content: space-between;
+    color: white;
+}
+
+.review-form-logo {
+    width: 80px;
+}
+
+.review-form-session-links {
+    margin-left: auto;
+}
+
+.review-form-drop-down {
+    margin-left: auto;
+}
+
+.review-form-title {
+    font-weight: 700;
+    font-size: 20px;
+    // width: 870px;
+    padding: 7px 0px;
+    padding-left: 14px;
+}
