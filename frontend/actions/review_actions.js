@@ -8,7 +8,10 @@ export const createReview = (review) => dispatch => {
 
     return ReviewAPIUtil.createReview(review)
     .then((review) => dispatch(recieveReview(review)),
-    (err) => dispatch(recieveReviewErrors(err.responseJSON)));
+    (err) => {
+        console.log(err);
+        return dispatch(recieveReviewErrors(err.responseJSON));
+    });
 };
 
 export const updateReview = (review) => dispatch => {
