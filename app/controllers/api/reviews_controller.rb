@@ -11,11 +11,19 @@ class Api::ReviewsController < ApplicationController
     end
 
     def update
-        
+        @review = Review.find_by(id: params[:id])
+
+        if current_user.reviews.include?(@review) && @review.update(review_params)
+            render 'api/reviews/review'
+        else
+            render json: @review.errors.full_messages
+        end
     end
 
     def destroy
-        
+        review = Review.find_by(id: params[:id])
+        review.destroy!
+        render json: ["successfully deleted"]
     end
 
     private
