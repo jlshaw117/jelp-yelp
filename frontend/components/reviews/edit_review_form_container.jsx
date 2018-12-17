@@ -17,7 +17,7 @@ const mapStateToProps = ({ session, entities }, ownProps) => {
 const mapDispatchToProps = dispatch => {
 
     return ({
-        updateReview: (id) => dispatch(updateReview(id))
+        action: (id) => dispatch(updateReview(id))
     });
 };
 

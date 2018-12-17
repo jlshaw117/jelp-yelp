@@ -20,7 +20,7 @@ const mapStateToProps = ({ session, entities }, ownProps) => {
 const mapDispatchToProps = dispatch => {
 
     return ({
-        createReview: () => dispatch(createReview())
+        action: (review) => dispatch(createReview(review))
     });
 };
 
