@@ -1,6 +1,6 @@
 import React from 'react';
 import DropDownMenuContainer from '../drop_down_menu/drop_down_menu_container';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 class ReviewForm extends React.Component {
 
@@ -8,6 +8,10 @@ class ReviewForm extends React.Component {
         super(props);
 
         this.state = props.review;
+        // this.state = {
+        //     review: props.review,
+        //     redirect: false
+        // };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -17,16 +21,20 @@ class ReviewForm extends React.Component {
 
     handleSubmit (e) {
         e.preventDefault();
-        this.props.action(this.state);
+        this.props.action(this.state.review)//.then(this.setState({redirect: true}));
     }
 
     update(field) {
         return (e) => this.setState ({
-            [field]: e.target.value
+            [field]: field === 'rating' ? parseInt(e.target.value, 10) : e.target.value
         });
     }
 
     render () {
+
+        // if (this.state.redirect) {
+        //     return <Redirect to='/'/>
+        // }
 
         const sessionLinks = () => {
             return (
@@ -46,6 +54,24 @@ class ReviewForm extends React.Component {
             )
         }
 
+        const rating = () => {
+            let str = '-star-review star review-form-stars'
+            switch (this.state.rating) {
+                case 1:
+                    return 'selected one' + str
+                case 2:
+                    return 'selected two' + str
+                case 3:
+                    return 'selected three' + str
+                case 4:
+                    return 'selected four' + str
+                case 5:
+                    return 'selected five' + str
+                default:
+                    return '0';
+            }
+        }
+
         return (
             <div className="review-form">
                 <header className='review-form-header'>
@@ -59,14 +85,29 @@ class ReviewForm extends React.Component {
                     <div className='review-form-content-container'>
                         <div className='review-form-biz-name'><Link to={`businesses/${this.props.match.params.businessId}`}>Business Name</Link></div>
                         <div className='review-form-container'>
-                            <div className='five-stars'>
-                                <button id='one' className='star' onClick={this.update('rating')} value='1'></button>
-                                <button id='two' className='star' onClick={this.update('rating')} value='2'></button>
-                                <button id='three' className='star' onClick={this.update('rating')} value='3'></button>
-                                <button id='four' className='star' onClick={this.update('rating')} value='4'></button>
-                                <button id='five' className='star' onClick={this.update('rating')} value='5'></button>
+                            <div className='review-stars-message'>
+                                <div className='five-stars'>
+                                    <button id='five' className={this.state.rating === 5 ? rating() : 'star review-form-stars'} onClick={this.update('rating')} value='5'>
+                                        <div className='review-rating-message five'>Woohoo! As good as it gets!</div>
+                                    </button>
+                                    <button id='four' className={this.state.rating === 4 ? rating() : 'star review-form-stars'} onClick={this.update('rating')} value='4'>
+                                        <div className='review-rating-message four'>Yay! I'm a fan.</div>
+                                    </button>
+                                    <button id='three' className={this.state.rating === 3 ? rating() : 'star review-form-stars'} onClick={this.update('rating')} value='3'>
+                                        <div className='review-rating-message three'>A-OK.</div>
+                                    </button>
+                                    <button id='two' className={this.state.rating === 2 ? rating() : 'star review-form-stars'} onClick={this.update('rating')} value='2'>
+                                        <div className='review-rating-message two'>Meh. I've experienced better.</div>
+                                    </button>
+                                    <button id='one' className={this.state.rating === 1 ? rating() : 'star review-form-stars'} onClick={this.update('rating')} value='1'>
+                                        <div className='review-rating-message one'>Eak! Methinks not.</div>
+                                    </button>
+                                </div>
+                                <div className='review-raitng-messages'>
+                                    <div className='review-rating-message-default'>Select your rating</div>
+                                </div>
                             </div>
-                            <textarea required className="review-form-body" onChange={this.update('body')} placeholder='Write your review here' cols="67" rows="15"></textarea>
+                            <textarea required className="review-form-body" onChange={this.update('body')} placeholder='Your review helps others learn about great local businesses.' cols="67" rows="15"></textarea>
                         </div>
                         <div className='review-form-button-wrapper'>
                             <button className='review-form-submit' onClick={this.handleSubmit}>Post Review</button>

@@ -34,3 +34,133 @@
     padding: 7px 0px;
     padding-left: 14px;
 }
+
+.review-form-biz-name {
+    padding-top: 24px;
+    padding-bottom: 12px;
+}
+
+.review-form-biz-name a {
+    font-size: 36px;
+    color: #0073bb;
+    font-weight: 700;
+}
+
+.review-form-body {
+    margin-top: 18px;
+    font-size: 18px;
+}
+
+.review-form-main-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.review-form-content-container {
+    min-width: 630px;
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+}
+
+.review-form-container {
+    padding: 18px;
+    border: 1px solid #ccc;
+}
+
+.review-form-button-wrapper {
+    margin-top: 18px;
+}
+
+.review-form-submit {
+    padding: 10px 13px;
+    border: 1px solid #d32323;
+    color: #fff;
+    background: #d32323;
+    min-width: 240px;
+    height: 28px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.review-stars-message {
+    display: flex;
+}
+
+.review-rating-message-default {
+    padding: 4px 10px; 
+}
+
+.review-rating-message {
+    color: black;
+    display: none;
+    z-index: 2;
+    position: relative;
+    width: 218px;
+    padding: 4px 10px;
+    background: white;
+}
+
+.review-form-stars:hover .review-rating-message {
+    display: block;
+}
+
+.selected .review-rating-message {
+    display: block;
+}
+
+.review-rating-message.one {
+    left: 162px;
+}
+
+.review-rating-message.two {
+    left: 129px;
+}
+
+.review-rating-message.three {
+    left: 96px;
+}
+
+.review-rating-message.four {
+    left: 63px;
+}
+
+.review-rating-message.five {
+    left: 30px;
+}
+
+.one-star-review {
+    background-position: 0 -30px;
+}
+
+.two-star-review {
+    background-position: 0 -60px;
+}
+
+.selected.two-star-review ~ .star {
+    background-position: 0 -60px;
+}
+
+.three-star-review {
+    background-position: 0 -90px;
+}
+
+.three-star-review.selected ~ .star {
+    background-position: 0 -90px;
+}
+
+.four-star-review {
+    background-position: 0 -120px;
+}
+
+.four-star-review.selected ~ .star {
+    background-position: 0 -120px;
+}
+
+.five-star-review {
+   background-position: 0 -150px; 
+}
+
+.five-star-review.selected ~ .star {
+   background-position: 0 -150px; 
+}
