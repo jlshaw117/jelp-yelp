@@ -6,7 +6,7 @@ class Api::ReviewsController < ApplicationController
         if @review.save
             render 'api/reviews/review'
         else
-            render json: @review.errors.full_messages
+            render json: @review.errors.full_messages, status: 422
         end
     end
 
@@ -16,7 +16,7 @@ class Api::ReviewsController < ApplicationController
         if current_user.reviews.include?(@review) && @review.update(review_params)
             render 'api/reviews/review'
         else
-            render json: @review.errors.full_messages
+            render json: @review.errors.full_messages, status: 422
         end
     end
 
