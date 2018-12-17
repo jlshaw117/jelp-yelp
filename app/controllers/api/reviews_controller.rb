@@ -21,9 +21,9 @@ class Api::ReviewsController < ApplicationController
     end
 
     def destroy
-        review = Review.find_by(id: params[:id])
-        review.destroy!
-        render json: ["successfully deleted"]
+        @review = Review.find_by(id: params[:id])
+        @review.destroy!
+        render 'api/reviews/review'
     end
 
     private
