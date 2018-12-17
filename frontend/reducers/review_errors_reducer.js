@@ -8,7 +8,7 @@ export default (state = [], action) => {
         case RECIEVE_REVIEW_ERRORS:
             return action.errors;
         case RECIEVE_REVIEW:
-            return null;
+            return [];
         default:
             return state;
     }

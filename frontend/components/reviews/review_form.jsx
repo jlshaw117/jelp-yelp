@@ -16,8 +16,8 @@ class ReviewForm extends React.Component {
     }
 
     handleSubmit (e) {
-        e.precentDefault();
-        this.props.action(this.state)
+        e.preventDefault();
+        this.props.action(this.state);
     }
 
     update(field) {
@@ -56,19 +56,21 @@ class ReviewForm extends React.Component {
                     </div>
                 </header>
                 <div className='review-form-main-wrapper'>
-                    <div className='review-form-biz-name'>Business Name</div>
-                    <div className='review-form-container'>
-                        <div className='five-stars'>
-                            <div id='one' className='star'></div>
-                            <div id='two' className='star'></div>
-                            <div id='three' className='star'></div>
-                            <div id='four' className='star'></div>
-                            <div id='five' className='star'></div>
+                    <div className='review-form-content-container'>
+                        <div className='review-form-biz-name'><Link to={`businesses/${this.props.match.params.businessId}`}>Business Name</Link></div>
+                        <div className='review-form-container'>
+                            <div className='five-stars'>
+                                <button id='one' className='star' onClick={this.update('rating')} value='1'></button>
+                                <button id='two' className='star' onClick={this.update('rating')} value='2'></button>
+                                <button id='three' className='star' onClick={this.update('rating')} value='3'></button>
+                                <button id='four' className='star' onClick={this.update('rating')} value='4'></button>
+                                <button id='five' className='star' onClick={this.update('rating')} value='5'></button>
+                            </div>
+                            <textarea required className="review-form-body" onChange={this.update('body')} placeholder='Write your review here' cols="67" rows="15"></textarea>
                         </div>
-                    </div>
-                    <textarea name="" id="" placeHolder='Write your review here' cols="30" rows="10"></textarea>
-                    <div className='review-form-button-wrapper'>
-                        <button className='review-form-submit' onClick={this.handleSubmit}>Post</button>
+                        <div className='review-form-button-wrapper'>
+                            <button className='review-form-submit' onClick={this.handleSubmit}>Post Review</button>
+                        </div>
                     </div>
                 </div>
             </div>
