@@ -27,7 +27,7 @@ export const createBusiness = (business) => dispatch => {
     return (
         BusinessAPIUtil.createBusiness(business)
         .then((business) => dispatch(receiveBusiness(business)),
-        (err) => dispatch(receiveErrors(err)))
+        (err) => dispatch(receiveErrors(err.responseJSON)))
     );
 };
 
@@ -40,7 +40,7 @@ export const updateBusiness = (business) => dispatch => {
     );
 };
 
-export const cleatBusinessErrors = () => ({
+export const clearBusinessErrors = () => ({
     type: RECEIVE_BUSINESS_ERRORS,
     errors: []
 });
