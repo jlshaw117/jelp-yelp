@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import BusinessShow from './business_show';
-import { fetchAllBusinesses } from '../../actions/business_actions';
+import { fetchBusiness } from '../../actions/business_actions';
 
 const mapStateToProps = ({ entities, session }, ownProps) => {
 
@@ -16,7 +16,7 @@ const mapStateToProps = ({ entities, session }, ownProps) => {
 const mapDispatchToProps = dispatch => {
 
     return ({
-        fetchAllBusinesses: () => dispatch(fetchAllBusinesses())
+        fetchBusiness: (id) => dispatch(fetchBusiness(id))
     });
 };
 

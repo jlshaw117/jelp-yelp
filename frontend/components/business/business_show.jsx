@@ -6,7 +6,7 @@ class BusinessShow extends React.Component {
 
     componentDidMount () {
         // debugger
-        this.props.fetchAllBusinesses();
+        this.props.fetchBusiness(this.props.match.params.businessId);
     }
 
     render () {
