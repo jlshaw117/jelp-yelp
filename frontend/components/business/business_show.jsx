@@ -204,10 +204,10 @@ class BusinessShow extends React.Component {
                                 </div>
                                 <div className='biz-top-content-right'>
                                     <div className='biz-buttons'>
-                                        <button className='biz-review-button'>
+                                        <Link to='/businesses/1/newReview' className='biz-review-button'>
                                             <i className="fas fa-star biz-star-review"></i>
                                             <div>Write a Review</div>
-                                        </button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
