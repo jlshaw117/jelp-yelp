@@ -263,7 +263,7 @@
     height: 210px;
 }
 
-.biz-raiting-star {
+.biz-rating-star {
     background-image: url(image_path('stars.png'));
     overflow: hidden;
     background-repeat: no-repeat;
@@ -271,6 +271,42 @@
     min-width: 110px;
     background-position: 0 -240px;
     margin-top: 5px;
+}
+
+#avg-one.biz-rating-star {
+    background-position: 0 -258px;
+}
+
+#avg-one-half.biz-rating-star {
+    background-position: 0 -276px;
+}
+
+#avg-two.biz-rating-star {
+    background-position: 0 -294px;
+}
+
+#avg-two-half.biz-rating-star {
+    background-position: 0 -312px;
+}
+
+#avg-three.biz-rating-star {
+    background-position: 0 -330px;
+}
+
+#avg-three-half.biz-rating-star {
+    background-position: 0 -348px;
+}
+
+#avg-four.biz-rating-star {
+    background-position: 0 -366px;
+}
+
+#avg-four-half.biz-rating-star {
+    background-position: 0 -384px;
+}
+
+#avg-five.biz-rating-star {
+    background-position: 0 -402px;
 }
 
 .biz-avg-review {
