@@ -32,11 +32,11 @@ const removeReview = (review) => ({
     review,
 });
 
-const recieveReview = (review) => ({
+const recieveReview = ({ review, user}) => ({
     type: RECIEVE_REVIEW,
     review,
     average_rating: review.biz_average_rating,
-    user: review.user_id
+    user
 });
 
 const recieveReviewErrors = (errors) => ({
