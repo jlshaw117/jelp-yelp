@@ -45,7 +45,7 @@
     display: flex;
 }
 
-.biz-avg-raiting {
+.biz-avg-rating {
     background-image: url(image_path('stars.png'));
     overflow: hidden;
     background-repeat: no-repeat;
@@ -53,6 +53,42 @@
     min-width: 132px;
     background-position: 0 0px;
     margin-top: 5px;
+}
+
+#avg-one.biz-avg-rating {
+    background-position: 0 -24px;
+}
+
+#avg-one-half.biz-avg-rating {
+    background-position: 0 -48px;
+}
+
+#avg-two.biz-avg-rating {
+    background-position: 0 -72px;
+}
+
+#avg-two-half.biz-avg-rating {
+    background-position: 0 -96px;
+}
+
+#avg-three.biz-avg-rating {
+    background-position: 0 -120px;
+}
+
+#avg-three-half.biz-avg-rating {
+    background-position: 0 -144px;
+}
+
+#avg-four.biz-avg-rating {
+    background-position: 0 -168px;
+}
+
+#avg-four-half.biz-avg-rating {
+    background-position: 0 -192px;
+}
+
+#avg-five.biz-avg-rating {
+    background-position: 0 -216px;
 }
 
 .biz-show-review-count {
