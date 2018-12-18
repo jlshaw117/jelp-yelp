@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import DropDownMenuContainer from '../drop_down_menu/drop_down_menu_container';
+import ReviewIndex from '../reviews/review_index';
 
 class BusinessShow extends React.Component {
 
@@ -203,7 +204,7 @@ class BusinessShow extends React.Component {
                                 </div>
                                 <div className='biz-top-content-right'>
                                     <div className='biz-buttons'>
-                                        <Link to='/businesses/1/newReview' className='biz-review-button'>
+                                        <Link to={`/businesses/${this.props.biz.id}/newReview`} className='biz-review-button'>
                                             <i className="fas fa-star biz-star-review"></i>
                                             <div>Write a Review</div>
                                         </Link>
@@ -221,10 +222,9 @@ class BusinessShow extends React.Component {
                                     <div className='recomended-reviews'><span>Recommended Reviews</span> for {this.props.biz.name}</div>
                                 </div>
                                 {this.props.currentUser ? loggedInReview() : loggedOutReview()}
-                                <div className='reviews-index'></div>
+                                <ReviewIndex reviews={this.props.reviews} />
                             </div>
                             <div className='biz-content-bottem-side'>
-                                
                             </div>
                         </div>
                     </div>
