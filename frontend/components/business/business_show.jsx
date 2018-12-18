@@ -83,7 +83,41 @@ class BusinessShow extends React.Component {
                 </div>
             );
         };
+
         if (this.props.biz === undefined) return null
+        const bizReviews = this.props.biz.reviewIds.map((id) => {
+            console.log(this.props.reviews, id)
+            return this.props.reviews[id]
+        });
+
+        let avgRating = () => {
+            let rating = parseFloat(this.props.biz.average_rating);
+            let avg = Math.floor(rating * 2) / 2;
+
+            switch (avg) {
+                case 1:
+                    return 'avg-one';
+                case 1.5:
+                    return 'avg-one-half';
+                case 2:
+                    return 'avg-two';
+                case 2.5:
+                    return 'avg-two-half';
+                case 3:
+                    return 'avg-three';
+                case 3.5:
+                    return 'avg-three-half';
+                case 4:
+                    return 'avg-four';
+                case 4.5:
+                    return 'avg-four-half';
+                case 5:
+                    return 'avg-five';
+                default:
+                    return 'avg-zero';
+            }
+        };
+        
         return (
             <div>
                 <header className='business-index-header'>
@@ -197,10 +231,10 @@ class BusinessShow extends React.Component {
                                 <div className='biz-top-content-left'>
                                     <div className='biz-name'>{this.props.biz.name}</div>
                                     <div className='biz-show-reviews'>
-                                        <div className='biz-avg-raiting'></div>
-                                        <div className='biz-show-review-count'>0 Reviews</div>
+                                        <div id={avgRating()} className='biz-avg-rating'></div>
+                                        <div className='biz-show-review-count'>{bizReviews.length} Reviews</div>
                                     </div>
-                                    <div className='biz-price'>$$$${/*this.props.biz.price*/}</div>
+                                    <div className='biz-price'>{this.props.biz.price}</div>
                                 </div>
                                 <div className='biz-top-content-right'>
                                     <div className='biz-buttons'>
@@ -222,7 +256,7 @@ class BusinessShow extends React.Component {
                                     <div className='recomended-reviews'><span>Recommended Reviews</span> for {this.props.biz.name}</div>
                                 </div>
                                 {this.props.currentUser ? loggedInReview() : loggedOutReview()}
-                                <ReviewIndex reviews={this.props.reviews} />
+                                <ReviewIndex reviews={bizReviews} />
                             </div>
                             <div className='biz-content-bottem-side'>
                             </div>
