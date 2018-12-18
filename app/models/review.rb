@@ -27,4 +27,8 @@ class Review < ApplicationRecord
         primary_key: :id,
         foreign_key: :business_id,
         class_name: :Business
+    
+    def biz_average_rating
+        self.business.average_rating
+    end
 end
