@@ -188,22 +188,6 @@ class BusinessIndex extends React.Component {
                     <div className='index-main-content-container'>
                         <ul className='business-index'>
                             {indexItems}
-                            {indexItems}
-                            {indexItems}
-                            {indexItems}
-                            {indexItems}
-                            {indexItems}
-                            {indexItems}
-                            {indexItems}
-                            {indexItems}
-                            {indexItems}
-                            {indexItems}
-                            {indexItems}
-                            {indexItems}
-                            {indexItems}
-                            {indexItems}
-                            {indexItems}
-                            {indexItems}
                         </ul>
                         <div className='index-map'></div>                
                     </div>
