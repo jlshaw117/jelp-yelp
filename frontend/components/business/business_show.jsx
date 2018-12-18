@@ -52,7 +52,7 @@ class BusinessShow extends React.Component {
                             <div id='one' className='star'></div>
                         </div>
                         <div className='biz-show-start-review'>
-                            <Link to='/' className='biz-show-strat-review-text'>Start your review of <span>Business Name</span></Link>
+                            <Link to='/' className='biz-show-strat-review-text'>Start your review of <span>{this.props.biz.name}</span></Link>
                         </div>
                     </div>
                 </div>
@@ -76,7 +76,7 @@ class BusinessShow extends React.Component {
                             <div id='five' className='star'></div>
                         </div>
                         <div className='biz-show-start-review'>
-                            <Link to='/' className='biz-show-strat-review-text'>Start your review of <span>Business Name</span></Link>
+                            <Link to='/' className='biz-show-strat-review-text'>Start your review of <span>{this.props.biz.name}</span></Link>
                         </div>
                     </div>
                 </div>
@@ -194,7 +194,7 @@ class BusinessShow extends React.Component {
                         <div className='biz-main-container'>
                             <div className='biz-top-content'>
                                 <div className='biz-top-content-left'>
-                                    <div className='biz-name'>Business Name{this.props.biz.name}</div>
+                                    <div className='biz-name'>{this.props.biz.name}</div>
                                     <div className='biz-show-reviews'>
                                         <div className='biz-avg-raiting'></div>
                                         <div className='biz-show-review-count'>0 Reviews</div>
@@ -218,7 +218,7 @@ class BusinessShow extends React.Component {
                         <div className='biz-content-bottem'>
                             <div className='biz-content-bottem-main'>
                                 <div className='biz-content-bottem-reviews-title'>
-                                    <div className='recomended-reviews'><span>Recommended Reviews</span> for Business Name</div>
+                                    <div className='recomended-reviews'><span>Recommended Reviews</span> for {this.props.biz.name}</div>
                                 </div>
                                 {this.props.currentUser ? loggedInReview() : loggedOutReview()}
                             </div>
