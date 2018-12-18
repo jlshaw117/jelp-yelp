@@ -89,32 +89,32 @@ class BusinessShow extends React.Component {
             console.log(this.props.reviews, id)
             return this.props.reviews[id]
         });
-
+        
         let avgRating = () => {
             let rating = parseFloat(this.props.biz.average_rating);
             let avg = Math.floor(rating * 2) / 2;
-
+            
             switch (avg) {
                 case 1:
-                    return 'avg-one';
+                return 'avg-one';
                 case 1.5:
-                    return 'avg-one-half';
+                return 'avg-one-half';
                 case 2:
-                    return 'avg-two';
+                return 'avg-two';
                 case 2.5:
-                    return 'avg-two-half';
+                return 'avg-two-half';
                 case 3:
-                    return 'avg-three';
+                return 'avg-three';
                 case 3.5:
-                    return 'avg-three-half';
+                return 'avg-three-half';
                 case 4:
-                    return 'avg-four';
+                return 'avg-four';
                 case 4.5:
-                    return 'avg-four-half';
+                return 'avg-four-half';
                 case 5:
-                    return 'avg-five';
+                return 'avg-five';
                 default:
-                    return 'avg-zero';
+                return 'avg-zero';
             }
         };
         

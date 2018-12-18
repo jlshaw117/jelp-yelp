@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 export default (props) => {
     
+    if (props.reviews[0] === undefined) return null;
     const indexItems = props.reviews.map((review, idx) => {
-
         const rating = () => {
             switch (review.rating) {
                 case 5:
@@ -37,6 +37,7 @@ export default (props) => {
             </div>
         )
     });
+    
     return (
         <div className='review-index'>
             {indexItems}
