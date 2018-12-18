@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default (props) => {
 
-    const indexItems = props.reviews.map((review) => {
+    const indexItems = props.reviews.map((review, idx) => {
 
         const rating = () => {
             switch (review.rating) {
@@ -23,7 +23,7 @@ export default (props) => {
         };
 
         return (
-            <div className='review-index-item'>
+            <div key={idx} className='review-index-item'>
                 <div className='biz-show-review-left'>
                     <div className='biz-show-user-profile-img'><Link to='/'><img src={window.dog} /></Link></div>
                     <div className='biz-show-user-details'>
