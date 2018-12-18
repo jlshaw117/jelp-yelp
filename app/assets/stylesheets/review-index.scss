@@ -1,0 +1,45 @@
+//////////########## SMALL STARS ########/////////
+
+.small-star-rating {
+    background-image: url(image_path('stars.png'));
+    overflow: hidden;
+    background-repeat: no-repeat;
+    height: 18px;
+    min-width: 110px;
+    background-position: 0 -240px;
+    margin-top: 5px;
+}
+
+#one.small-star-rating {
+    background-position: 0 -258px;
+}
+
+#two.small-star-rating {
+    background-position: 0 -294px;
+}
+
+#three.small-star-rating {
+    background-position: 0 -330px;
+}
+
+#four.small-star-rating {
+    background-position: 0 -366px;
+}
+
+#five.small-star-rating {
+    background-position: 0 -402px;
+}
+
+/////////######### REVIEW CONTAINER #########////////
+
+.review-index-item {
+    display: flex;
+    padding-top: 18px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.review-index-body {
+    padding: 12px 0;
+    margin-bottom: 0;
+}
