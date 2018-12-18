@@ -40,7 +40,7 @@ class DropDownMenu extends React.Component {
             <div className="home-drop-down">
                 <button onClick={this.showMenu}>
                     <div className='drop-down-button'>
-                        <img src={window.dog} />
+                        <img className='user-profile-image' src={this.props.currentUser.photo} />
                         <i className="fas fa-caret-down"></i>
                     </div>
                 </button>
@@ -55,7 +55,7 @@ class DropDownMenu extends React.Component {
                         }}>
                             <div className='menu-user-info'>
                                 <div className='menu-profile-pic'>
-                                    <Link to='/'><img src={window.dog} /></Link>
+                                    <Link to='/'><img className='user-profile-image' src={this.props.currentUser.photo} /></Link>
                                 </div>
                                 <div className='menu-user-info'>
                                     <Link className='menu-user-name' to='/'>{this.props.currentUser.f_name } {this.props.currentUser.l_name[0]}</Link>
