@@ -16,12 +16,13 @@ class ReviewForm extends React.Component {
     }
 
     componentDidMount() {
-
+        if (!this.props.biz) this.props.fetchBusiness(this.props.match.params.businessId);
     }
 
     handleSubmit (e) {
         e.preventDefault();
-        this.props.action(this.state)//.then(this.setState({redirect: true}));
+        this.props.action(this.state).then(() => this.props.history.push(`/businesses/${this.props.biz.id}`), (err) => console.log(err));
+
     }
 
     update(field) {
@@ -83,7 +84,7 @@ class ReviewForm extends React.Component {
                 </header>
                 <div className='review-form-main-wrapper'>
                     <div className='review-form-content-container'>
-                        <div className='review-form-biz-name'><Link to={`businesses/${this.props.match.params.businessId}`}>{this.props.biz.name}</Link></div>
+                        <div className='review-form-biz-name'><Link to={`/businesses/${this.props.match.params.businessId}`}>{this.props.biz.name}</Link></div>
                         <div className='review-form-container'>
                             <div className='review-stars-message'>
                                 <div className='five-stars'>
