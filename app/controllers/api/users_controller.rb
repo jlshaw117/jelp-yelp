@@ -1,8 +1,9 @@
 class Api::UsersController < ApplicationController
   def create
     @user = User.new(user_params)
-
+    
     if @user.save
+      @user.photo.attach(io: File.open("./app/assets/images/dog.png"), filename:"dog.png")
       login(@user)
       render 'api/users/show'
     else
