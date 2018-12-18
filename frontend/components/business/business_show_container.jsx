@@ -6,11 +6,11 @@ const mapStateToProps = ({ entities, session }, ownProps) => {
 
     let id = ownProps.match.params.businessId;
     let biz = entities.businesses[id];
-    let reviews = Object.values(entities.reviews) || [];
+    // let reviews = Object.values(entities.reviews) || [];
     return ({
         currentUser: entities.users[session.id],
         biz,
-        reviews
+        reviews: entities.reviews
     });
 };
 
