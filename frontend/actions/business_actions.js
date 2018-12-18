@@ -17,7 +17,7 @@ export const fetchBusiness = (id) => dispatch => {
 
     return (
         BusinessAPIUtil.fetchBusiness(id)
-        .then((business) => dispatch(receiveBusiness(business)),
+        .then((payload) => dispatch(receiveBusiness(payload)),
         (err) => dispatch(receiveErrors(err.responseJSON)))
     );
 };
@@ -45,9 +45,11 @@ export const clearBusinessErrors = () => ({
     errors: []
 });
 
-const receiveBusiness = (business) => ({
+const receiveBusiness = ({ business, reviews, users}) => ({
     type: RECEIVE_BUSINESS,
-    business
+    business,
+    reviews,
+    users
 });
 
 const receiveAllBusinesses = (businesses) => ({
