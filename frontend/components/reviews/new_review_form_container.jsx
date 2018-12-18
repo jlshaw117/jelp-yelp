@@ -5,6 +5,7 @@ import { createReview } from '../../actions/review_actions';
 const mapStateToProps = ({ session, entities }, ownProps) => {
 
     let id = ownProps.match.params.businessId;
+    let biz = entities.businesses[id];
     return ({
         currentUser: entities.users[session.id],
         formType: 'Write a Review',
@@ -13,7 +14,8 @@ const mapStateToProps = ({ session, entities }, ownProps) => {
             body: null,
             user_id: session.id,
             business_id: id
-        }
+        },
+        biz
     });
 };
 
