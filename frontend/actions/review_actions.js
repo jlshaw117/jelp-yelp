@@ -30,12 +30,14 @@ export const deleteReview = (id) => dispatch => {
 
 const removeReview = (review) => ({
     type: REMOVE_REVIEW,
-    review
+    review,
 });
 
-const recieveReview = (review) => ({
+const recieveReview = ({ review, average_rating, user }) => ({
     type: RECIEVE_REVIEW,
-    review
+    review,
+    average_rating,
+    user
 });
 
 const recieveReviewErrors = (errors) => ({
