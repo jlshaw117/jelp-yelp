@@ -30,7 +30,14 @@ class Business < ApplicationRecord
         class_name: :User,
         optional: true
 
-    has_many :reviews
+    has_many :reviews,
+        primary_key: :id,
+        foreign_key: :business_id,
+        class_name: :Review
 
     has_one_attached :photo
+
+    def average_rating
+        reviews.average(:rating)
+    end
 end

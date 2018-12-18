@@ -27,7 +27,10 @@ class User < ApplicationRecord
         foreign_key: :owner_id,
         class_name: :Business
 
-    has_many :reviews
+    has_many :reviews,
+        primary_key: :id,
+        foreign_key: :user_id,
+        class_name: :Review
 
     def self.generate_session_token
         SecureRandom.urlsafe_base64
