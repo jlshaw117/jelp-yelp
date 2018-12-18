@@ -9,8 +9,7 @@ export const createReview = (review) => dispatch => {
     return ReviewAPIUtil.createReview(review)
     .then((review) => dispatch(recieveReview(review)),
     (err) => {
-        console.log(err);
-        return dispatch(recieveReviewErrors(err.responseJSON));
+        dispatch(recieveReviewErrors(err.responseJSON));
     });
 };
 
@@ -33,11 +32,11 @@ const removeReview = (review) => ({
     review,
 });
 
-const recieveReview = ({ review, average_rating, user }) => ({
+const recieveReview = (review) => ({
     type: RECIEVE_REVIEW,
     review,
-    average_rating,
-    user
+    average_rating: review.biz_average_rating,
+    user: review.user_id
 });
 
 const recieveReviewErrors = (errors) => ({
