@@ -71,7 +71,7 @@ class ReviewForm extends React.Component {
                     return '0';
             }
         }
-
+        if (this.props.biz === undefined) return null
         return (
             <div className="review-form">
                 <header className='review-form-header'>
@@ -83,7 +83,7 @@ class ReviewForm extends React.Component {
                 </header>
                 <div className='review-form-main-wrapper'>
                     <div className='review-form-content-container'>
-                        <div className='review-form-biz-name'><Link to={`businesses/${this.props.match.params.businessId}`}>Business Name</Link></div>
+                        <div className='review-form-biz-name'><Link to={`businesses/${this.props.match.params.businessId}`}>{this.props.biz.name}</Link></div>
                         <div className='review-form-container'>
                             <div className='review-stars-message'>
                                 <div className='five-stars'>
