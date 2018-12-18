@@ -8,17 +8,17 @@ export default (state = {}, action) => {
     let newState = merge({}, state);
     switch (action.type) {
         case RECIEVE_REVIEW:
-            // newState[action.review.id] = action.review;
-            // return newState;
-            const { review, average_rating } = action;
-            newState[review.business_id].reviewIds.push(review.id);
-            newState[review.business_id].average_rating = average_rating;
+            newState[action.review.id] = action.review;
             return newState;
         case REMOVE_REVIEW:
             delete newState[action.review.id];
             return newState;
         case RECEIVE_BUSINESS:
-            return action.reviews;
+            if (action.reviews) {
+                return action.reviews;
+            } else {
+                return newState;
+            };
         default:
             return state;
     }
