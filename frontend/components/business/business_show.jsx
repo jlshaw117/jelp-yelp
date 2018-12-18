@@ -69,11 +69,11 @@ class BusinessShow extends React.Component {
                     </div>
                     <div className='biz-show-review-right'>
                         <div className='five-stars'>
-                            <div id='one' className='star'></div>
-                            <div id='two' className='star'></div>
-                            <div id='three' className='star'></div>
-                            <div id='four' className='star'></div>
                             <div id='five' className='star'></div>
+                            <div id='four' className='star'></div>
+                            <div id='three' className='star'></div>
+                            <div id='two' className='star'></div>
+                            <div id='one' className='star'></div>
                         </div>
                         <div className='biz-show-start-review'>
                             <Link to='/' className='biz-show-strat-review-text'>Start your review of <span>{this.props.biz.name}</span></Link>
@@ -221,9 +221,10 @@ class BusinessShow extends React.Component {
                                     <div className='recomended-reviews'><span>Recommended Reviews</span> for {this.props.biz.name}</div>
                                 </div>
                                 {this.props.currentUser ? loggedInReview() : loggedOutReview()}
+                                <div className='reviews-index'></div>
                             </div>
                             <div className='biz-content-bottem-side'>
-                            
+                                
                             </div>
                         </div>
                     </div>
