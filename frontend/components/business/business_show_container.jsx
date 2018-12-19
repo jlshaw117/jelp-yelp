@@ -10,7 +10,8 @@ const mapStateToProps = ({ entities, session }, ownProps) => {
     return ({
         currentUser: entities.users[session.id],
         biz,
-        reviews: entities.reviews
+        reviews: entities.reviews,
+        users: entities.users
     });
 };
 
