@@ -170,6 +170,12 @@
     font-size: 21px;
 }
 
+.review-index {
+
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 .recomended-reviews span{
     color: #d32323;
     font-weight: 700;
