@@ -147,7 +147,7 @@
     display: flex;
     width: 69%;
     height: 355px;
-    border: 1px solid black;
+    // border: 1px solid black;
     align-items: center;
 }
 
@@ -160,7 +160,7 @@
 
 .biz-content-bottem-main {
     width: calc(100% / 3 * 2);
-    // border: 1px solid black;
+    border-right: 1px solid #e6e6e6;
     padding-right: 30px;
 }
 
@@ -240,7 +240,7 @@
 
 .biz-content-bottem-side {
     width: calc(100% / 3);
-    border: 1px solid black;
+    // border: 1px solid black;
     padding-left: 30px;
 }
 

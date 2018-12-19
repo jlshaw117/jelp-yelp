@@ -48,8 +48,8 @@ class PictureCarouselShow extends React.Component {
 
         return (
             <div className='carousel-wrapper'>
-                <button className='previous-image scroll-button' onClick={this.preImage}>
-                    <i className="fas fa-angle-left"></i>
+                <button className='scroll-button' onClick={this.preImage}>
+                    <i id='pre' className="fas fa-angle-left"></i>
                 </button>
                 <div className='carousel-container'>
                     {
@@ -70,8 +70,8 @@ class PictureCarouselShow extends React.Component {
                         })
                     }
                 </div>
-                <button className='next-image scroll-button' onClick={this.nextImage}>
-                    <i className="fas fa-angle-right"></i>
+                <button className='scroll-button' onClick={this.nextImage}>
+                    <i id='next' className="fas fa-angle-right fas-lrg"></i>
                 </button>
             </div>
         )

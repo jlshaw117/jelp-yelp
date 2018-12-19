@@ -13,8 +13,24 @@
 }
 
 .scroll-button {
-    z-index: 3;
+    z-index: 10;
+    // position: absolute;
+    color: white;
+    // position: relative;
+    font-size: 30px;
+
+}
+
+#next {
+    position: relative;
+    // color: red;
+    margin-right: 10px;
+    right: 32px;
+}
+
+#pre {
     position: absolute;
+    margin-left: 8px;
 }
 
 .carousel-img {
@@ -26,6 +42,12 @@
     overflow: hidden;
 }
 
-.next-image {
-    left: 100px;
+.center.carousel-img {
+    transform: scale(1.2);
+    z-index: 4;
+}
+
+.carousel-img:hover {
+    transform: scale(1.2);
+    z-index: 4;
 }
