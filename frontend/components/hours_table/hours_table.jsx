@@ -13,37 +13,37 @@ export default () => {
             // case 0:
             //     return 'status';
             case 1:
-                if (hours > 9 && hours < 17) {
+                if (hours >= 9 && hours <= 17) {
                     return 'status active';
                 } else {
                     return 'status';
                 }
             case 2:
-                if (hours > 9 && hours < 17) {
+                if (hours >= 9 && hours <= 17) {
                     return 'status active';
                 } else {
                     return 'status';
                 }
             case 3:
-                if (hours > 9 && hours < 17) {
+                if (hours >= 9 && hours <= 17) {
                     return 'status active';
                 } else {
                     return 'status';
                 }
             case 4:
-                if (hours > 9 && hours < 17) {
+                if (hours >= 9 && hours <= 17) {
                     return 'status active';
                 } else {
                     return 'status';
                 }
             case 5:
-                if (hours > 9 && hours < 17) {
+                if (hours >= 9 && hours <= 17) {
                     return 'status active';
                 } else {
                     return 'status';
                 }
             case 6:
-                if (hours > 10 && hours < 16) {
+                if (hours >= 10 && hours <= 16) {
                     return 'status active';
                 } else {
                     return 'status';
