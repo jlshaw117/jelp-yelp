@@ -36,8 +36,41 @@ class BusinessShow extends React.Component {
             );
         };
 
-        const loggedInReview = () => {
+        const newEditReviewButton = () => {
+            let alreadyReviewed = false;
+            let arrReviews = Object.values(this.props.reviews)
+            let reviewId;
+            for (let index = 0; index < arrReviews.length; index++) {
+                if (arrReviews[index].user_id === this.props.currentUser.id) {
+                    alreadyReviewed = true;
+                    reviewId = arrReviews[index].id
+                }
+            }
+            if (alreadyReviewed === true) {
+                return (
+                    <Link to={`/businesses/${this.props.biz.id}/editReview/${reviewId}`} className='biz-review-button'>
+                        <i className="fas fa-star biz-star-review"></i>
+                        <div>Edit Your Review</div>
+                    </Link>
+                )
+            } else {
+                return (
+                    <Link to={`/businesses/${this.props.biz.id}/newReview`} className='biz-review-button'>
+                        <i className="fas fa-star biz-star-review"></i>
+                        <div>Write a Review</div>
+                    </Link>
+                )
+            } 
+            
+        }
 
+        const loggedInReview = () => {
+            let alreadyReviewed;
+            let arrReviews = Object.values(this.props.reviews)
+            for (let index = 0; index < arrReviews.length; index++) {
+                if (arrReviews[index].user_id === this.props.currentUser.id) alreadyReviewed = true;
+            }
+            if (alreadyReviewed) return <div></div>
             return (
                 <div className='biz-show-new-review-container'>
                     <div className='biz-show-review-left'>
@@ -239,10 +272,7 @@ class BusinessShow extends React.Component {
                                 </div>
                                 <div className='biz-top-content-right'>
                                     <div className='biz-buttons'>
-                                        <Link to={`/businesses/${this.props.biz.id}/newReview`} className='biz-review-button'>
-                                            <i className="fas fa-star biz-star-review"></i>
-                                            <div>Write a Review</div>
-                                        </Link>
+                                        {newEditReviewButton()}
                                     </div>
                                 </div>
                             </div>
