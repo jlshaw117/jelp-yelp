@@ -27,23 +27,27 @@ const Greeting = ({ currentUser, logout }) => {
     };
 
     return (
-        <header className="home-header">
-            <div className='overlay'></div>
-            <nav className="home-nav-bar">
-                <ul className='page-links'>
-                    <li><Link to='/'>Write a Review</Link></li>
-                    <li><Link to='/'>Events</Link></li>
-                    <li><Link to='/'>Talk</Link></li>
-                </ul>
-                {currentUser ? greeting() : sessionLinks()}
-            </nav>
-            <div className='home-logo'>
-                <Link className='logo-link' to='/'><img src={window.logo} alt=""/></Link>
+        <div className='outer-wrapper-home'>
+            <div className='inner-wrapper'>
+                <header className="home-header">
+                    <div className='overlay'></div>
+                    <nav className="home-nav-bar">
+                        <ul className='page-links'>
+                            <li><Link to='/'>Write a Review</Link></li>
+                            <li><Link to='/'>Events</Link></li>
+                            <li><Link to='/'>Talk</Link></li>
+                        </ul>
+                        {currentUser ? greeting() : sessionLinks()}
+                    </nav>
+                    <div className='home-logo'>
+                        <Link className='logo-link' to='/'><img src={window.logo} alt=""/></Link>
+                    </div>
+                    <div className="search-bar">
+                        <Link to='/businesses'>All Businesses</Link>
+                    </div>
+                </header>
             </div>
-            <div className="search-bar">
-                <Link to='/businesses'>All Businesses</Link>
-            </div>
-        </header>
+        </div>
     );
 };
 

@@ -65,7 +65,7 @@ class BusinessIndex extends React.Component {
         };
 
         return (
-            <div>
+            <div className='outer-wrapper'>
                 <header className='business-index-header'>
                     <nav className='business-index-nav'>
                         <div className='index-logo'>

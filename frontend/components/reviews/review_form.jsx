@@ -74,44 +74,46 @@ class ReviewForm extends React.Component {
         }
         if (this.props.biz === undefined) return null
         return (
-            <div className="review-form">
-                <header className='review-form-header'>
-                    <div className='review-form-header-bar'>
-                        <Link className='review-form-logo' to='/'><img src={window.logo} /></Link>
-                        <div className='review-form-title'>{this.props.formType}</div>
-                        {this.props.currentUser ? dropDown() : sessionLinks()}
-                    </div>
-                </header>
-                <div className='review-form-main-wrapper'>
-                    <div className='review-form-content-container'>
-                        <div className='review-form-biz-name'><Link to={`/businesses/${this.props.match.params.businessId}`}>{this.props.biz.name}</Link></div>
-                        <div className='review-form-container'>
-                            <div className='review-stars-message'>
-                                <div className='five-stars'>
-                                    <button id='five' className={this.state.rating === 5 ? rating() : 'star review-form-stars'} onClick={this.update('rating')} value='5'>
-                                        <div className='review-rating-message five'>Woohoo! As good as it gets!</div>
-                                    </button>
-                                    <button id='four' className={this.state.rating === 4 ? rating() : 'star review-form-stars'} onClick={this.update('rating')} value='4'>
-                                        <div className='review-rating-message four'>Yay! I'm a fan.</div>
-                                    </button>
-                                    <button id='three' className={this.state.rating === 3 ? rating() : 'star review-form-stars'} onClick={this.update('rating')} value='3'>
-                                        <div className='review-rating-message three'>A-OK.</div>
-                                    </button>
-                                    <button id='two' className={this.state.rating === 2 ? rating() : 'star review-form-stars'} onClick={this.update('rating')} value='2'>
-                                        <div className='review-rating-message two'>Meh. I've experienced better.</div>
-                                    </button>
-                                    <button id='one' className={this.state.rating === 1 ? rating() : 'star review-form-stars'} onClick={this.update('rating')} value='1'>
-                                        <div className='review-rating-message one'>Eak! Methinks not.</div>
-                                    </button>
-                                </div>
-                                <div className='review-raitng-messages'>
-                                    <div className='review-rating-message-default'>Select your rating</div>
-                                </div>
-                            </div>
-                            <textarea required className="review-form-body" onChange={this.update('body')} placeholder='Your review helps others learn about great local businesses.' cols="67" rows="15"></textarea>
+            <div className='outer-wrapper'>
+                <div className="review-form">
+                    <header className='review-form-header'>
+                        <div className='review-form-header-bar'>
+                            <Link className='review-form-logo' to='/'><img src={window.logo} /></Link>
+                            <div className='review-form-title'>{this.props.formType}</div>
+                            {this.props.currentUser ? dropDown() : sessionLinks()}
                         </div>
-                        <div className='review-form-button-wrapper'>
-                            <button className='review-form-submit' onClick={this.handleSubmit}>Post Review</button>
+                    </header>
+                    <div className='review-form-main-wrapper'>
+                        <div className='review-form-content-container'>
+                            <div className='review-form-biz-name'><Link to={`/businesses/${this.props.match.params.businessId}`}>{this.props.biz.name}</Link></div>
+                            <div className='review-form-container'>
+                                <div className='review-stars-message'>
+                                    <div className='five-stars'>
+                                        <button id='five' className={this.state.rating === 5 ? rating() : 'star review-form-stars'} onClick={this.update('rating')} value='5'>
+                                            <div className='review-rating-message five'>Woohoo! As good as it gets!</div>
+                                        </button>
+                                        <button id='four' className={this.state.rating === 4 ? rating() : 'star review-form-stars'} onClick={this.update('rating')} value='4'>
+                                            <div className='review-rating-message four'>Yay! I'm a fan.</div>
+                                        </button>
+                                        <button id='three' className={this.state.rating === 3 ? rating() : 'star review-form-stars'} onClick={this.update('rating')} value='3'>
+                                            <div className='review-rating-message three'>A-OK.</div>
+                                        </button>
+                                        <button id='two' className={this.state.rating === 2 ? rating() : 'star review-form-stars'} onClick={this.update('rating')} value='2'>
+                                            <div className='review-rating-message two'>Meh. I've experienced better.</div>
+                                        </button>
+                                        <button id='one' className={this.state.rating === 1 ? rating() : 'star review-form-stars'} onClick={this.update('rating')} value='1'>
+                                            <div className='review-rating-message one'>Eak! Methinks not.</div>
+                                        </button>
+                                    </div>
+                                    <div className='review-raitng-messages'>
+                                        <div className='review-rating-message-default'>Select your rating</div>
+                                    </div>
+                                </div>
+                                <textarea required className="review-form-body" onChange={this.update('body')} placeholder='Your review helps others learn about great local businesses.' cols="67" rows="15"></textarea>
+                            </div>
+                            <div className='review-form-button-wrapper'>
+                                <button className='review-form-submit' onClick={this.handleSubmit}>Post Review</button>
+                            </div>
                         </div>
                     </div>
                 </div>

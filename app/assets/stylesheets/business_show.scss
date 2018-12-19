@@ -7,7 +7,7 @@
 }
 
 .biz-content-wrapper {
-    min-width: 1020px;
+    max-width: 1020px;
 }
 
 .background-grey {
@@ -16,7 +16,7 @@
     background: #f5f5f5;
     border-bottom: 1px solid #e6e6e6;
     min-height: 420px;
-    width: 100%;
+    width: 1000%;
 
 }
 
@@ -184,6 +184,10 @@
 .biz-show-review-left {
     width: 37.5%;
     display: flex;
+}
+
+.review-index-item-right {
+    width: calc(100% - 37.5%);
 }
 
 .biz-show-user-profile-img {

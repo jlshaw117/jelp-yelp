@@ -32,7 +32,7 @@ export default (props) => {
                 </div>
                 <div className='review-index-item-right'>
                     <div id={rating()} className='small-star-rating'></div>
-                    <p className='review-index-body'>{review.body}</p>
+                    <div className='review-index-body'>{review.body}</div>
                 </div>
             </div>
         )

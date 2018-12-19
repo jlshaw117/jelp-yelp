@@ -5,9 +5,22 @@
     flex-direction: column;
     height: 570px;
     padding-top: 30px;
+}
+
+.outer-wrapper-home {
+    min-width: 1020px;
     background-size: cover;
     background-position: 50%;
     background-image: url(image_path('cover_page_img.jpg'));
+}
+
+.outer-wrapper {
+    min-width: 1020px;
+}
+
+.inner-wrapper {
+    max-width: 1020px;
+    margin: 0 auto;
 }
 
 .user-profile-image {
