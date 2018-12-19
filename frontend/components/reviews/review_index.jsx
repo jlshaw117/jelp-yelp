@@ -9,6 +9,8 @@ class ReviewIndex extends React.Component {
         this.clickHandler = this.clickHandler.bind(this);
     }
 
+
+
     clickHandler(id) {
         return () => this.props.deleteReview(id);
     }
@@ -44,8 +46,8 @@ class ReviewIndex extends React.Component {
                     </div>
                 )
             }
-
             return (
+                
                 <div key={idx} className='review-index-review-container'>
                     <div className='review-index-item'>
                         <div className='biz-show-review-left'>
