@@ -256,7 +256,7 @@ class BusinessShow extends React.Component {
                                     <div className='recomended-reviews'><span>Recommended Reviews</span> for {this.props.biz.name}</div>
                                 </div>
                                 {this.props.currentUser ? loggedInReview() : loggedOutReview()}
-                                <ReviewIndex reviews={bizReviews} />
+                                <ReviewIndex reviews={bizReviews} users={this.props.users} />
                             </div>
                             <div className='biz-content-bottem-side'>
                             </div>
