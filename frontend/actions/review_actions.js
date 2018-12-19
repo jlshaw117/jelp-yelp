@@ -27,7 +27,14 @@ export const deleteReview = (id) => dispatch => {
     (err) => dispatch(receiveReviewErrors(err.responseJSON)));
 };
 
-const removeReview = (review) => ({
+export const clearReviewErrors = () => {
+    return ({
+        type: RECEIVE_REVIEW_ERRORS,
+        errors: []
+    });
+}
+
+const removeReview = ({review}) => ({
     type: REMOVE_REVIEW,
     review,
 });
