@@ -48,11 +48,25 @@
 .review-index-item-footer {
     display: flex;
     justify-content: flex-end;
+    
+}
+
+.review-form-links {
+    padding-right: 10px;
+    padding-bottom: 10px;
 }
 
 .review-index-item-footer button {
-    padding-right: 10px;
-    padding-bottom: 10px;
+    padding: 3px 7px;
+    border: 1px solid #e6e6e6;
+    color: #b6b4b4;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+
+.review-index-item-footer button:hover {
+    background: #b6b4b4;
+    color: black;
 }
 
 .review-index-body {

@@ -41,7 +41,7 @@ class ReviewIndex extends React.Component {
                         <Link to={`/businesses/${review.business_id}/editReview/${review.id}`}>
                             <i className="fas fa-pencil-alt category"></i>
                         </Link>
-                        <button onClick={this.clickHandler(review.id)}><i class="far fa-trash-alt"></i></button>
+                        <button onClick={this.clickHandler(review.id)} className='delete-review'><i class="far fa-trash-alt"></i></button>
                     </div>
                 )
             }
