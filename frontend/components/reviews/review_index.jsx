@@ -10,7 +10,6 @@ class ReviewIndex extends React.Component {
     }
 
     clickHandler(id) {
-        console.log('hi',this.props);
         return () => this.props.deleteReview(id);
     }
 

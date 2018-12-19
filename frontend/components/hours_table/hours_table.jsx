@@ -7,7 +7,6 @@ export default () => {
         const date = new Date();
         const hours = date.getHours();
         const currDay = date.getDay();
-        console.log(currDay, hours);
         if (day !== currDay) return 'status';
         switch (currDay) {
             // case 0:

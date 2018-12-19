@@ -88,7 +88,6 @@ class BusinessShow extends React.Component {
 
         if (this.props.biz === undefined) return null
         const bizReviews = this.props.biz.reviewIds.map((id) => {
-            console.log(this.props.reviews, id)
             return this.props.reviews[id]
         });
         
