@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import DropDownMenuContainer from '../drop_down_menu/drop_down_menu_container';
-import ReviewIndex from '../reviews/review_index';
+import ReviewIndexContainer from '../reviews/review_index_container';
 import HoursTable from '../hours_table/hours_table';
 import PictureCarouselShow from '../picture_carousel/picture_carousel_show';
 
@@ -260,7 +260,7 @@ class BusinessShow extends React.Component {
                                     <div className='recomended-reviews'><span>Recommended Reviews</span> for {this.props.biz.name}</div>
                                 </div>
                                 {this.props.currentUser ? loggedInReview() : loggedOutReview()}
-                                <ReviewIndex reviews={bizReviews} users={this.props.users} />
+                                <ReviewIndexContainer reviews={bizReviews} users={this.props.users} />
                             </div>
                             <div className='biz-content-bottem-side'>
                                 <HoursTable />
