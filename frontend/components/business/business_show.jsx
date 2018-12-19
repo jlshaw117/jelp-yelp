@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import DropDownMenuContainer from '../drop_down_menu/drop_down_menu_container';
 import ReviewIndex from '../reviews/review_index';
+import HoursTable from '../hours_table/hours_table';
 
 class BusinessShow extends React.Component {
 
@@ -259,6 +260,7 @@ class BusinessShow extends React.Component {
                                 <ReviewIndex reviews={bizReviews} users={this.props.users} />
                             </div>
                             <div className='biz-content-bottem-side'>
+                                <HoursTable />
                             </div>
                         </div>
                     </div>

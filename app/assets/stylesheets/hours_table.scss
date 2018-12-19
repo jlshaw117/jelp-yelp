@@ -1,0 +1,32 @@
+
+.hours-header {
+    font-size: 16px;
+    color: #d32323;
+    font-weight: bold;
+    margin-bottom: 12px; 
+}
+
+.day-of-week {
+    display: flex;
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+
+.day-of-week .day {
+    font-weight: bold;
+    width: 18%;
+}
+    
+.day-of-week .hours {
+    width: 50%;
+}
+
+.day-of-week .status {
+    display: none;
+    color: #41a700;
+    font-weight: bold;
+}
+
+.active.status {
+    display: block;
+}
