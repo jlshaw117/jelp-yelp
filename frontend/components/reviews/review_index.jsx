@@ -63,7 +63,7 @@ class ReviewIndex extends React.Component {
                     </div>
                     <div className='review-index-item-footer'>
                         {
-                            review.user_id === this.props.currentUser.id ? reviewFormLinks() : <div></div>
+                            (this.props.currentUser && review.user_id === this.props.currentUser.id) ? reviewFormLinks() : <div></div>
                         }
                     </div>
                 </div>

@@ -40,13 +40,15 @@ class BusinessShow extends React.Component {
             let alreadyReviewed = false;
             let arrReviews = Object.values(this.props.reviews)
             let reviewId;
-            for (let index = 0; index < arrReviews.length; index++) {
-                if (arrReviews[index].user_id === this.props.currentUser.id) {
-                    alreadyReviewed = true;
-                    reviewId = arrReviews[index].id
+            if (this.props.currentUser) {
+                for (let index = 0; index < arrReviews.length; index++) {
+                    if (arrReviews[index].user_id === this.props.currentUser.id) {
+                        alreadyReviewed = true;
+                        reviewId = arrReviews[index].id
+                    }
                 }
             }
-            if (alreadyReviewed === true) {
+            if (alreadyReviewed) {
                 return (
                     <Link to={`/businesses/${this.props.biz.id}/editReview/${reviewId}`} className='biz-review-button'>
                         <i className="fas fa-star biz-star-review"></i>
