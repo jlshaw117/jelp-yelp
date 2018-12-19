@@ -68,4 +68,19 @@ ActiveRecord::Base.transaction do
   fog_harbor.images.attach(io: File.open("./app/assets/images/fog_harbor_1.jpg"), filename:"fog_harbor_1.jpg")
   fog_harbor.images.attach(io: File.open("./app/assets/images/fog_harbor_2.jpg"), filename:"fog_harbor_2.jpg")
   fog_harbor.images.attach(io: File.open("./app/assets/images/fog_harbor_3.jpg"), filename:"fog_harbor_3.jpg")
+
+
+  Review.create!(user_id: west.id, business_id: fog_harbor.id, rating: 3, body: 'Came here for dinner last night.  Its right on pier 39 overlooking the marina.  Seevice was good.  Our waitress was nice and attentive.  Ambience was inviting.  Food though was sub par, especially for the price.  The seafood was so so.')
+  Review.create!(user_id: batman.id, business_id: fog_harbor.id, rating: 5, body: 'Great view of the sunset from the dining room.  Dinner started with fresh sourdough bread.  They buy the dough from Boudin and bake a batch hourly.  The outside is crispy while the inside is fluffy.  There was a strong sour flavor.  I ordered the mixed grill plate.  French fries were crunchy and had a nice potato flavor.  Shrimp were plump, juicy, with a strong bay seasoning flavor.  I liked the shrimp.  Cod was grilled with a slightly spicier seasoning.  I liked this dish but the mild flavor and the cod was hidden by the seasoning.  Salmon was grilled with a seasoning that had a sweet component.  I loved the interplay between the savory salmon and the sweet flavor from the dry rub.
+  ')
+  Review.create!(user_id: maverick.id, business_id: fog_harbor.id, rating: 5, body: 'I had dinner here for the first time and it was exceptionally scrumptious. I had been here for lunch prior to this visit but wow their dinner had nothing on their brunch. Best in pier 39 ever! Did not disappoint at all! I am so glad I chose to come here over all other restaurants around here.')
+
+
+  Review.create!(user_id: sams.id, business_id: yacht_club.id, rating: 4, body: 'Finally get a chance to try this place out with a group of friend. Reservation is highly recommended for big party; It is always challenging to get so often you would have to make reservation 2 months in advance. 
+
+The benefit of eating with a big group is you get to try many plates. 
+Definitely recommend to others')
+  Review.create!(user_id: goose.id, business_id: yacht_club.id, rating: 3, body: 'I\'ve heard more than enough raves and reviews about this place that my expectations were HYPED. UP. But what they say is true - the higher expectations rise, they harder they fall (ish). Not to say that Liholiho was bad or a poor experience, but I found the food just...OK.')
+  Review.create!(user_id: maverick.id, business_id: yacht_club.id, rating: 4, body: 'Managed to walk in sans reservation the night before thanksgiving. The bar staff were incredibly  knowledgeable, and the drinks were delicious. I enjoyed every dish we ate - the chicken liver mousse toast was my favourite. Almost gave only 4 stars as the boyfriend didn\'t enjoy the food, but he can write his own review :) 
+Probably wouldn\'t queue for this restaurant, or book ages in advance, but would most definitely eat here again.')
 end
