@@ -8,14 +8,14 @@ export const login = user => dispatch => {
 
     return SessionAPIUtil.login(user)
     .then((user) => dispatch(receiveUser(user)),
-    (err) => dispatch(recieveErrors(err.responseJSON)));
+    (err) => dispatch(receiveErrors(err.responseJSON)));
 };
 
 export const fetchUser = id => dispatch => {
 
     return SessionAPIUtil.fetchUser(id)
     .then((user) => dispatch(receiveUser(user)),
-    (err) => dispatch(recieveErrors(err.responseJSON)));
+    (err) => dispatch(receiveErrors(err.responseJSON)));
 };
 
 export const clearErrors = () => {
@@ -29,17 +29,17 @@ export const logout = () => dispatch => {
 
     return SessionAPIUtil.logout()
     .then(() => dispatch(logoutUser()),
-    (err) => dispatch(recieveErrors(err.responseJSON)));
+    (err) => dispatch(receiveErrors(err.responseJSON)));
 };
 
 export const signup = (user) => dispatch => {
 
     return SessionAPIUtil.signup(user)
     .then((user) => dispatch(receiveUser(user)),
-    (err) => dispatch(recieveErrors(err.responseJSON)));
+    (err) => dispatch(receiveErrors(err.responseJSON)));
 };
 
-const recieveErrors = errors => ({
+const receiveErrors = errors => ({
     type: RECEIVE_SESSION_ERRORS,
     errors
 });

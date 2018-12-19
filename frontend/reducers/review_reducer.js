@@ -1,5 +1,5 @@
 import { merge } from 'lodash';
-import { RECIEVE_REVIEW, REMOVE_REVIEW } from '../actions/review_actions';
+import { RECEIVE_REVIEW, REMOVE_REVIEW } from '../actions/review_actions';
 import { RECEIVE_BUSINESS } from '../actions/business_actions';
 
 export default (state = {}, action) => {
@@ -7,7 +7,7 @@ export default (state = {}, action) => {
 
     let newState = merge({}, state);
     switch (action.type) {
-        case RECIEVE_REVIEW:
+        case RECEIVE_REVIEW:
             newState[action.review.id] = action.review;
             return newState;
         case REMOVE_REVIEW:

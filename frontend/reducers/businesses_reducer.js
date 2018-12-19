@@ -1,6 +1,6 @@
 import { merge } from 'lodash';
 import  { RECEIVE_BUSINESS, RECEIVE_ALL_BUSINESSES } from '../actions/business_actions';
-import { RECIEVE_REVIEW } from '../actions/review_actions';
+import { RECEIVE_REVIEW } from '../actions/review_actions';
 
 export default (state = {}, action) => {
     Object.freeze(state);
@@ -12,7 +12,7 @@ export default (state = {}, action) => {
             return newState;
         case RECEIVE_ALL_BUSINESSES:
             return action.businesses;
-        case RECIEVE_REVIEW:
+        case RECEIVE_REVIEW:
             const { review, average_rating } = action;
             newState[review.business_id].reviewIds.push(review.id);
             newState[review.business_id].average_rating = average_rating;
