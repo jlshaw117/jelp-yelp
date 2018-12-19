@@ -7,7 +7,7 @@ class ReviewForm extends React.Component {
     constructor (props) {
         super(props);
 
-        this.state = props.review;
+        this.state = this.props.review;
         // this.state = {
         //     review: props.review,
         //     redirect: false
@@ -16,7 +16,16 @@ class ReviewForm extends React.Component {
     }
 
     componentDidMount() {
-        if (!this.props.biz) this.props.fetchBusiness(this.props.match.params.businessId);
+        this.props.fetchBusiness(this.props.match.params.businessId)
+        this.setState({ ...(this.props.review) });
+    }
+    
+    componentDidUpdate(preProps) {
+        if (preProps.review !== this.props.review) this.setState({...(this.props.review)});
+    }
+
+    componentWillUnmount() {
+        this.props.clearReviewErrors();
     }
 
     handleSubmit (e) {
@@ -32,11 +41,10 @@ class ReviewForm extends React.Component {
     }
 
     render () {
-
+        console.log(this.props)
         // if (this.state.redirect) {
         //     return <Redirect to='/'/>
         // }
-
         const sessionLinks = () => {
             return (
                 <ul className='index-session-links review-form-session-links'>
@@ -72,7 +80,17 @@ class ReviewForm extends React.Component {
                     return '0';
             }
         }
+
+        const errorMessage = () => {
+            return (
+                <div className='review-error-message'>{this.props.errors[0]}</div>
+            )
+        }
+
         if (this.props.biz === undefined) return null
+        if (this.props.review === undefined) return null
+        console.log('props: ', this.props.review)
+        console.log('state: ', this.state)
         return (
             <div className='outer-wrapper'>
                 <div className="review-form">
@@ -109,7 +127,8 @@ class ReviewForm extends React.Component {
                                         <div className='review-rating-message-default'>Select your rating</div>
                                     </div>
                                 </div>
-                                <textarea required className="review-form-body" onChange={this.update('body')} placeholder='Your review helps others learn about great local businesses.' cols="67" rows="15"></textarea>
+                                <textarea required className="review-form-body" onChange={this.update('body')} placeholder='Your review helps others learn about great local businesses.' cols="67" rows="15" value={this.state.body}></textarea>
+                                { this.props.errors.length ? errorMessage() : <div></div>}
                             </div>
                             <div className='review-form-button-wrapper'>
                                 <button className='review-form-submit' onClick={this.handleSubmit}>Post Review</button>
