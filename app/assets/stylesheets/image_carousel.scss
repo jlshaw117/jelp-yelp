@@ -1,0 +1,31 @@
+
+.carousel-wrapper {
+    display: flex;
+    // position: absolute;
+    width: 100%;
+    margin: 0px;
+    align-items: center;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+}
+
+.scroll-button {
+    z-index: 3;
+    position: absolute;
+}
+
+.carousel-img {
+    // width: calc(100% / 3);
+    width: 231px;
+    height: 231px;
+    // padding-bottom: calc(100%/3);
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.next-image {
+    left: 100px;
+}

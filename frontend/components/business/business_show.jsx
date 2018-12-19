@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import DropDownMenuContainer from '../drop_down_menu/drop_down_menu_container';
 import ReviewIndex from '../reviews/review_index';
 import HoursTable from '../hours_table/hours_table';
+import PictureCarouselShow from '../picture_carousel/picture_carousel_show';
 
 class BusinessShow extends React.Component {
 
@@ -248,7 +249,9 @@ class BusinessShow extends React.Component {
                             </div>
                             <div className='biz-bottom-content'>
                                 <div className='biz-show-map'></div>
-                                <div className='biz-show-bottem-content-right'></div>
+                                <div className='biz-show-bottem-content-right'>
+                                    <PictureCarouselShow images={this.props.biz.images} />
+                                </div>
                             </div>
                         </div>
                         <div className='biz-content-bottem'>
