@@ -96,8 +96,8 @@ class SessionForm extends React.Component {
         return (
             <div className ='outer-wrapper'>
                 <header className="form-header">
-                    <div className='logo-conatiner'>
-                        <Link className='logo-link' to='/'>Jelp</Link>
+                    <div className='index-logo'>
+                        <Link className='logo-link' to='/'><img className='logo-img' src={window.logo} /></Link>
                     </div>
                 </header>
                 <div className='form-main'>
