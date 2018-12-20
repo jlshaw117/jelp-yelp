@@ -6,30 +6,30 @@ class Map extends React.Component {
         super(props);
     }
 
-    createMap() {
+    createMap(center) {
         const mapOptions = {
-            center: { lat: 37.7758, lng: -122.435 },
+            center,
             zoom: 12
         };
         this.map = new google.maps.Map(this.mapNode, mapOptions);
     }
 
     componentDidMount () {
-        this.createMap();
+        this.createMap(this.props.center);
         this.props.businesses.forEach((biz) => {
             this.placeMarker(biz);
         });
     }
 
     componentDidUpdate() {
-        this.createMap();
+        this.createMap(this.props.center);
         this.props.businesses.forEach((biz) => {
             this.placeMarker(biz);
         });
     }
 
     placeMarker(biz) {
-        let pos = { lat: biz.long, lng: biz.lat };
+        let pos = { lat: biz.lat, lng: biz.long };
         new google.maps.Marker({
             position: pos,
             map: this.map
