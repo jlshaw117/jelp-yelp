@@ -4,7 +4,7 @@ import configureStore from './store/store';
 import Root from './components/root';
 import { login } from './actions/session_actions';
 import { createReview, deleteReview, updateReview } from './actions/review_actions';
-import { searchBusinesses } from './actions/business_actions';
+import { searchBusinesses, fetchAllBusinesses } from './actions/business_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //testing
     window.searchBusinesses = searchBusinesses;
+    window.fetchAllBusinesses = fetchAllBusinesses;
     window.createReview = createReview;
     window.deleteReview = deleteReview;
     window.updateReview = updateReview;
