@@ -53,8 +53,8 @@ ActiveRecord::Base.transaction do
   maverick.photo.attach(io: File.open("./app/assets/images/maverick_profile_pic.jpg"), filename:"maverick_profile_pic.jpg")
   goose.photo.attach(io: File.open("./app/assets/images/goose_profile_pic.jpg"), filename:"goose_profile_pic.jpg")
 
-  Business.create(name: 'Fog Harbor Fish House', long: 37.809271, lat: -122.410119, address: 'Pier 39', city: 'San Fransisco', state: 'CA', zip: '94133', price: '$$', phone_number: '(415) 632-7593')
-  Business.create(name: 'Liholiho Yacht Club', long: 37.788291, lat: -122.414695, address: '871 Sutter St', city: 'San Fransisco', state: 'CA', zip: '94109', price: '$$$', phone_number: '(415) 845-6384')
+  Business.create(name: 'Fog Harbor Fish House', lat: 37.809271, long: -122.410119, address: 'Pier 39', city: 'San Fransisco', state: 'CA', zip: '94133', price: '$$', phone_number: '(415) 632-7593')
+  Business.create(name: 'Liholiho Yacht Club', lat: 37.788291, long: -122.414695, address: '871 Sutter St', city: 'San Fransisco', state: 'CA', zip: '94109', price: '$$$', phone_number: '(415) 845-6384')
 
   fog_harbor = Business.find_by(name: 'Fog Harbor Fish House')
   yacht_club = Business.find_by(name: 'Liholiho Yacht Club')
