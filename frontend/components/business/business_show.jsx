@@ -64,6 +64,13 @@ class BusinessShow extends React.Component {
                         </Link>
                     )
                 } 
+            } else {
+                return (
+                    <Link to={`/login`} className='biz-review-button'>
+                        <i className="fas fa-star biz-star-review"></i>
+                        <div>Log in to Write a Review</div>
+                    </Link>
+                )
             }
             
         }
