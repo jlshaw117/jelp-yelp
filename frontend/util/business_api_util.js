@@ -34,10 +34,9 @@ export const updateBusiness = (business) => {
 };
 
 export const searchBusinesses = (terms) => {
-
     return $.ajax({
         method: 'GET',
-        url: 'api/businesses/search',
+        url: 'api/search/businesses',
         data: { terms }
     });
 };
