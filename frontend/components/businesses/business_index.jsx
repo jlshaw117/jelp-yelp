@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import DropDownMenuContainer from '../drop_down_menu/drop_down_menu_container';
 import CategoryDropDwon from '../drop_down_menu/category_drop_down';
 import SearchBarContainer from '../search/search_bar_container';
+import Map from '../map/map';
 
 class BusinessIndex extends React.Component {
 
@@ -192,7 +193,9 @@ class BusinessIndex extends React.Component {
                         <ul className='business-index'>
                             {indexItems}
                         </ul>
-                        <div className='index-map'></div>                
+                        <div className='index-map'>
+                            <Map businesses={this.props.businesses}/>
+                        </div>                
                     </div>
                 </div>
             </div>
