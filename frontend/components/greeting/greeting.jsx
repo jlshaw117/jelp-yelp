@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import DropDownMenuContainer from '../drop_down_menu/drop_down_menu_container';
+import SearchBarContainer from '../search/search_bar_container';
 
 const Greeting = ({ currentUser, logout }) => {
     const sessionLinks = () => {
@@ -42,8 +43,8 @@ const Greeting = ({ currentUser, logout }) => {
                     <div className='home-logo'>
                         <Link className='logo-link' to='/'><img src={window.logo} alt=""/></Link>
                     </div>
-                    <div className="search-bar">
-                        <Link to='/businesses'>All Businesses</Link>
+                    <div className="home-search-bar">
+                        <SearchBarContainer placeHolder='burgers, barbers, spas...' />
                     </div>
                 </header>
             </div>
