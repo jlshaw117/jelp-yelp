@@ -78,7 +78,7 @@ class BusinessShow extends React.Component {
                     <div className='biz-show-review-left'>
                         <div className='biz-show-user-profile-img'><Link to='/'><img className='user-profile-image' src={this.props.currentUser.photo} /></Link></div>
                         <div className='biz-show-user-details'>
-                            <div className='biz-show-user-name'><Link to='/'>Demo U.</Link></div>                            
+                            <div className='biz-show-user-name'><Link to='/'>{this.props.currentUser.f_name} {this.props.currentUser.l_name[0]}.</Link></div>                            
                         </div>
                     </div>
                     <div className='biz-show-review-right'>
