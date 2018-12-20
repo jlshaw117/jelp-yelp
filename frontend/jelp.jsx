@@ -4,6 +4,7 @@ import configureStore from './store/store';
 import Root from './components/root';
 import { login } from './actions/session_actions';
 import { createReview, deleteReview, updateReview } from './actions/review_actions';
+import { searchBusinesses } from './actions/business_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ReactDOM.render(<Root store={store}/>, root);
 
     //testing
+    window.searchBusinesses = searchBusinesses;
     window.createReview = createReview;
     window.deleteReview = deleteReview;
     window.updateReview = updateReview;
