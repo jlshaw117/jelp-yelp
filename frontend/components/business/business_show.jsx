@@ -4,6 +4,7 @@ import DropDownMenuContainer from '../drop_down_menu/drop_down_menu_container';
 import ReviewIndexContainer from '../reviews/review_index_container';
 import HoursTable from '../hours_table/hours_table';
 import PictureCarouselShow from '../picture_carousel/picture_carousel_show';
+import Map from '../map/map';
 
 class BusinessShow extends React.Component {
 
@@ -288,7 +289,7 @@ class BusinessShow extends React.Component {
                                 </div>
                             </div>
                             <div className='biz-bottom-content'>
-                                <div className='biz-show-map'></div>
+                                <div className='biz-show-map'><Map businesses={[this.props.biz]}/></div>
                                 <div className='biz-show-bottem-content-right'>
                                     <PictureCarouselShow images={this.props.biz.images} />
                                 </div>
