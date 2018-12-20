@@ -48,21 +48,23 @@ class BusinessShow extends React.Component {
                     }
                 }
             }
-            if (alreadyReviewed) {
-                return (
-                    <Link to={`/businesses/${this.props.biz.id}/editReview/${reviewId}`} className='biz-review-button'>
-                        <i className="fas fa-star biz-star-review"></i>
-                        <div>Edit Your Review</div>
-                    </Link>
-                )
-            } else {
-                return (
-                    <Link to={`/businesses/${this.props.biz.id}/newReview`} className='biz-review-button'>
-                        <i className="fas fa-star biz-star-review"></i>
-                        <div>Write a Review</div>
-                    </Link>
-                )
-            } 
+            if (this.props.currentUser) {
+                if (alreadyReviewed) {
+                    return (
+                        <Link to={`/businesses/${this.props.biz.id}/editReview/${reviewId}`} className='biz-review-button'>
+                            <i className="fas fa-star biz-star-review"></i>
+                            <div>Edit Your Review</div>
+                        </Link>
+                    )
+                } else {
+                    return (
+                        <Link to={`/businesses/${this.props.biz.id}/newReview`} className='biz-review-button'>
+                            <i className="fas fa-star biz-star-review"></i>
+                            <div>Write a Review</div>
+                        </Link>
+                    )
+                } 
+            }
             
         }
 
@@ -90,7 +92,7 @@ class BusinessShow extends React.Component {
                             <div id='one' className='star'></div>
                         </div>
                         <div className='biz-show-start-review'>
-                            <Link to='/' className='biz-show-strat-review-text'>Start your review of <span>{this.props.biz.name}</span></Link>
+                            <Link to={`/businesses/${this.props.biz.id}/newReview`} className='biz-show-strat-review-text'>Start your review of <span>{this.props.biz.name}</span></Link>
                         </div>
                     </div>
                 </div>
