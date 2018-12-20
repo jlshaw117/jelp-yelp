@@ -3,11 +3,12 @@ import BusinessIndexItem from './business_index_item';
 import { Link } from 'react-router-dom';
 import DropDownMenuContainer from '../drop_down_menu/drop_down_menu_container';
 import CategoryDropDwon from '../drop_down_menu/category_drop_down';
+import SearchBarContainer from '../search/search_bar_container';
 
 class BusinessIndex extends React.Component {
 
     componentDidMount () {
-        this.props.fetchAllBusinesses();
+        // this.props.fetchAllBusinesses();
     }
 
     render () {
@@ -71,7 +72,9 @@ class BusinessIndex extends React.Component {
                         <div className='index-logo'>
                             <Link className='logo-link' to='/'><img className='logo-img' src={window.logo} /></Link>
                         </div>
-                        <div className='index-search-bar'></div>
+                        <div className='index-search-bar'>
+                            <SearchBarContainer placeHolder='tacos, cheap dinner...' />
+                        </div>
                         <nav className="index-nav-bar">
                             {this.props.currentUser ? greeting() : sessionLinks()}
                         </nav>

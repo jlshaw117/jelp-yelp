@@ -14,7 +14,6 @@ export const fetchAllBusinesses = () => dispatch => {
 };
 
 export const searchBusinesses = (terms) => dispatch => {
-
     return (
         BusinessAPIUtil.searchBusinesses(terms)
         .then((businesses) => dispatch(receiveAllBusinesses(businesses)),
@@ -62,6 +61,7 @@ const receiveBusiness = ({ business, reviews, users}) => ({
 });
 
 const receiveAllBusinesses = (businesses) => ({
+
     type: RECEIVE_ALL_BUSINESSES,
     businesses
 });
