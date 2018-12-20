@@ -1,5 +1,4 @@
 import React from 'react';
-import MarkerManager from '../../util/marker_manager';
 
 class Map extends React.Component {
     constructor(props) {
