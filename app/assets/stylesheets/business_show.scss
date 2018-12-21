@@ -26,7 +26,6 @@
 
 .biz-main-container {
     padding: 15px 0px;
-    // border: 1px solid black;
 }
 
 ////######## BIZ TOP INFO #########/////////
@@ -143,14 +142,12 @@
 .biz-show-map {
     width: 31%;
     height: 355px;
-    border: 1px solid black;
 }
 
 .biz-show-bottem-content-right {
     display: flex;
     width: 69%;
     height: 355px;
-    // border: 1px solid black;
     align-items: center;
 }
 
@@ -249,7 +246,6 @@
 
 .biz-content-bottem-side {
     width: calc(100% / 3);
-    // border: 1px solid black;
     padding-left: 30px;
 }
 
@@ -265,13 +261,11 @@
 
 .star {
     background-image: url(image_path('big_stars.png'));
-    // overflow: hidden;
     background-repeat: no-repeat;
     height: 30px;
     width: 30px;
     padding-right: 3px;
     background-position: 0 0px;
-    // margin-top: 5px;
 }
 
 
@@ -319,75 +313,3 @@
     background-position: 0 -150px;
     cursor: pointer;
 }
-
-// .star#one {
-//     position: absolute;
-//     z-index: 5;
-//     background-position: 0 0;
-    
-// }
-
-// .star#two {
-//     position: absolute;
-//     z-index: 4;
-//     width: 51px;
-//     background-position: 0 0;
-    
-// }
-
-// .star#three {
-//     position: absolute;
-//     width: 78px;
-//     z-index: 3;
-//     background-position: 0 0;
-    
-// }
-
-// .star#four {
-//     width: 105px;
-//     position: absolute;
-//     z-index: 2;
-//     background-position: 0 0;
-    
-// }
-
-// .star#five {
-//     width: 132px;
-//     position: absolute;
-//     z-index: 1;
-//     background-position: 0 0;
-    
-// }
-
-// .star#one:hover {
-//     z-index: 6;
-//     cursor: pointer;
-//     background-position: 0 -24px;
-// }
-
-// .star#two:hover {
-//     z-index: 6;
-//     cursor: pointer;
-//     background-position: 0 -72px;
-// }
-
-// .star#three:hover {
-//     z-index: 6;
-//     cursor: pointer;
-//     background-position: 0 -120px;
-// }
-
-// .star#four:hover {
-//     z-index: 6;
-//     cursor: pointer;
-//     background-position: 0 -168px;
-// }
-
-// .star#five:hover {
-//     z-index: 6;
-//     cursor: pointer;
-//     background-position: 0 -216px;
-// }
-
-
-
