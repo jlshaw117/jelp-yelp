@@ -9,7 +9,6 @@ export default (state = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_USER:
-            // return merge({}, state, { [action.user.id]: action.user });
             newState[action.user.id] = action.user;
             return newState;
         case RECEIVE_REVIEW:
