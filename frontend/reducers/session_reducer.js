@@ -1,6 +1,5 @@
 import {merge} from 'lodash';
 import { RECEIVE_USER, LOGOUT_USER } from '../actions/session_actions';
-import { RECEIVE_BUSINESS } from '../actions/business_actions';
 
 
 export default (state = {id: null}, action) => {
@@ -13,9 +12,6 @@ export default (state = {id: null}, action) => {
         case LOGOUT_USER:
             newState.id = null;
             return newState;
-        // case RECEIVE_BUSINESS:
-        //     newState.businessId = action.business.id;
-        //     return newState;
         default:
             return state;
     }
