@@ -7,9 +7,19 @@ import SearchBarContainer from '../search/search_bar_container';
 import Map from '../map/map';
 
 class BusinessIndex extends React.Component {
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         results: false
+    //     };
+    // }
 
     componentDidMount () {
-        // this.props.fetchAllBusinesses();
+        if (!this.props.results) this.props.fetchAllBusinesses();
+    }
+    
+    componentDidUpdate(preProps) {
+        if (this.props.results !== preProps.results && !this.props.results) this.props.fetchAllBusinesses();
     }
 
     render () {
@@ -65,6 +75,24 @@ class BusinessIndex extends React.Component {
                 </div>
             );
         };
+
+        const result = () => {
+
+            return (
+                <div className='display-results-message'>
+                    <div><span>Showing Results for:</span> {this.props.search}</div>
+                </div>
+            )
+        }
+
+        const noResult = () => {
+            return (
+                <div className='display-results-message'>
+                    <div><span>There are no results for:</span> {this.props.search}</div>
+                    <div><span>showing all businesses</span></div>
+                </div>
+            )
+        }
 
         return (
             <div className='outer-wrapper'>
@@ -186,7 +214,7 @@ class BusinessIndex extends React.Component {
                     </div>
                 </div>
                 <div className='search-params-container'>
-                
+                    {this.props.results ? result() : noResult()}
                 </div>
                 <div className='index-main-content'>
                     <div className='index-main-content-container'>
