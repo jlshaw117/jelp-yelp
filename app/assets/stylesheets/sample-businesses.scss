@@ -5,6 +5,8 @@
     height: 100%;
 }
 
+
+
 .sample-businesses-wrapper {
     display: flex;
     flex-direction: column;
@@ -17,6 +19,13 @@
     width: 800px;
 }
 
+.businesses-list a {
+    text-decoration: none;
+    color: black;
+    width: calc(25% - 38px);
+    border: 1px solid #e6e6e6;
+    background-color: white;
+}
 #root {
     height: 100vh;
 }
@@ -30,12 +39,6 @@
     color: #d32323;
     margin-bottom: 24px;
     font-weight: 700
-}
-
-.sample-business {
-    width: calc(25% - 38px);
-    border: 1px solid #e6e6e6;
-    background-color: white;
 }
 
 .sample-filler {

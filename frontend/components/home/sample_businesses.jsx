@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class SampleBusinesses extends React.Component {
 
@@ -28,25 +29,25 @@ class SampleBusinesses extends React.Component {
                 <div className='sample-businesses-wrapper'>
                     <div className='sample-header'>Check out These Businesses</div>
                     <div className='businesses-list'>
-                        <div className='sample-business'>
+                        <Link to={`/businesses/${biz1.id}`}><div className='sample-business'>
                             <img src={biz1.images[1]} alt=""/>
                             <div className='sample-business-name'>{biz1.name}</div>
-                        </div>
+                        </div></Link>
                         <div className='sample-filler'></div>
-                        <div className='sample-business'>
+                        <Link to={`/businesses/${biz2.id}`}><div className='sample-business'>
                             <img src={biz2.images[1]} alt=""/>
                             <div className='sample-business-name'>{biz2.name}</div>
-                        </div>
+                        </div></Link>
                         <div className='sample-filler'></div>
-                        <div className='sample-business'>
+                        <Link to={`/businesses/${biz3.id}`}><div className='sample-business'>
                             <img src={biz3.images[1]} alt=""/>
                             <div className='sample-business-name'>{biz3.name}</div>
-                        </div>
+                        </div></Link>
                         <div className='sample-filler'></div>
-                        <div className='sample-business'>
+                        <Link to={`/businesses/${biz4.id}`}><div className='sample-business'>
                             <img src={biz4.images[1]} alt=""/>
                             <div className='sample-business-name'>{biz4.name}</div>
-                        </div>
+                        </div></Link>
                     </div>
                 </div>
             </div>
