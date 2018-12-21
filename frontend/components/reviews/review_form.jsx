@@ -8,10 +8,6 @@ class ReviewForm extends React.Component {
         super(props);
 
         this.state = this.props.review;
-        // this.state = {
-        //     review: props.review,
-        //     redirect: false
-        // };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -30,7 +26,7 @@ class ReviewForm extends React.Component {
 
     handleSubmit (e) {
         e.preventDefault();
-        this.props.action(this.state).then(() => this.props.history.push(`/businesses/${this.props.biz.id}`), (err) => console.log(err));
+        this.props.action(this.state).then(() => this.props.history.push(`/businesses/${this.props.biz.id}`));
 
     }
 
@@ -41,10 +37,6 @@ class ReviewForm extends React.Component {
     }
 
     render () {
-        console.log(this.props)
-        // if (this.state.redirect) {
-        //     return <Redirect to='/'/>
-        // }
         const sessionLinks = () => {
             return (
                 <ul className='index-session-links review-form-session-links'>
@@ -89,8 +81,6 @@ class ReviewForm extends React.Component {
 
         if (this.props.biz === undefined) return null
         if (this.props.review === undefined) return null
-        console.log('props: ', this.props.review)
-        console.log('state: ', this.state)
         return (
             <div className='outer-wrapper'>
                 <div className="review-form">
