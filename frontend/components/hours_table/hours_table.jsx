@@ -9,8 +9,6 @@ export default () => {
         const currDay = date.getDay();
         if (day !== currDay) return 'status';
         switch (currDay) {
-            // case 0:
-            //     return 'status';
             case 1:
                 if (hours >= 9 && hours <= 17) {
                     return 'status active';
