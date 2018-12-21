@@ -1,7 +1,6 @@
 
 .carousel-wrapper {
     display: flex;
-    // position: absolute;
     width: 100%;
     margin: 0px;
     align-items: center;
@@ -14,16 +13,13 @@
 
 .scroll-button {
     z-index: 10;
-    // position: absolute;
     color: white;
-    // position: relative;
     font-size: 30px;
 
 }
 
 #next {
     position: relative;
-    // color: red;
     margin-right: 10px;
     right: 32px;
 }
@@ -34,8 +30,6 @@
 }
 
 .carousel-img {
-    // width: calc(100% / 3);
-    // padding-bottom: calc(100%/3);
     width: 231px;
     height: 231px;
     overflow: hidden;
