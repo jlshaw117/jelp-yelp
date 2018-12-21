@@ -5,23 +5,24 @@ class Map extends React.Component {
         super(props);
     }
 
-    createMap(center) {
+    createMap(center, zoom) {
+        zoom = parseInt(zoom);
         const mapOptions = {
             center,
-            zoom: 12
+            zoom
         };
         this.map = new google.maps.Map(this.mapNode, mapOptions);
     }
 
     componentDidMount () {
-        this.createMap(this.props.center);
+        this.createMap(this.props.center, this.props.zoom);
         this.props.businesses.forEach((biz) => {
             this.placeMarker(biz);
         });
     }
 
     componentDidUpdate() {
-        this.createMap(this.props.center);
+        this.createMap(this.props.center, this.props.zoom);
         this.props.businesses.forEach((biz) => {
             this.placeMarker(biz);
         });

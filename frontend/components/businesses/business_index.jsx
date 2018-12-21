@@ -222,7 +222,7 @@ class BusinessIndex extends React.Component {
                             {indexItems}
                         </ul>
                         <div className='index-map'>
-                            <Map businesses={this.props.businesses} center={{lat: 37.7758, lng: -122.435} }/>
+                            <Map businesses={this.props.businesses} center={{lat: 37.7758, lng: -122.435} } zoom='11'/>
                         </div>                
                     </div>
                 </div>
