@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import SearchBar from './search_bar';
-import { searchBusinesses } from '../../actions/business_actions';
+import { searchBusinesses } from '../../actions/search_actions';
 import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = (state, ownProps) => {
