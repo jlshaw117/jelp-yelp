@@ -213,6 +213,23 @@
     height: 133px;
     background: #f5f5f5;
     border-bottom: 1px solid #e6e6e6;
+    display: flex;
+    justify-content: space-around;
+}
+
+.display-results-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 1020px;
+    height: 100%;
+    padding-left: 10px;
+    font-size: 21px;
+    color: #333;
+}
+
+.display-results-message span {
+    font-weight: 700;
 }
 
 /////##### Main Content Index ####////
@@ -328,8 +345,11 @@
 }
 
 .index-item-review {
-    height: 33%;
+    // display: flex;
+    height: 3.6em;
+    width: 300px;
     // border: 1px solid black;
+    // white-space: nowrap;
     padding: 10px;
     overflow: hidden;
     text-overflow: ellipsis;
