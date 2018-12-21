@@ -139,9 +139,31 @@
     display: flex;
 }
 
-.biz-show-map {
+.biz-show-side {
     width: 31%;
-    height: 355px;
+    // height: 355px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+
+.biz-show-map {
+    border: 1px solid #ccc;
+    width: calc(100% - 5px);
+    height: 33%;
+}
+
+.biz-show-info {
+    padding-top: 10px;
+    width: calc(100% - 5px);
+}
+
+.show-business-city {
+    padding-left: 35px;
+    padding-bottom: 8px;
 }
 
 .biz-show-bottem-content-right {

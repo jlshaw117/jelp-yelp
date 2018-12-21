@@ -289,7 +289,16 @@ class BusinessShow extends React.Component {
                                 </div>
                             </div>
                             <div className='biz-bottom-content'>
-                                <div className='biz-show-map'><Map businesses={[this.props.biz]} center={{lat: this.props.biz.lat, lng: this.props.biz.long}} zoom='16'/></div>
+                                <div className='biz-show-side'>
+                                    <div className='biz-show-map'>
+                                        <Map businesses={[this.props.biz]} center={{lat: this.props.biz.lat, lng: this.props.biz.long}} zoom='16'/>
+                                    </div>
+                                    <div className='biz-show-info'>
+                                        <div className='show-business-address'><i className="fas fa-map-marker-alt"></i>{this.props.biz.address}</div>
+                                        <div className='show-business-city'>{this.props.biz.city} {this.props.biz.state}</div>
+                                        <div className='show-business-phone'><i className="fas fa-phone"></i>{this.props.biz.phone_number}</div>
+                                    </div>
+                                </div>
                                 <div className='biz-show-bottem-content-right'>
                                     <PictureCarouselShow images={this.props.biz.images} />
                                 </div>
