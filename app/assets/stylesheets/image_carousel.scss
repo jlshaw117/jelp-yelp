@@ -35,11 +35,16 @@
 
 .carousel-img {
     // width: calc(100% / 3);
+    // padding-bottom: calc(100%/3);
     width: 231px;
     height: 231px;
-    // padding-bottom: calc(100%/3);
-    object-fit: cover;
     overflow: hidden;
+}
+
+.carousel-img-img {
+    width: 231px;
+    height: 231px;    
+    object-fit: cover;
 }
 
 .center.carousel-img {
