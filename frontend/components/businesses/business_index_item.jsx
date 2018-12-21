@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const indexItem = ({ biz, index }) => {
 
-    let review = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia commodi debitis odit sed fugiat rerum dolorum omnis laudantium. Iusto dolores suscipit beatae incidunt nemo ratione quod dolore, dolorum sit facere.'
+    let review = biz.reviewText;
 
     let avgRating = () => {
         let rating = parseFloat(biz.average_rating);
