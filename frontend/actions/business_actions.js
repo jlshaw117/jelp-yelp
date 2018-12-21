@@ -13,13 +13,13 @@ export const fetchAllBusinesses = () => dispatch => {
     );
 };
 
-export const searchBusinesses = (terms) => dispatch => {
-    return (
-        BusinessAPIUtil.searchBusinesses(terms)
-        .then((businesses) => dispatch(receiveAllBusinesses(businesses)),
-        (err) => dispatch(receiveErrors(err.responseJSON)))
-    );
-};
+// export const searchBusinesses = (terms) => dispatch => {
+//     return (
+//         BusinessAPIUtil.searchBusinesses(terms)
+//         .then((businesses) => dispatch(receiveAllBusinesses(businesses)),
+//         (err) => dispatch(receiveErrors(err.responseJSON)))
+//     );
+// };
 
 export const fetchBusiness = (id) => dispatch => {
 
