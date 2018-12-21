@@ -12,7 +12,7 @@ import EditReviewFormContainer from './reviews/edit_review_form_container';
 const App = () => {
 
     return (
-        <div>
+        <div className='splash-wrapper'>
             <header>
                 
             </header>

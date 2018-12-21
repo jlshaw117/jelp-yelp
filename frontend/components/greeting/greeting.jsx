@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import DropDownMenuContainer from '../drop_down_menu/drop_down_menu_container';
 import SearchBarContainer from '../search/search_bar_container';
+import SampleBusinessesContainer from '../home/sample_businesses_container';
 
 const Greeting = ({ currentUser, logout }) => {
     const sessionLinks = () => {
@@ -28,26 +29,29 @@ const Greeting = ({ currentUser, logout }) => {
     };
 
     return (
-        <div className='outer-wrapper-home'>
-            <div className='inner-wrapper'>
-                <header className="home-header">
-                    <div className='overlay'></div>
-                    <nav className="home-nav-bar">
-                        <ul className='page-links'>
-                            <li><Link to='/'>Write a Review</Link></li>
-                            <li><Link to='/'>Events</Link></li>
-                            <li><Link to='/'>Talk</Link></li>
-                        </ul>
-                        {currentUser ? greeting() : sessionLinks()}
-                    </nav>
-                    <div className='home-logo'>
-                        <Link className='logo-link' to='/'><img src={window.logo} alt=""/></Link>
-                    </div>
-                    <div className="home-search-bar">
-                        <SearchBarContainer placeHolder='burgers, barbers, spas...' />
-                    </div>
-                </header>
+        <div className='outer-wrapper'>
+            <div className='outer-wrapper-home'>
+                <div className='inner-wrapper'>
+                    <header className="home-header">
+                        <div className='overlay'></div>
+                        <nav className="home-nav-bar">
+                            <ul className='page-links'>
+                                <li><Link to='/'>Write a Review</Link></li>
+                                <li><Link to='/'>Events</Link></li>
+                                <li><Link to='/'>Talk</Link></li>
+                            </ul>
+                            {currentUser ? greeting() : sessionLinks()}
+                        </nav>
+                        <div className='home-logo'>
+                            <Link className='logo-link' to='/'><img src={window.logo} alt=""/></Link>
+                        </div>
+                        <div className="home-search-bar">
+                            <SearchBarContainer placeHolder='burgers, barbers, spas...' />
+                        </div>
+                    </header>
+                </div>
             </div>
+            <SampleBusinessesContainer />
         </div>
     );
 };
