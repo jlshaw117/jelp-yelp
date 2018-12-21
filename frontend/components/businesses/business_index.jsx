@@ -7,12 +7,6 @@ import SearchBarContainer from '../search/search_bar_container';
 import Map from '../map/map';
 
 class BusinessIndex extends React.Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         results: false
-    //     };
-    // }
 
     componentDidMount () {
         if (!this.props.results) this.props.fetchAllBusinesses();
@@ -24,26 +18,6 @@ class BusinessIndex extends React.Component {
 
     render () {
 
-        // const restaurants = [
-        //     [<i className="fas fa-utensils"></i>, 'Burgers'],
-        //     [<i className="fas fa-utensils"></i>, 'Mexican'],
-        //     [<i className="fas fa-utensils"></i>, 'Italian'],
-        //     [<i className="fas fa-utensils"></i>, 'Sushi']
-        // ];
-
-        // const homeServices = [
-        //     [<i className="fas fa-home"></i>, "Contracters"],
-        //     [<i className="fas fa-home"></i>, 'Electricians'],
-        //     [<i className="fas fa-home"></i>, 'Landscaping'],
-        //     [<i className="fas fa-home"></i>, 'Movers']
-        // ];
-
-        // const autoServices = [
-        //     [<i className="fas fa-car"></i>, 'Auto Repair'],
-        //     [<i className="fas fa-car"></i>, 'Car Dealers'],
-        //     [<i className="fas fa-car"></i>, 'Auto Detailing'],
-        //     [<i className="fas fa-car"></i>, 'Towing']
-        // ];
 
         let indexItems = this.props.businesses.map((biz, idx) => {
             return (
