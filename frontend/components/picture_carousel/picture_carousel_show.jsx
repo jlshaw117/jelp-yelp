@@ -56,7 +56,7 @@ class PictureCarouselShow extends React.Component {
                         this.props.images.slice(this.state.startIdx, this.state.endIdx).map((image, idx) => {
                             if (idx === 1) {
                                 return (
-                                    <div key={idx} className='center carousel-img'><img src={image} /></div>
+                                    <div key={idx} className='center carousel-img'><img className='carousel-img-img' src={image} /></div>
                                 )
                             } else {
                                 return (
@@ -64,7 +64,7 @@ class PictureCarouselShow extends React.Component {
                                     key={idx} 
                                     className='carousel-img'
                                     onMouseOver={this.changeCenter}
-                                    onMouseOut={this.resetCenter}><img src={image} /></div>
+                                    onMouseOut={this.resetCenter}><img className='carousel-img-img' src={image} /></div>
                                 )
                             }
                         })

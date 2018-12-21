@@ -117,7 +117,7 @@ ActiveRecord::Base.transaction do
   beretta.images.attach(io: File.open("./app/assets/images/beretta_1.jpg"), filename:"beretta_1.jpg")
   beretta.images.attach(io: File.open("./app/assets/images/beretta_2.jpg"), filename:"beretta_2.jpg")
   beretta.images.attach(io: File.open("./app/assets/images/beretta_3.jpg"), filename:"beretta_3.jpg")
-
+  
   delfina.images.attach(io: File.open("./app/assets/images/delfina_0.jpg"), filename:"delfina_0.jpg")
   delfina.images.attach(io: File.open("./app/assets/images/delfina_1.jpg"), filename:"delfina_1.jpg")
   delfina.images.attach(io: File.open("./app/assets/images/delfina_2.jpg"), filename:"delfina_2.jpg")
