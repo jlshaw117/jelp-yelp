@@ -30,6 +30,11 @@
     width: 90%;
     color: black;
 }
+
+.search-input:focus {
+    border: none;
+}
+
 .search-button {
     color: white;
     background: #be2020;
