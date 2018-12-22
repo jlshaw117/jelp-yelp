@@ -9,7 +9,7 @@ class SampleBusinesses extends React.Component {
 
     render() {
 
-        if (!this.props.businesses[0]) return null;
+        if (this.props.businesses.length < 4) return null;
         const randIdx = (bizes) => {
             let indicies = [];
             while (indicies.length < 4) {
