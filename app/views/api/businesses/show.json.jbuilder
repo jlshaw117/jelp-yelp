@@ -3,9 +3,9 @@
 json.business do
   json.partial! '/api/businesses/business', business: @business
   json.reviewIds @business.reviews.pluck(:id)
+  json.businessTags @business.tags.map { |tag| tag.name }
 end
 
-json.businessTags biz.tags.map { |tag| tag.name }
 
 @business.reviews.each do |review|
   json.reviews do
