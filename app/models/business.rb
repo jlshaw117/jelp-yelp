@@ -35,6 +35,15 @@ class Business < ApplicationRecord
         foreign_key: :business_id,
         class_name: :Review
 
+    has_many :taggings,
+        primary_key: :id,
+        foreign_key: :business_id,
+        class_name: :Tagging
+
+    has_many :tags,
+    through: :taggings,
+    source: :tags
+
     # has_one_attached :photo
     has_many_attached :images
 

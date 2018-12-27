@@ -16,8 +16,4 @@ class Tag < ApplicationRecord
      primary_key: :id,
      foreign_key: :tag_id,
      class_name: :Tagging
-
-    has_many :businesses,
-        through: :taggings,
-        source: :businesses
 end
