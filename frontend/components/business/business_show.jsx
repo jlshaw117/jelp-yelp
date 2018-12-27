@@ -8,8 +8,20 @@ import Map from '../map/map';
 
 class BusinessShow extends React.Component {
 
+    constructor(props) {
+        super(props);
+
+        this.handleClick = this.handleClick.bind(this);
+    }
+
     componentDidMount () {
         this.props.fetchBusiness(this.props.match.params.businessId);
+    }
+
+    handleClick(e) {
+        e.preventDefault();
+        this.props.searchBusinesses(e.currentTarget.value);
+        this.props.history.push('/businesses');
     }
 
     render () {
