@@ -4,9 +4,9 @@ class Api::SearchesController < ApplicationController
         @string = params[:terms]
         search_terms = @string.split
         result_string = search_terms.map do |term|
-            "LOWER(name) LIKE '%#{term.downcase}%'"
+            "LOWER(businesses.name) LIKE '%#{term.downcase}%' OR LOWER(tags.name) LIKE '%#{term.downcase}%'"
         end.join(" OR ")
-        @result = Business.where(result_string)
+        @result = Business.joins(:tags).where(result_string)
         @results = @result.empty? ? false : true
         render 'api/searches/business_results'
     end
