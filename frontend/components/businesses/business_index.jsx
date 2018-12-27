@@ -1,5 +1,5 @@
 import React from 'react';
-import BusinessIndexItem from './business_index_item';
+import BusinessIndexItemContainer from './business_index_item_container';
 import { Link } from 'react-router-dom';
 import DropDownMenuContainer from '../drop_down_menu/drop_down_menu_container';
 import CategoryDropDwon from '../drop_down_menu/category_drop_down';
@@ -33,7 +33,7 @@ class BusinessIndex extends React.Component {
         let indexItems = this.props.businesses.map((biz, idx) => {
             return (
                 <div key={idx}>
-                    <BusinessIndexItem index={idx} biz={biz} />
+                    <BusinessIndexItemContainer index={idx} biz={biz} />
                 </div>
             )
         });
