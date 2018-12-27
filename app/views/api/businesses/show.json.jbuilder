@@ -5,6 +5,8 @@ json.business do
   json.reviewIds @business.reviews.pluck(:id)
 end
 
+json.businessTags biz.tags.map { |tag| tag.name }
+
 @business.reviews.each do |review|
   json.reviews do
     json.set! review.id do
