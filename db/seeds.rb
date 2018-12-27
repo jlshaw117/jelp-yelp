@@ -196,4 +196,83 @@ ActiveRecord::Base.transaction do
   Review.create!(user_id: west.id, business_id: urban.id, rating: 4, body: 'Major remodel: Kevin was the low bid, complete on-time and on budget to the highest quality with no unpleasant surprises.')
   Review.create!(user_id: sams.id, business_id: urban.id, rating: 5, body: 'My wife and I hired Kevin and his team to do build customized shelving, closets, put in new lighting, and put in doors in our bedrooms. Kevin was fantastic at managing his team and keeping the project on-budget and on-time. Best of all, the work has very high-quality. I highly recommend him.')
 
+  #Tags
+
+  Tag.create!(name: 'Restaurant')
+  Tag.create!(name: 'Seafood')
+  Tag.create!(name: 'Italian')
+  Tag.create!(name: 'Mexican')
+  Tag.create!(name: 'Burgers')
+
+  Tag.create!(name: 'Auto Services')
+  Tag.create!(name: 'Dealer')
+  Tag.create!(name: 'Auto Repair')
+  Tag.create!(name: 'Towing')
+  Tag.create!(name: 'Auto Detail')
+  
+  Tag.create!(name: 'Home Services')
+  Tag.create!(name: 'Contractor')
+  Tag.create!(name: 'Electrician')
+  Tag.create!(name: 'Landscaping')
+  Tag.create!(name: 'Mover')
+  
+  res = Tag.find_by(name: 'Restaurant')
+  sea = Tag.find_by(name: 'Seafood')
+  ital = Tag.find_by(name: 'Italian')
+  mex = Tag.find_by(name: 'Mexican')
+  burg = Tag.find_by(name: 'Burgers')
+
+  auto_s = Tag.find_by(name: 'Auto Services')
+  dealer = Tag.find_by(name: 'Dealer')
+  auto_r = Tag.find_by(name: 'Auto Repair')
+  tow = Tag.find_by(name: 'Towing')
+  auto_d = Tag.find_by(name: 'Auto Detail')
+
+  home_s = Tag.find_by(name: 'Home Services')
+  cont = Tag.find_by(name: 'Contractor')
+  elec = Tag.find_by(name: 'Electrician')
+  land = Tag.find_by(name: 'Landscaping')
+  mover = Tag.find_by(name: 'Mover')  
+
+  #Tagging
+
+  #fog tags
+  tagging.create!(tag_id: res.id, business_id: fog_harbor.id)
+  tagging.create!(tag_id: sea.id, business_id: fog_harbor.id)
+  
+  #yacht tags
+  tagging.create!(tag_id: res.id, business_id: yacht_club.id)
+  tagging.create!(tag_id: sea.id, business_id: yacht_club.id)
+  
+  #the house tags
+  tagging.create!(tag_id: res.id, business_id: the_house.id)
+
+  #el falolito tags
+  tagging.create!(tag_id: res.id, business_id: el_farolito.id)
+  tagging.create!(tag_id: mex.id, business_id: el_farolito.id)
+
+  #The little chihuahua tags
+  tagging.create!(tag_id: res.id, business_id: chihuahua.id)
+  tagging.create!(tag_id: mex.id, business_id: chihuahua.id)
+  
+  #Bella tags
+  tagging.create!(tag_id: res.id, business_id: bella.id)
+  tagging.create!(tag_id: ital.id, business_id: bella.id)
+
+  #Beretta Tags
+  tagging.create!(tag_id: res.id, business_id: beretta.id)
+  tagging.create!(tag_id: ital.id, business_id: beretta.id)
+
+  #delfina Tags
+  tagging.create!(tag_id: res.id, business_id: delfina.id)
+  tagging.create!(tag_id: ital.id, business_id: delfina.id)
+
+  #Mizen Tags
+  tagging.create!(tag_id: home_s.id, business_id: mizen.id)
+  tagging.create!(tag_id: cont.id, business_id: mizen.id)
+
+  #Urban Tags
+  tagging.create!(tag_id: home_s.id, business_id: urban.id)
+  tagging.create!(tag_id: cont.id, business_id: urban.id)
+
 end
