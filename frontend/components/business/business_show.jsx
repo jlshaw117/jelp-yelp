@@ -131,6 +131,13 @@ class BusinessShow extends React.Component {
             );
         };
 
+        let tags = this.props.biz.businessTags.map((tag, idx) => {
+
+            return (
+                <button key={idx} className='business-tag'>{tag}</button>
+            )
+        })
+
         if (this.props.biz === undefined) return null
         const bizReviews = this.props.biz.reviewIds.map((id) => {
             return this.props.reviews[id]
@@ -280,7 +287,10 @@ class BusinessShow extends React.Component {
                                         <div id={avgRating()} className='biz-avg-rating'></div>
                                         <div className='biz-show-review-count'>{bizReviews.length} Reviews</div>
                                     </div>
-                                    <div className='biz-price'>{this.props.biz.price}</div>
+                                    <div className='biz-price'>
+                                        <div>{this.props.biz.price}</div>
+                                        <div>{tags}</div>
+                                    </div>
                                 </div>
                                 <div className='biz-top-content-right'>
                                     <div className='biz-buttons'>

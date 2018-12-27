@@ -90,8 +90,6 @@
     background-position: 0 -216px;
 }
 
-.biz-
-
 .biz-show-review-count {
     padding: 6px 0px 0px 7px;
     font-size: 16px;
@@ -99,8 +97,23 @@
 }
 
 .biz-price {
+    display: flex;
     margin-top: 5px;
     font-size: 19px;
+}
+
+.info.biz-price {
+    font-size: 15px;
+}
+
+.biz-price button {
+    margin-left: 6px;
+    color: #0073bb;
+}
+
+.business-tag:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .biz-top-content-right {
