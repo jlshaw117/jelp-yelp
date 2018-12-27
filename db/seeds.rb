@@ -9,6 +9,8 @@ ActiveRecord::Base.transaction do
   User.destroy_all
   Business.destroy_all
   Review.destroy_all
+  Tag.destroy_all
+  Tagging.destroy_all
 
   user = User.create!(email: 'demo1@gmail.com', password: 'password', f_name: 'Demo', l_name: 'User')
   user.photo.attach(io: File.open("./app/assets/images/dog.png"), filename:"dog.png")
@@ -237,42 +239,42 @@ ActiveRecord::Base.transaction do
   #Tagging
 
   #fog tags
-  tagging.create!(tag_id: res.id, business_id: fog_harbor.id)
-  tagging.create!(tag_id: sea.id, business_id: fog_harbor.id)
+  Tagging.create!(tag_id: res.id, business_id: fog_harbor.id)
+  Tagging.create!(tag_id: sea.id, business_id: fog_harbor.id)
   
   #yacht tags
-  tagging.create!(tag_id: res.id, business_id: yacht_club.id)
-  tagging.create!(tag_id: sea.id, business_id: yacht_club.id)
+  Tagging.create!(tag_id: res.id, business_id: yacht_club.id)
+  Tagging.create!(tag_id: sea.id, business_id: yacht_club.id)
   
   #the house tags
-  tagging.create!(tag_id: res.id, business_id: the_house.id)
+  Tagging.create!(tag_id: res.id, business_id: the_house.id)
 
   #el falolito tags
-  tagging.create!(tag_id: res.id, business_id: el_farolito.id)
-  tagging.create!(tag_id: mex.id, business_id: el_farolito.id)
+  Tagging.create!(tag_id: res.id, business_id: el_farolito.id)
+  Tagging.create!(tag_id: mex.id, business_id: el_farolito.id)
 
   #The little chihuahua tags
-  tagging.create!(tag_id: res.id, business_id: chihuahua.id)
-  tagging.create!(tag_id: mex.id, business_id: chihuahua.id)
+  Tagging.create!(tag_id: res.id, business_id: chihuahua.id)
+  Tagging.create!(tag_id: mex.id, business_id: chihuahua.id)
   
   #Bella tags
-  tagging.create!(tag_id: res.id, business_id: bella.id)
-  tagging.create!(tag_id: ital.id, business_id: bella.id)
+  Tagging.create!(tag_id: res.id, business_id: bella.id)
+  Tagging.create!(tag_id: ital.id, business_id: bella.id)
 
   #Beretta Tags
-  tagging.create!(tag_id: res.id, business_id: beretta.id)
-  tagging.create!(tag_id: ital.id, business_id: beretta.id)
+  Tagging.create!(tag_id: res.id, business_id: beretta.id)
+  Tagging.create!(tag_id: ital.id, business_id: beretta.id)
 
   #delfina Tags
-  tagging.create!(tag_id: res.id, business_id: delfina.id)
-  tagging.create!(tag_id: ital.id, business_id: delfina.id)
+  Tagging.create!(tag_id: res.id, business_id: delfina.id)
+  Tagging.create!(tag_id: ital.id, business_id: delfina.id)
 
   #Mizen Tags
-  tagging.create!(tag_id: home_s.id, business_id: mizen.id)
-  tagging.create!(tag_id: cont.id, business_id: mizen.id)
+  Tagging.create!(tag_id: home_s.id, business_id: mizen.id)
+  Tagging.create!(tag_id: cont.id, business_id: mizen.id)
 
   #Urban Tags
-  tagging.create!(tag_id: home_s.id, business_id: urban.id)
-  tagging.create!(tag_id: cont.id, business_id: urban.id)
+  Tagging.create!(tag_id: home_s.id, business_id: urban.id)
+  Tagging.create!(tag_id: cont.id, business_id: urban.id)
 
 end
