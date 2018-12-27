@@ -188,82 +188,127 @@ class BusinessShow extends React.Component {
                     <div className='categories-bar'>
                         <div className='category-container'>
                             <div className='category-item'>
-                                <button className='category-button'>
+                                <button
+                                onClick={this.handleClick}
+                                value='Restaurant'
+                                className='category-button'>
                                     <div className='category-icon'><i className="fas fa-utensils category"></i></div>
                                     <div className='category-name'>Restaurants</div>
                                     <i className="fas fa-angle-down category"></i>
                                 </button>
                                 <div className='sub-cats'>
-                                    <div className='sub-cat'>
+                                    <button
+                                    onClick={this.handleClick}
+                                    value='Burgers'
+                                    className='sub-cat'>
                                         <i className="fas fa-utensils category"></i>
                                         <div className='sub-cat-name'>Burgers</div>
-                                    </div>
-                                    <div className='sub-cat'>
+                                    </button>
+                                    <button
+                                    onClick={this.handleClick}
+                                    value='Mexican'
+                                    className='sub-cat'>
                                         <i className="fas fa-utensils category"></i>
                                         <div className='sub-cat-name'>Mexican</div>
-                                    </div>
-                                    <div className='sub-cat'>
+                                    </button>
+                                    <button
+                                    onClick={this.handleClick}
+                                    value='Italian'
+                                    className='sub-cat'>
                                         <i className="fas fa-utensils category"></i>
                                         <div className='sub-cat-name'>Italian</div>
-                                    </div>
-                                    <div className='sub-cat'>
+                                    </button>
+                                    <button
+                                    onClick={this.handleClick}
+                                    value='Seafood'
+                                    className='sub-cat'>
                                         <i className="fas fa-utensils category"></i>
-                                        <div className='sub-cat-name'>Sushi</div>
-                                    </div>
+                                        <div className='sub-cat-name'>Sefood</div>
+                                    </button>
                                 </div>
                             </div>
                         </div>
                         <div className='category-container'>
                             <div className='category-item'>
-                                <button className='category-button'>
+                                <button
+                                onClick={this.handleClick}
+                                value='Home'
+                                className='category-button'>
                                     <div className='category-icon'><i className="fas fa-home category"></i></div>
                                     <div className='category-name'>Home Services</div>
                                     <i className="fas fa-angle-down category"></i>
                                 </button>
                                 <div className='sub-cats'>
-                                    <div className='sub-cat'>
+                                    <button
+                                    onClick={this.handleClick}
+                                    value='Contractor'
+                                    className='sub-cat'>
                                         <i className="fas fa-home category"></i>
-                                        <div className='sub-cat-name'>Contracters</div>
-                                    </div>
-                                    <div className='sub-cat'>
+                                        <div className='sub-cat-name'>Contractors</div>
+                                    </button>
+                                    <button
+                                    onClick={this.handleClick}
+                                    value='Landscaping'
+                                    className='sub-cat'>
                                         <i className="fas fa-home category"></i>
                                         <div className='sub-cat-name'>Landscaping</div>
-                                    </div>
-                                    <div className='sub-cat'>
+                                    </button>
+                                    <button
+                                    onClick={this.handleClick}
+                                    value='Electrician'
+                                    className='sub-cat'>
                                         <i className="fas fa-home category"></i>
                                         <div className='sub-cat-name'>Electricians</div>
-                                    </div>
-                                    <div className='sub-cat'>
+                                    </button>
+                                    <button
+                                    onClick={this.handleClick}
+                                    value='Mover'
+                                    className='sub-cat'>
                                         <i className="fas fa-home category"></i>
                                         <div className='sub-cat-name'>Movers</div>
-                                    </div>
+                                    </button>
                                 </div>
                             </div>
                         </div>
                         <div className='category-container'>
                             <div className='category-item'>
-                                <button className='category-button'>
+                                <button
+                                onClick={this.handleClick}
+                                value='Auto'
+                                className='category-button'>
                                     <div className='category-icon'><i className="fas fa-car category"></i></div>
                                     <div className='category-name'>Auto Services</div>
                                     <i className="fas fa-angle-down category"></i>
                                 </button>
                                 <div className='sub-cats'>
-                                    <div className='sub-cat'>
+                                    <button
+                                    onClick={this.handleClick}
+                                    value='Repair'
+                                    className='sub-cat'>
                                         <i className="fas fa-car category"></i>
                                         <div className='sub-cat-name'>Auto Repair</div>
-                                    </div>
-                                    <div className='sub-cat'>
+                                    </button>
+                                    <button
+                                    onClick={this.handleClick}
+                                    value='Dealer'
+                                    className='sub-cat'>
                                         <i className="fas fa-car category"></i>
-                                        <div className='sub-cat-name'>Auto Sales</div>
-                                    </div>
-                                    <div className='sub-cat'>
+                                        <div className='sub-cat-name'>Dealers</div>
+                                    </button>
+                                    <button
+                                    onClick={this.handleClick}
+                                    value='Detail'
+                                    className='sub-cat'>
                                         <i className="fas fa-car category"></i>
                                         <div className='sub-cat-name'>Auto Detail</div>
-                                    </div>
-                                    <div className='sub-cat'>
+                                    </button>
+                                    <button
+                                    onClick={this.handleClick}
+                                    value='Towing'
+                                    className='sub-cat'>
                                         <i className="fas fa-car category"></i>
                                         <div className='sub-cat-name'>Towing</div>
-                                    </div>
+                                    </button>
                                 </div>
                             </div>
                         </div>
