@@ -119,7 +119,7 @@ class BusinessIndex extends React.Component {
                                     </div>
                                     <div className='sub-cat'>
                                         <i className="fas fa-utensils category"></i>
-                                        <div className='sub-cat-name'>Sushi</div>
+                                        <div className='sub-cat-name'>Seafood</div>
                                     </div>
                                 </div>
                             </div>
