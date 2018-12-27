@@ -146,7 +146,7 @@ class BusinessShow extends React.Component {
         let tags = this.props.biz.businessTags.map((tag, idx) => {
 
             return (
-                <button key={idx} className='business-tag'>{tag}</button>
+                <button key={idx} onClick={this.handleClick} value={tag} className='business-tag'>{tag}</button>
             )
         })
 
