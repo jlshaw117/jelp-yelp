@@ -10,4 +10,16 @@
 #
 
 class Tagging < ApplicationRecord
+
+    validates :tag_id, uniqueness: { scope: :business_id}
+
+    has_many :tags,
+        primary_key: :id,
+        foreign_key: :tag_id,
+        class_name: :Tag
+
+    has_many :businesses
+        primary_key: :id,
+        foreign_key: :business_id,
+        class_name: :Business 
 end
