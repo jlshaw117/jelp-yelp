@@ -7,6 +7,14 @@ class IndexItem extends React.Component {
 
     constructor(props) {
         super(props);
+
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick(e) {
+        e.preventDefault();
+
+        this.props.searchBusinesses(e.currentTarget.value);
     }
 
     render() {
@@ -44,7 +52,7 @@ class IndexItem extends React.Component {
         let tags = this.props.biz.businessTags.map((tag, idx) => {
 
             return (
-                <button key={idx} className='business-tag'>{tag}</button>
+                <button key={idx} onClick={this.handleClick} value={tag} className='business-tag'>{tag}</button>
             )
         })
         return (
