@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import DropDownMenuContainer from '../drop_down_menu/drop_down_menu_container';
 import SearchBarContainer from '../search/search_bar_container';
 import SampleBusinessesContainer from '../home/sample_businesses_container';
+import Footer from '../footer/footer';
 
 const Greeting = ({ currentUser, logout }) => {
     const sessionLinks = () => {
@@ -52,6 +53,7 @@ const Greeting = ({ currentUser, logout }) => {
                 </div>
             </div>
             <SampleBusinessesContainer />
+            <Footer />
         </div>
     );
 };
