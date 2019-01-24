@@ -1,8 +1,7 @@
 .sample-businesses {
     min-width: 1020px;
     margin: 0 auto;
-    background-color: #f5f5f5;
-    height: 100%;
+    background-color: white;
 }
 
 
@@ -24,7 +23,8 @@
     color: black;
     width: calc(25% - 38px);
     border: 1px solid #e6e6e6;
-    background-color: white;
+    background-color: #f5f5f5;
+    margin-bottom: 30px;
 }
 #root {
     height: 100vh;
