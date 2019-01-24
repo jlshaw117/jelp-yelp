@@ -17,7 +17,7 @@ class Footer extends React.Component {
                         </div>
                         <nav className='footer-links'>
                             <a className='email' href="mailto: jlshaw117@gmail.com"><i className="fas fa-envelope"></i></a>
-                            <a className='portfolio' href="https://www.jerrikshaw.com/"><i className="fas fa-briefcase"></i></a>
+                            <a className='portfolio' href="https://www.jerrikshaw.com/"></a>
                             <a className='linkedin' href="https://www.linkedin.com/in/jerrik-shaw/"><i className="fab fa-linkedin"></i></a>
                             <a className='angellist' href="https://angel.co/jerrik-shaw?al_content=view+your+profile&al_source=transaction_feed%2Fnetwork_sidebar"><i className="fab fa-angellist"></i></a>
                         </nav>

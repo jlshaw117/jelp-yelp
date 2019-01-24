@@ -32,6 +32,11 @@ footer {
 
 .portfolio {
     color: black;
+    background-image: url(image_path('favicon.ico'));
+    height: 36px;
+    width: 36px;
+    background-size: 85%;
+    background-repeat: no-repeat;
 }
 
 .email {
