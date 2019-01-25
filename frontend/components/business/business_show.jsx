@@ -5,6 +5,7 @@ import ReviewIndexContainer from '../reviews/review_index_container';
 import HoursTable from '../hours_table/hours_table';
 import PictureCarouselShow from '../picture_carousel/picture_carousel_show';
 import Map from '../map/map';
+import SearchBarContainer from '../search/search_bar_container';
 
 class BusinessShow extends React.Component {
 
@@ -190,7 +191,9 @@ class BusinessShow extends React.Component {
                         <div className='index-logo'>
                             <Link className='logo-link' to='/'><img className='logo-img' src={window.logo} /></Link>
                         </div>
-                        <div className='index-search-bar'></div>
+                        <div className='index-search-bar'>
+                            <SearchBarContainer placeHolder='burgers, barbers, spas...' />
+                        </div>
                         <nav className="index-nav-bar">
                             {this.props.currentUser ? greeting() : sessionLinks()}
                         </nav>
