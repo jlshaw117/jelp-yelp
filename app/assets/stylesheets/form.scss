@@ -122,6 +122,19 @@ input {
     font-weight: 700;
 }
 
+#demo-btn {
+    background-color: #d32323;
+    border: 1px solid #8d0005;
+    border-radius: 3px;
+    color: white;
+    width: 87%;
+    cursor: pointer;
+    text-align: center;
+    padding: 12px 18px 13px 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
 .form-side {
     display: flex;
     align-items: center;
