@@ -383,7 +383,7 @@ class BusinessShow extends React.Component {
                                 <ReviewIndexContainer reviews={bizReviews} users={this.props.users} />
                             </div>
                             <div className='biz-content-bottem-side'>
-                                <HoursTable />
+                                <HoursTable hours={this.props.hours} />
                             </div>
                         </div>
                     </div>

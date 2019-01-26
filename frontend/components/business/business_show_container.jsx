@@ -7,11 +7,16 @@ const mapStateToProps = ({ entities, session }, ownProps) => {
 
     let id = ownProps.match.params.businessId;
     let biz = entities.businesses[id];
+    let hours = biz.hours.map(str => {
+        let arr = str.split(',');
+        return arr.map(hour => parseInt(hour));
+    });
     return ({
         currentUser: entities.users[session.id],
         biz,
         reviews: entities.reviews,
-        users: entities.users
+        users: entities.users,
+        hours
     });
 };
 
