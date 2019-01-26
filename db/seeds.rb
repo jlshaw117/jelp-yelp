@@ -59,17 +59,17 @@ ActiveRecord::Base.transaction do
   jane_doe.photo.attach(io: File.open("./app/assets/images/jane_doe.jpeg"), filename:"jane_doe.jpeg")
 
   # Restaurants
-  Business.create(name: 'Fog Harbor Fish House', lat: 37.809271, long: -122.410119, address: 'Pier 39', city: 'San Fransisco', state: 'CA', zip: '94133', price: '$$', phone_number: '(415) 632-7593' hours: [[17,23], [17,23], [17,23], [17,23], [17,23], [17,23], [17,23]])
-  Business.create(name: 'Liholiho Yacht Club', lat: 37.788291, long: -122.414695, address: '871 Sutter St', city: 'San Fransisco', state: 'CA', zip: '94109', price: '$$$', phone_number: '(415) 845-6384' hours: [[10,21], [11,21], [11,21], [11,21], [11,21], [11,22], [10,22]])
-  Business.create(name: 'The House', lat: 37.798412, long: -122.407058, address: '1230 Grant AVE', city: 'San Fransisco', state: 'CA', zip: '94133', price: '$$$', phone_number: '(415) 623-8956' hours: [[17,22], [[12,22], [[12,22], [[12,22], [[12,22], [12,23], [12,23]])
-  Business.create(name: 'El Farolito', lat: 37.752644, long: -122.418105, address: '2779 Mission St', city: 'San Fransisco', state: 'CA', zip: '94110', price: '$', phone_number: '(415) 902-6381')
-  Business.create(name: 'The Little Chihuahua', lat: 37.771960, long: -122.436854, address: '292 Divisadero St', city: 'San Fransisco', state: 'CA', zip: '94117', price: '$$', phone_number: '(415) 309-3685')
-  Business.create(name: 'Bella Trattoria', lat: 37.781390, long: -122.460947, address: '3854 Geary Blvd', city: 'San Fransisco', state: 'CA', zip: '94118', price: '$$', phone_number: '(415) 634-8356')
-  Business.create(name: 'Beretta', lat: 37.753825, long: -122.420582, address: '1199 Valencia St', city: 'San Fransisco', state: 'CA', zip: '94110', price: '$$', phone_number: '(415) 835-9642')
-  Business.create(name: 'Delfina', lat: 37.763697, long: -122.424297, address: '3621 18th St', city: 'San Fransisco', state: 'CA', zip: '94110', price: '$$$', phone_number: '(415) 883-6734')
+  Business.create(name: 'Fog Harbor Fish House', lat: 37.809271, long: -122.410119, address: 'Pier 39', city: 'San Fransisco', state: 'CA', zip: '94133', price: '$$', phone_number: '(415) 632-7593', hours: ['17,23', '17,23', '17,23', '17,23', '17,23', '17,23', '17,23'])
+  Business.create(name: 'Liholiho Yacht Club', lat: 37.788291, long: -122.414695, address: '871 Sutter St', city: 'San Fransisco', state: 'CA', zip: '94109', price: '$$$', phone_number: '(415) 845-6384', hours: ['10,21', '11,21', '11,21', '11,21', '11,21', '11,22', '10,22'])
+  Business.create(name: 'The House', lat: 37.798412, long: -122.407058, address: '1230 Grant AVE', city: 'San Fransisco', state: 'CA', zip: '94133', price: '$$$', phone_number: '(415) 623-8956', hours: ['17,22', '12,22', '12,22', '12,22', '12,22', '12,23', '12,23'])
+  Business.create(name: 'El Farolito', lat: 37.752644, long: -122.418105, address: '2779 Mission St', city: 'San Fransisco', state: 'CA', zip: '94110', price: '$', phone_number: '(415) 902-6381', hours: ['10,24', '10,24', '10,24', '10,24', '10,24', '10,24', '10,24'])
+  Business.create(name: 'The Little Chihuahua', lat: 37.771960, long: -122.436854, address: '292 Divisadero St', city: 'San Fransisco', state: 'CA', zip: '94117', price: '$$', phone_number: '(415) 309-3685', hours: ['10,23', '11,23', '11,23', '11,23', '11,23', '11,23', '10,23'])
+  Business.create(name: 'Bella Trattoria', lat: 37.781390, long: -122.460947, address: '3854 Geary Blvd', city: 'San Fransisco', state: 'CA', zip: '94118', price: '$$', phone_number: '(415) 634-8356', hours: ['11,21', '17,22', '17,22', '11,22', '11,22', '11,23', '12,23'])
+  Business.create(name: 'Beretta', lat: 37.753825, long: -122.420582, address: '1199 Valencia St', city: 'San Fransisco', state: 'CA', zip: '94110', price: '$$', phone_number: '(415) 835-9642', hours: ['10,24', '0,0', '0,0', '0,0', '0,0', '0,0', '10,24'])
+  Business.create(name: 'Delfina', lat: 37.763697, long: -122.424297, address: '3621 18th St', city: 'San Fransisco', state: 'CA', zip: '94110', price: '$$$', phone_number: '(415) 883-6734', hours: ['12,22', '12,22', '17,22', '12,22', '12,22', '12,23', '12,22'])
   # Home
-  Business.create(name: 'Mizen Construction', lat: 37.781620, long: -122.455999, address: '3410 Geary Blvd', city: 'San Fransisco', state: 'CA', zip: '94118', price: '$$$$', phone_number: '(415) 663-2346')
-  Business.create(name: 'The Urban Builder', lat: 37.781620, long: -122.491953, address: '1258 33rd Ave', city: 'San Fransisco', state: 'CA', zip: '94110', price: '$$$', phone_number: '(415) 867-5309')
+  Business.create(name: 'Mizen Construction', lat: 37.781620, long: -122.455999, address: '3410 Geary Blvd', city: 'San Fransisco', state: 'CA', zip: '94118', price: '$$$$', phone_number: '(415) 663-2346', hours: ['0,0', '9,17', '9,17', '9,17', '9,17', '9,17', '9,17'])
+  Business.create(name: 'The Urban Builder', lat: 37.781620, long: -122.491953, address: '1258 33rd Ave', city: 'San Fransisco', state: 'CA', zip: '94110', price: '$$$', phone_number: '(415) 867-5309', hours: ['0,0', '9,17', '9,17', '9,17', '9,17', '9,17', '9,17'])
 
   # Restaurants
   fog_harbor = Business.find_by(name: 'Fog Harbor Fish House')

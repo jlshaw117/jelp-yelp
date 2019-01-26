@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_27_014819) do
+ActiveRecord::Schema.define(version: 2019_01_25_234843) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,9 +47,9 @@ ActiveRecord::Schema.define(version: 2018_12_27_014819) do
     t.integer "owner_id"
     t.string "price", null: false
     t.string "phone_number"
-    t.string "hours"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "hours", default: [], array: true
     t.index ["name"], name: "index_businesses_on_name", unique: true
   end
 
