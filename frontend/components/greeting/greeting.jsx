@@ -37,7 +37,7 @@ const Greeting = ({ currentUser, logout }) => {
                         <div className='overlay'></div>
                         <nav className="home-nav-bar">
                             <ul className='page-links'>
-                                <li><Link to='/'>Write a Review</Link></li>
+                                <li><a href='https://github.com/jlshaw117/jelp-yelp' target='_blank'>View the Code</a></li>
                                 <li><Link to='/'>Events</Link></li>
                                 <li><Link to='/'>Talk</Link></li>
                             </ul>
