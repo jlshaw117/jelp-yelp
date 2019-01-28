@@ -38,8 +38,8 @@ const Greeting = ({ currentUser, logout }) => {
                         <nav className="home-nav-bar">
                             <ul className='page-links'>
                                 <li><a href='https://github.com/jlshaw117/jelp-yelp' target='_blank'>View the Code</a></li>
-                                <li><Link to='/'>Events</Link></li>
-                                <li><Link to='/'>Talk</Link></li>
+                                <li><a href='https://www.jerrikshaw.com/'>My Site</a></li>
+                                <li><a href='mailto:jlshaw117@gmail.com'>Talk</a></li>
                             </ul>
                             {currentUser ? greeting() : sessionLinks()}
                         </nav>
