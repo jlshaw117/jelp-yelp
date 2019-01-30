@@ -8,6 +8,7 @@ import { AuthRoute } from '../util/route_util';
 import BusinessShowContainer from './business/business_show_container';
 import NewReviewFormContainer from './reviews/new_review_form_container';
 import EditReviewFormContainer from './reviews/edit_review_form_container';
+import Footer from './footer/footer';
 
 const App = () => {
 
@@ -24,6 +25,7 @@ const App = () => {
             <Route exact path="/businesses/:businessId/editReview/:reviewId" component={EditReviewFormContainer} />
             <AuthRoute path="/login" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer} />
+            <Route path='/' component={Footer} />
         </div>
     )
 };
