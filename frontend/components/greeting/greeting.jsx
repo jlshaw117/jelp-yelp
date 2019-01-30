@@ -53,7 +53,6 @@ const Greeting = ({ currentUser, logout }) => {
                 </div>
             </div>
             <SampleBusinessesContainer />
-            <Footer />
         </div>
     );
 };
