@@ -129,7 +129,7 @@ class SessionForm extends React.Component {
                                     required
                                 />
                                 <input id='form-btn' type="submit" value={this.props.formBTN}/>
-                                {this.props.formType === 'Log in to' ? <button id='demo-btn' onClick={this.demo}>Demo</button> : <div></div>}
+                                {<button id='demo-btn' onClick={this.demo}>Demo</button>}
                             </form>
                         </div>
                         {this.props.formType === 'Log in to' ? <small>New to Jelp? {this.props.navLink}</small> : <small>Already on Jelp? {this.props.navLink}</small>}
