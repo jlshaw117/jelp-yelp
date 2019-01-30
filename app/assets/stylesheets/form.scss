@@ -29,7 +29,7 @@ header.form-header {
 .form-main {
     display: flex;
     justify-content: center;
-    height: 771px;
+    height: 600px;
 }
 
 .form-small {
@@ -79,7 +79,7 @@ form {
     display: flex;
     flex-direction: column;
     width: 300px;
-    height:190px;
+    // height:190px;
     justify-content: space-between;
 }
 
@@ -91,6 +91,7 @@ form {
 input {
     height: 18px;
     padding: 9px 9px;
+    margin-bottom: 10px;
 
 }
 .full-name-container input {
