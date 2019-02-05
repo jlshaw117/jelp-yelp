@@ -71,6 +71,7 @@ ActiveRecord::Base.transaction do
   Business.create(name: 'Mizen Construction', lat: 37.781620, long: -122.455999, address: '3410 Geary Blvd', city: 'San Fransisco', state: 'CA', zip: '94118', price: '$$$$', phone_number: '(415) 663-2346', hours: ['0,0', '9,17', '9,17', '9,17', '9,17', '9,17', '9,17'])
   Business.create(name: 'The Urban Builder', lat: 37.781620, long: -122.491953, address: '1258 33rd Ave', city: 'San Fransisco', state: 'CA', zip: '94110', price: '$$$', phone_number: '(415) 867-5309', hours: ['0,0', '9,17', '9,17', '9,17', '9,17', '9,17', '9,17'])
   Business.create(name: 'Rick Brown Electrical Contractor', lat: 37.782081, long: -122.454811, address: '185 Parker Ave', city: 'San Fransisco', state: 'CA', zip: '94118', price: '$$$', phone_number: '(415) 786-3457', hours: ['0,0', '8,16', '8,16', '8,16', '8,16', '8,16', '0,0'])
+  Business.create(name: 'A 24 Electric Co', lat: 37.776470, long: -122.425221, address: '517 Hayes St,', city: 'San Fransisco', state: 'CA', zip: '94102', price: '$$$', phone_number: '(415) 945-2579', hours: ['0,0', '9,17', '9,17', '9,17', '9,17', '9,17', '0,0'])
 
   # Restaurants
   fog_harbor = Business.find_by(name: 'Fog Harbor Fish House')
@@ -86,6 +87,7 @@ ActiveRecord::Base.transaction do
   urban = Business.find_by(name: 'The Urban Builder')
 
   rick = Business.find_by(name: 'Rick Brown Electrical Contractor')
+  electric24 = Business.find_by(name: 'A 24 Electric Co')
   
   # Restaurants
   yacht_club.images.attach(io: File.open("./app/assets/images/yacht_club_0.jpg"), filename:"yacht_club_0.jpg")
@@ -144,6 +146,11 @@ ActiveRecord::Base.transaction do
   rick.images.attach(io: File.open("./app/assets/images/rick_1.jpg"), filename:"rick_1.jpg")
   rick.images.attach(io: File.open("./app/assets/images/rick_2.jpg"), filename:"rick_2.jpg")
   rick.images.attach(io: File.open("./app/assets/images/rick_3.jpg"), filename:"rick_3.jpg")
+
+  electric24.images.attach(io: File.open("./app/assets/images/electric24_0.jpg"), filename:"electric24_0.jpg")
+  electric24.images.attach(io: File.open("./app/assets/images/electric24_1.jpg"), filename:"electric24_1.jpg")
+  electric24.images.attach(io: File.open("./app/assets/images/electric24_2.jpg"), filename:"electric24_2.jpg")
+  electric24.images.attach(io: File.open("./app/assets/images/electric24_3.jpg"), filename:"electric24_3.jpg")
 
 
   Review.create!(user_id: west.id, business_id: fog_harbor.id, rating: 3, body: 'Came here for dinner last night.  Its right on pier 39 overlooking the marina.  Seevice was good.  Our waitress was nice and attentive.  Ambience was inviting.  Food though was sub par, especially for the price.  The seafood was so so.')
@@ -210,6 +217,17 @@ ActiveRecord::Base.transaction do
   Review.create!(user_id: samp.id, business_id: rick.id, rating: 5, body: 'Rick was very prompt and helpful. His pricing was competitive - I checked with a few different electricians in the neighborhood, and he was one of the most knowledgeable. No charge for an estimate.  We will strongly consider Rick for our next job.')
   Review.create!(user_id: jane_doe.id, business_id: rick.id, rating: 4, body: 'Rick was a pleasure to work with: punctual, uncomplicated and friendly. He gave us good suggestions for the work we were proposing (changing an external light switch) and made the project easier than it would have been with other electrical services.')
   Review.create!(user_id: west.id, business_id: rick.id, rating: 5, body: 'Rick is awesome! We needed a doorbell fixed immediately, and Rick came out the very next morning. He fixed it within a few minutes and also gave me tips on how to self-fix it next time. I\'ll definitely keep him on my vendor list! The only thing is he doesn\'t take credit cards, so make sure you have cash or a check ready (he can give you a receipt).')
+
+  Review.create!(user_id: sams.id, business_id: electric24.id, rating: 5, body: 'Had an electrical problem after moving in. Due to the holiday weekend my own management company dragged its feet getting someone out for us. We have a young toddler and a fridge out of commission is certainly more stress on top of stress.
+
+Called Eddie. He walked us through what ended up being a simple problem free of charge. Super patient and courteous on the phone. On top of that unless the issue needed him to physically come over (it did not), he did it free of charge!
+
+Though I hope to not call him in the future, I definitely will be calling if other problems arise!')
+  Review.create!(user_id: maverick.id, business_id: electric24.id, rating: 4, body: 'We needed some pretty major electrical upgrading to our older San Francisco home.  Eddie came to our house at the scheduled time and provided us a quote and contract.  He was the utmost professional through the whole process.  He had to spend a good 3 full days at our house and always arrived on-time.  I felt comfortable leaving him alone on the property, including one full day in our kitchen, while we were away at work.    Eddie took care of arranging the time with the city inspector and was on-site to meet with them.  His work passed inspection with flying colors.  He also made the initial calls to PG&E to start their piece of the project.  The quality of his work is top-notch, and he even cleaned up after himself!!!  Eddie couldn\'t have made the process any easier for us.  I will be using Eddie for any future licensed electricion needs, and highly recommend that you do the same.')
+  Review.create!(user_id: jane_doe.id, business_id: electric24.id, rating: 5, body: 'My old door chime short-circuited and wouldn\'t stop ringing.  This is not a pleasant sound.  Imagine a fire alarm blaring at close range in your ears.  I called Eddie after hours and he arrived quickly.  Thanks to his prompt service and efficiency, the doorbell has been repaired so we can sleep peacefully tonight.  I would use his services again.')
+  Review.create!(user_id: batman.id, business_id: electric24.id, rating: 2, body: 'Punctual: yes. Professional: yes. Extremely expensive? Yes.
+I called on a Saturday. He came, could not find the issue, and still charged me $300 for coming.
+Never Again.')
 
   #Tags
 
@@ -293,4 +311,9 @@ ActiveRecord::Base.transaction do
   #Rick Tags
   Tagging.create!(tag_id: home_s.id, business_id: rick.id)
   Tagging.create!(tag_id: elec.id, business_id: rick.id)
+
+  #Electric 24 tags
+  Tagging.create!(tag_id: home_s.id, business_id: rick.id)
+  Tagging.create!(tag_id: elec.id, business_id: rick.id)
+  
 end
