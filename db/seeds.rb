@@ -70,6 +70,7 @@ ActiveRecord::Base.transaction do
   # Home
   Business.create(name: 'Mizen Construction', lat: 37.781620, long: -122.455999, address: '3410 Geary Blvd', city: 'San Fransisco', state: 'CA', zip: '94118', price: '$$$$', phone_number: '(415) 663-2346', hours: ['0,0', '9,17', '9,17', '9,17', '9,17', '9,17', '9,17'])
   Business.create(name: 'The Urban Builder', lat: 37.781620, long: -122.491953, address: '1258 33rd Ave', city: 'San Fransisco', state: 'CA', zip: '94110', price: '$$$', phone_number: '(415) 867-5309', hours: ['0,0', '9,17', '9,17', '9,17', '9,17', '9,17', '9,17'])
+  Business.create(name: 'Rick Brown Electrical Contractor', lat: 37.782081, long: -122.454811, address: '185 Parker Ave', city: 'San Fransisco', state: 'CA', zip: '94118', price: '$$$', phone_number: '(415) 786-3457', hours: ['0,0', '8,16', '8,16', '8,16', '8,16', '8,16', '0,0'])
 
   # Restaurants
   fog_harbor = Business.find_by(name: 'Fog Harbor Fish House')
@@ -83,6 +84,8 @@ ActiveRecord::Base.transaction do
   #Home
   mizen = Business.find_by(name: 'Mizen Construction')
   urban = Business.find_by(name: 'The Urban Builder')
+
+  rick = Business.find_by(name: 'Rick Brown Electrical Contractor')
   
   # Restaurants
   yacht_club.images.attach(io: File.open("./app/assets/images/yacht_club_0.jpg"), filename:"yacht_club_0.jpg")
@@ -136,6 +139,11 @@ ActiveRecord::Base.transaction do
   urban.images.attach(io: File.open("./app/assets/images/urban_1.jpg"), filename:"urban_1.jpg")
   urban.images.attach(io: File.open("./app/assets/images/urban_2.jpg"), filename:"urban_2.jpg")
   urban.images.attach(io: File.open("./app/assets/images/urban_3.jpg"), filename:"urban_3.jpg")
+
+  rick.images.attach(io: File.open("./app/assets/images/rick_0.jpg"), filename:"rick_0.jpg")
+  rick.images.attach(io: File.open("./app/assets/images/rick_1.jpg"), filename:"rick_1.jpg")
+  rick.images.attach(io: File.open("./app/assets/images/rick_2.jpg"), filename:"rick_2.jpg")
+  rick.images.attach(io: File.open("./app/assets/images/rick_3.jpg"), filename:"rick_3.jpg")
 
 
   Review.create!(user_id: west.id, business_id: fog_harbor.id, rating: 3, body: 'Came here for dinner last night.  Its right on pier 39 overlooking the marina.  Seevice was good.  Our waitress was nice and attentive.  Ambience was inviting.  Food though was sub par, especially for the price.  The seafood was so so.')
@@ -197,6 +205,11 @@ ActiveRecord::Base.transaction do
   Review.create!(user_id: batman.id, business_id: urban.id, rating: 5, body: 'Kevin and his guys have now completed our Master bathroom and bedroom remodel.  They knocked it out of the park again ala SF Giants winning the World Series style!  See the pics that show how incredible our bath and bedroom!  These pics speak for themselves and show what an amazing job he can do for you.')
   Review.create!(user_id: west.id, business_id: urban.id, rating: 4, body: 'Major remodel: Kevin was the low bid, complete on-time and on budget to the highest quality with no unpleasant surprises.')
   Review.create!(user_id: sams.id, business_id: urban.id, rating: 5, body: 'My wife and I hired Kevin and his team to do build customized shelving, closets, put in new lighting, and put in doors in our bedrooms. Kevin was fantastic at managing his team and keeping the project on-budget and on-time. Best of all, the work has very high-quality. I highly recommend him.')
+
+  Review.create!(user_id: goose.id, business_id: rick.id, rating: 5, body: 'Rick is the best electrician I have ever worked with.  He installed all of our outdoor lighting and has upgraded our electrical panel.  He is capable of managing a large electrical project in a timely manner and always responds to texts/calls/emails in a timely manner.  I would highly recommend him to anyone looking for high quality electrical work.')
+  Review.create!(user_id: samp.id, business_id: rick.id, rating: 5, body: 'Rick was very prompt and helpful. His pricing was competitive - I checked with a few different electricians in the neighborhood, and he was one of the most knowledgeable. No charge for an estimate.  We will strongly consider Rick for our next job.')
+  Review.create!(user_id: jane_doe.id, business_id: rick.id, rating: 4, body: 'Rick was a pleasure to work with: punctual, uncomplicated and friendly. He gave us good suggestions for the work we were proposing (changing an external light switch) and made the project easier than it would have been with other electrical services.')
+  Review.create!(user_id: west.id, business_id: rick.id, rating: 5, body: 'Rick is awesome! We needed a doorbell fixed immediately, and Rick came out the very next morning. He fixed it within a few minutes and also gave me tips on how to self-fix it next time. I\'ll definitely keep him on my vendor list! The only thing is he doesn\'t take credit cards, so make sure you have cash or a check ready (he can give you a receipt).')
 
   #Tags
 
@@ -277,4 +290,7 @@ ActiveRecord::Base.transaction do
   Tagging.create!(tag_id: home_s.id, business_id: urban.id)
   Tagging.create!(tag_id: cont.id, business_id: urban.id)
 
+  #Rick Tags
+  Tagging.create!(tag_id: home_s.id, business_id: rick.id)
+  Tagging.create!(tag_id: elec.id, business_id: rick.id)
 end
