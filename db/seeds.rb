@@ -72,6 +72,7 @@ ActiveRecord::Base.transaction do
   Business.create(name: 'The Urban Builder', lat: 37.781620, long: -122.491953, address: '1258 33rd Ave', city: 'San Fransisco', state: 'CA', zip: '94110', price: '$$$', phone_number: '(415) 867-5309', hours: ['0,0', '9,17', '9,17', '9,17', '9,17', '9,17', '9,17'])
   Business.create(name: 'Rick Brown Electrical Contractor', lat: 37.782081, long: -122.454811, address: '185 Parker Ave', city: 'San Fransisco', state: 'CA', zip: '94118', price: '$$$', phone_number: '(415) 786-3457', hours: ['0,0', '8,16', '8,16', '8,16', '8,16', '8,16', '0,0'])
   Business.create(name: 'A 24 Electric Co', lat: 37.776470, long: -122.425221, address: '517 Hayes St,', city: 'San Fransisco', state: 'CA', zip: '94102', price: '$$$', phone_number: '(415) 945-2579', hours: ['0,0', '9,17', '9,17', '9,17', '9,17', '9,17', '0,0'])
+  Business.create(name: 'Ideal Landscape & Concrete', lat: 37.761916, long: -122.423120, address: '600 Guerrero St,', city: 'San Fransisco', state: 'CA', zip: '94110', price: '$$', phone_number: '(415) 134-6452', hours: ['0,0', '7,17', '7,17', '7,17', '7,17', '7,17', '0,0'])
 
   # Restaurants
   fog_harbor = Business.find_by(name: 'Fog Harbor Fish House')
@@ -88,6 +89,11 @@ ActiveRecord::Base.transaction do
 
   rick = Business.find_by(name: 'Rick Brown Electrical Contractor')
   electric24 = Business.find_by(name: 'A 24 Electric Co')
+
+  ideal = Business.find_by(name: 'Ideal Landscape & Concrete')
+
+
+
   
   # Restaurants
   yacht_club.images.attach(io: File.open("./app/assets/images/yacht_club_0.jpg"), filename:"yacht_club_0.jpg")
@@ -151,6 +157,11 @@ ActiveRecord::Base.transaction do
   electric24.images.attach(io: File.open("./app/assets/images/electric24_1.jpg"), filename:"electric24_1.jpg")
   electric24.images.attach(io: File.open("./app/assets/images/electric24_2.jpg"), filename:"electric24_2.jpg")
   electric24.images.attach(io: File.open("./app/assets/images/electric24_3.jpg"), filename:"electric24_3.jpg")
+
+  ideal.images.attach(io: File.open("./app/assets/images/ideal_0.jpg"), filename:"ideal_0.jpg")
+  ideal.images.attach(io: File.open("./app/assets/images/ideal_1.jpg"), filename:"ideal_1.jpg")
+  ideal.images.attach(io: File.open("./app/assets/images/ideal_2.jpg"), filename:"ideal_2.jpg")
+  ideal.images.attach(io: File.open("./app/assets/images/ideal_3.jpg"), filename:"ideal_3.jpg")
 
 
   Review.create!(user_id: west.id, business_id: fog_harbor.id, rating: 3, body: 'Came here for dinner last night.  Its right on pier 39 overlooking the marina.  Seevice was good.  Our waitress was nice and attentive.  Ambience was inviting.  Food though was sub par, especially for the price.  The seafood was so so.')
@@ -217,6 +228,14 @@ ActiveRecord::Base.transaction do
   Review.create!(user_id: samp.id, business_id: rick.id, rating: 5, body: 'Rick was very prompt and helpful. His pricing was competitive - I checked with a few different electricians in the neighborhood, and he was one of the most knowledgeable. No charge for an estimate.  We will strongly consider Rick for our next job.')
   Review.create!(user_id: jane_doe.id, business_id: rick.id, rating: 4, body: 'Rick was a pleasure to work with: punctual, uncomplicated and friendly. He gave us good suggestions for the work we were proposing (changing an external light switch) and made the project easier than it would have been with other electrical services.')
   Review.create!(user_id: west.id, business_id: rick.id, rating: 5, body: 'Rick is awesome! We needed a doorbell fixed immediately, and Rick came out the very next morning. He fixed it within a few minutes and also gave me tips on how to self-fix it next time. I\'ll definitely keep him on my vendor list! The only thing is he doesn\'t take credit cards, so make sure you have cash or a check ready (he can give you a receipt).')
+
+  Review.create!(user_id: maverick.id, business_id: ideal.id, rating: 3, body: 'This is the second time I\'ve had David and his amazingly professional team do work for us, having found them here on Yelp the first time around.  And I will hire them again! We had two large retaining walls that needed replacement, a (surprise) French drain that also needed full replacement, new front concrete steps, and a retaining fence above the first retaining wall (we live on a very steep slope).  The vision and look of the entire project was conjured up by David and the team in consultation with me; they were deeply attentive to detail, and to my aspirations for the overall aesthetic, within the constraints of what the land allowed.  They are true craftsmen!  I trusted them completely, and was rewarded with a superior job.  Thank you, David and your talented team!')
+  Review.create!(user_id: batman.id, business_id: ideal.id, rating: 4, body: 'We hired David and his crew to do a complete overhaul of both front and back yards of an investment property my husband and I were putting on the market for sale.  Not only was David very responsive and communicative throughout the whole process, his crew did an impeccable job.  They redid the driveway and all hard scapes in the backyard, new grass, new concrete planters and plants...etc., complete with brand new irrigation system.  And they showed up early everyday, worked tirelessly and finished the job in 10 days.  
+We would hire Ideal Landscape again in a heart beat.')
+  Review.create!(user_id: samp.id, business_id: ideal.id, rating: 4, body: 'David and his guys are fantastic. I originally contacted them to do my driveway, but was so happy with them that I also had them do my front steps, fence, irrigation, and drainage. 
+
+Their pricing is competitive, their quality and attention to detail is spot on, and they were fast. David is honest, responsive, and professional. I spoke to him daily during my project and he was knowledgeable about the work itself as well as the administrative things like permits. His crew worked hard and paid attention to details. If anything was unclear or unusual, they asked and didnt assume.')
+  Review.create!(user_id: jane_doe.id, business_id: ideal.id, rating: 5, body: 'We just finished a full backyard make over and were thrilled with the work that David and his crew performed for us. The best part of going with Ideal, is that the project will be done fast and the quality will be great. I had other contractors estimate our yard to take 6 weeks and David\'s guys had it done in about a week! They are hard working and efficient. I also felt like they listened to what I really wanted and what mattered most to me and tried to make sure I was happy with the progress and the results. They were glad to make adjustments that I asked for and it was a collaborative process so I ended up with the yard I really envisioned.  Our project included a paver patio, new stairs, an artificial turf lawn and concrete pad for a hot tub. David is a good communicator and faithful to follow through on what he says he will do. His crew was respectful of our property and skilled at their craft. Couldn\'t be more happy that I chose Ideal and we now have the yard we always wanted for our family!')
 
   Review.create!(user_id: sams.id, business_id: electric24.id, rating: 5, body: 'Had an electrical problem after moving in. Due to the holiday weekend my own management company dragged its feet getting someone out for us. We have a young toddler and a fridge out of commission is certainly more stress on top of stress.
 
@@ -315,5 +334,10 @@ Never Again.')
   #Electric 24 tags
   Tagging.create!(tag_id: home_s.id, business_id: rick.id)
   Tagging.create!(tag_id: elec.id, business_id: rick.id)
+  
+  # Ideal tags
+  Tagging.create!(tag_id: home_s.id, business_id: ideal.id)
+  Tagging.create!(tag_id: land.id, business_id: ideal.id)
+
   
 end
