@@ -73,6 +73,7 @@ ActiveRecord::Base.transaction do
   Business.create(name: 'Rick Brown Electrical Contractor', lat: 37.782081, long: -122.454811, address: '185 Parker Ave', city: 'San Fransisco', state: 'CA', zip: '94118', price: '$$$', phone_number: '(415) 786-3457', hours: ['0,0', '8,16', '8,16', '8,16', '8,16', '8,16', '0,0'])
   Business.create(name: 'A 24 Electric Co', lat: 37.776470, long: -122.425221, address: '517 Hayes St,', city: 'San Fransisco', state: 'CA', zip: '94102', price: '$$$', phone_number: '(415) 945-2579', hours: ['0,0', '9,17', '9,17', '9,17', '9,17', '9,17', '0,0'])
   Business.create(name: 'Ideal Landscape & Concrete', lat: 37.761916, long: -122.423120, address: '600 Guerrero St,', city: 'San Fransisco', state: 'CA', zip: '94110', price: '$$', phone_number: '(415) 134-6452', hours: ['0,0', '7,17', '7,17', '7,17', '7,17', '7,17', '0,0'])
+  Business.create(name: 'Shambhala Landscapes', lat: 37.754763, long: -122.406232, address: '1001 Potrero Ave', city: 'San Fransisco', state: 'CA', zip: '94110', price: '$$$$', phone_number: '(415) 634-3632', hours: ['0,0', '7,17', '7,17', '7,17', '7,17', '7,17', '0,0'])
 
   # Restaurants
   fog_harbor = Business.find_by(name: 'Fog Harbor Fish House')
@@ -91,6 +92,7 @@ ActiveRecord::Base.transaction do
   electric24 = Business.find_by(name: 'A 24 Electric Co')
 
   ideal = Business.find_by(name: 'Ideal Landscape & Concrete')
+  shamb = Business.find_by(name: 'Shambhala Landscapes')
 
 
 
@@ -162,6 +164,11 @@ ActiveRecord::Base.transaction do
   ideal.images.attach(io: File.open("./app/assets/images/ideal_1.jpg"), filename:"ideal_1.jpg")
   ideal.images.attach(io: File.open("./app/assets/images/ideal_2.jpg"), filename:"ideal_2.jpg")
   ideal.images.attach(io: File.open("./app/assets/images/ideal_3.jpg"), filename:"ideal_3.jpg")
+
+  shamb.images.attach(io: File.open("./app/assets/images/shamb_0.jpg"), filename:"shamb_0.jpg")
+  shamb.images.attach(io: File.open("./app/assets/images/shamb_1.jpg"), filename:"shamb_1.jpg")
+  shamb.images.attach(io: File.open("./app/assets/images/shamb_2.jpg"), filename:"shamb_2.jpg")
+  shamb.images.attach(io: File.open("./app/assets/images/shamb_3.jpg"), filename:"shamb_3.jpg")
 
 
   Review.create!(user_id: west.id, business_id: fog_harbor.id, rating: 3, body: 'Came here for dinner last night.  Its right on pier 39 overlooking the marina.  Seevice was good.  Our waitress was nice and attentive.  Ambience was inviting.  Food though was sub par, especially for the price.  The seafood was so so.')
@@ -247,6 +254,11 @@ Though I hope to not call him in the future, I definitely will be calling if oth
   Review.create!(user_id: batman.id, business_id: electric24.id, rating: 2, body: 'Punctual: yes. Professional: yes. Extremely expensive? Yes.
 I called on a Saturday. He came, could not find the issue, and still charged me $300 for coming.
 Never Again.')
+
+  Review.create!(user_id: maverick.id, business_id: shamb.id, rating: 2, body: 'No response to my query, so no basis for judgment except that they appear not to be interested in new business.  Or perhaps they are no longer in business??')
+  Review.create!(user_id: batman.id, business_id: shamb.id, rating: 5, body: 'We\'re very pleased with the work Shambhala Landscapes did on our back yard.  Tsering and his crew were punctual, kept the job site tidy, and did great work.  We received a detailed quote before work started, and didn\'t have any problems throughout the project.')
+  Review.create!(user_id: west.id, business_id: shamb.id, rating: 4, body: 'A mis understanding while he was out of town. A very nice gentleman who came by my home and gave me some good ideas. Do not hesitate to give him a call. He will respond in a timely manner and really knows his business.')
+  Review.create!(user_id: sams.id, business_id: shamb.id, rating: 5, body: 'Tsering and his team were honest, fast, reliable and creative with the rather odd yard I took on when I bought my home. They accommodated some last minute changes too and have offered to replace one tree that isn\'t looking healthy after a crazy windstorm the day after it was planted. Highly recommend Shambhala. Most processional contractor I\'ve had work on my home.')
 
   #Tags
 
@@ -336,6 +348,10 @@ Never Again.')
   Tagging.create!(tag_id: elec.id, business_id: rick.id)
   
   # Ideal tags
+  Tagging.create!(tag_id: home_s.id, business_id: ideal.id)
+  Tagging.create!(tag_id: land.id, business_id: ideal.id)
+  
+  # Shamb tags
   Tagging.create!(tag_id: home_s.id, business_id: ideal.id)
   Tagging.create!(tag_id: land.id, business_id: ideal.id)
 
