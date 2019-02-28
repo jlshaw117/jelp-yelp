@@ -344,16 +344,16 @@ Never Again.')
   Tagging.create!(tag_id: elec.id, business_id: rick.id)
 
   #Electric 24 tags
-  Tagging.create!(tag_id: home_s.id, business_id: rick.id)
-  Tagging.create!(tag_id: elec.id, business_id: rick.id)
+  Tagging.create!(tag_id: home_s.id, business_id: electric24.id)
+  Tagging.create!(tag_id: elec.id, business_id: electric24.id)
   
   # Ideal tags
   Tagging.create!(tag_id: home_s.id, business_id: ideal.id)
   Tagging.create!(tag_id: land.id, business_id: ideal.id)
   
   # Shamb tags
-  Tagging.create!(tag_id: home_s.id, business_id: ideal.id)
-  Tagging.create!(tag_id: land.id, business_id: ideal.id)
+  Tagging.create!(tag_id: home_s.id, business_id: shamb.id)
+  Tagging.create!(tag_id: land.id, business_id: shamb.id)
 
   
 end
