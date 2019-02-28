@@ -70,9 +70,9 @@ ActiveRecord::Base.transaction do
   # Home
   Business.create(name: 'Mizen Construction', lat: 37.781620, long: -122.455999, address: '3410 Geary Blvd', city: 'San Fransisco', state: 'CA', zip: '94118', price: '$$$$', phone_number: '(415) 663-2346', hours: ['0,0', '9,17', '9,17', '9,17', '9,17', '9,17', '9,17'])
   Business.create(name: 'The Urban Builder', lat: 37.781620, long: -122.491953, address: '1258 33rd Ave', city: 'San Fransisco', state: 'CA', zip: '94110', price: '$$$', phone_number: '(415) 867-5309', hours: ['0,0', '9,17', '9,17', '9,17', '9,17', '9,17', '9,17'])
-  Business.create(name: 'Rick Brown Electrical Contractor', lat: 37.782081, long: -122.454811, address: '185 Parker Ave', city: 'San Fransisco', state: 'CA', zip: '94118', price: '$$$', phone_number: '(415) 786-3457', hours: ['0,0', '8,16', '8,16', '8,16', '8,16', '8,16', '0,0'])
+  Business.create(name: 'Rick Brown Electrical', lat: 37.782081, long: -122.454811, address: '185 Parker Ave', city: 'San Fransisco', state: 'CA', zip: '94118', price: '$$$', phone_number: '(415) 786-3457', hours: ['0,0', '8,16', '8,16', '8,16', '8,16', '8,16', '0,0'])
   Business.create(name: 'A 24 Electric Co', lat: 37.776470, long: -122.425221, address: '517 Hayes St,', city: 'San Fransisco', state: 'CA', zip: '94102', price: '$$$', phone_number: '(415) 945-2579', hours: ['0,0', '9,17', '9,17', '9,17', '9,17', '9,17', '0,0'])
-  Business.create(name: 'Ideal Landscape & Concrete', lat: 37.761916, long: -122.423120, address: '600 Guerrero St,', city: 'San Fransisco', state: 'CA', zip: '94110', price: '$$', phone_number: '(415) 134-6452', hours: ['0,0', '7,17', '7,17', '7,17', '7,17', '7,17', '0,0'])
+  Business.create(name: 'Ideal Landscape', lat: 37.761916, long: -122.423120, address: '600 Guerrero St,', city: 'San Fransisco', state: 'CA', zip: '94110', price: '$$', phone_number: '(415) 134-6452', hours: ['0,0', '7,17', '7,17', '7,17', '7,17', '7,17', '0,0'])
   Business.create(name: 'Shambhala Landscapes', lat: 37.754763, long: -122.406232, address: '1001 Potrero Ave', city: 'San Fransisco', state: 'CA', zip: '94110', price: '$$$$', phone_number: '(415) 634-3632', hours: ['0,0', '7,17', '7,17', '7,17', '7,17', '7,17', '0,0'])
 
   # Restaurants
@@ -88,10 +88,10 @@ ActiveRecord::Base.transaction do
   mizen = Business.find_by(name: 'Mizen Construction')
   urban = Business.find_by(name: 'The Urban Builder')
 
-  rick = Business.find_by(name: 'Rick Brown Electrical Contractor')
+  rick = Business.find_by(name: 'Rick Brown Electrical')
   electric24 = Business.find_by(name: 'A 24 Electric Co')
 
-  ideal = Business.find_by(name: 'Ideal Landscape & Concrete')
+  ideal = Business.find_by(name: 'Ideal Landscape')
   shamb = Business.find_by(name: 'Shambhala Landscapes')
 
 
