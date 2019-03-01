@@ -74,6 +74,8 @@ ActiveRecord::Base.transaction do
   Business.create(name: 'A 24 Electric Co', lat: 37.776470, long: -122.425221, address: '517 Hayes St,', city: 'San Fransisco', state: 'CA', zip: '94102', price: '$$$', phone_number: '(415) 945-2579', hours: ['0,0', '9,17', '9,17', '9,17', '9,17', '9,17', '0,0'])
   Business.create(name: 'Ideal Landscape', lat: 37.761916, long: -122.423120, address: '600 Guerrero St,', city: 'San Fransisco', state: 'CA', zip: '94110', price: '$$', phone_number: '(415) 134-6452', hours: ['0,0', '7,17', '7,17', '7,17', '7,17', '7,17', '0,0'])
   Business.create(name: 'Shambhala Landscapes', lat: 37.754763, long: -122.406232, address: '1001 Potrero Ave', city: 'San Fransisco', state: 'CA', zip: '94110', price: '$$$$', phone_number: '(415) 634-3632', hours: ['0,0', '7,17', '7,17', '7,17', '7,17', '7,17', '0,0'])
+  Business.create(name: 'Golden Bay Movers', lat: 37.778953, long: -122.411647, address: '1160 Mission St', city: 'San Fransisco', state: 'CA', zip: '94103', price: '$$', phone_number: '(415) 345-7521', hours: ['0,0', '8,18', '8,18', '8,18', '8,15', '8,18', '8,14'])
+  Business.create(name: 'Ontrack Moving', lat: 37.792410, long: -122.404674, address: '601 California St', city: 'San Fransisco', state: 'CA', zip: '94108', price: '$$$', phone_number: '(415) 735-2437', hours: ['0,0', '8,18', '8,18', '8,18', '8,18', '8,18', '10,14'])
 
   # Restaurants
   fog_harbor = Business.find_by(name: 'Fog Harbor Fish House')
@@ -94,9 +96,9 @@ ActiveRecord::Base.transaction do
   ideal = Business.find_by(name: 'Ideal Landscape')
   shamb = Business.find_by(name: 'Shambhala Landscapes')
 
+  golden = Business.find_by(name: 'Golden Bay Movers')
+  track = Business.find_by(name: 'Ontrack Moving')
 
-
-  
   # Restaurants
   yacht_club.images.attach(io: File.open("./app/assets/images/yacht_club_0.jpg"), filename:"yacht_club_0.jpg")
   yacht_club.images.attach(io: File.open("./app/assets/images/yacht_club_1.jpg"), filename:"yacht_club_1.jpg")
@@ -169,6 +171,16 @@ ActiveRecord::Base.transaction do
   shamb.images.attach(io: File.open("./app/assets/images/shamb_1.jpg"), filename:"shamb_1.jpg")
   shamb.images.attach(io: File.open("./app/assets/images/shamb_2.jpg"), filename:"shamb_2.jpg")
   shamb.images.attach(io: File.open("./app/assets/images/shamb_3.jpg"), filename:"shamb_3.jpg")
+
+  golden.images.attach(io: File.open("./app/assets/images/golden_0.jpg"), filename:"golden_0.jpg")
+  golden.images.attach(io: File.open("./app/assets/images/golden_1.jpg"), filename:"golden_1.jpg")
+  golden.images.attach(io: File.open("./app/assets/images/golden_2.jpg"), filename:"golden_2.jpg")
+  golden.images.attach(io: File.open("./app/assets/images/golden_3.jpg"), filename:"golden_3.jpg")
+
+  track.images.attach(io: File.open("./app/assets/images/track_0.jpg"), filename:"track_0.jpg")
+  track.images.attach(io: File.open("./app/assets/images/track_1.jpg"), filename:"track_1.jpg")
+  track.images.attach(io: File.open("./app/assets/images/track_2.jpg"), filename:"track_2.jpg")
+  track.images.attach(io: File.open("./app/assets/images/track_3.jpg"), filename:"track_3.jpg")
 
 
   Review.create!(user_id: west.id, business_id: fog_harbor.id, rating: 3, body: 'Came here for dinner last night.  Its right on pier 39 overlooking the marina.  Seevice was good.  Our waitress was nice and attentive.  Ambience was inviting.  Food though was sub par, especially for the price.  The seafood was so so.')
@@ -268,6 +280,16 @@ Never Again.')
   Review.create!(user_id: west.id, business_id: shamb.id, rating: 4, body: 'A mis understanding while he was out of town. A very nice gentleman who came by my home and gave me some good ideas. Do not hesitate to give him a call. He will respond in a timely manner and really knows his business.')
   Review.create!(user_id: sams.id, business_id: shamb.id, rating: 5, body: 'Tsering and his team were honest, fast, reliable and creative with the rather odd yard I took on when I bought my home. They accommodated some last minute changes too and have offered to replace one tree that isn\'t looking healthy after a crazy windstorm the day after it was planted. Highly recommend Shambhala. Most processional contractor I\'ve had work on my home.')
 
+  Review.create!(user_id: maverick.id, business_id: golden.id, rating: 5, body: 'Golden Bay Movers were everything you could hope for with a moving company/service. Reserving the move and understanding the process was easy and professional with Vanessa. Fernando, William, and Alex were professional, kind, helpful, and hardworking. They arrived early and ready to go with smiles. They all took time to assist me with little things along the way and made sure the move was going well and I was comfortable the entire time. The kind, positive attitudes of this moving crew made my moving day so much better. And all of my belongings arrived safely. I give them my highest recommendation!')
+  Review.create!(user_id: goose.id, business_id: golden.id, rating: 5, body: 'I used Jelp to find Golden Bay Relocation and am very happy I did. Communication with them was very clear, the pricing was great, the movers were super friendly and did a very thorough and efficient job. Would highly recommend them!')
+  Review.create!(user_id: batman.id, business_id: golden.id, rating: 5, body: 'Excellent moving company. Fernando and his team are efficient, experienced, helpful and professional. On moving day, they were on time, worked effectively, efficiently, very clean and paid attention to details. We won\'t hesitate to use Fernando and his team for our future moves.')
+  Review.create!(user_id: jane_doe.id, business_id: golden.id, rating: 5, body: 'I had such a great experience with Golden Bay Movers. From the booking experience to the day-of service, this company was professional, polite and prompt. I especially want to thank the moving team (Ceasar, Alex and Carlos) who made the experience so amazing. They were right on time, extremely careful with our things and fast! They were all really nice people which made the painful chore of moving (almost) delightful.  Thank you, Golden Bay Movers!')
+
+  Review.create!(user_id: maverick.id, business_id: track.id, rating: 5, body: 'Professional, fast, so easy to work with. Fabian was a great foreman. They also took away some extra large junk for me (old bow flex, broken kayak) that I had been wanting to get rid of for years and did so graciously! Really a pleasure to work with them and I would book them again in a heartbeat!')
+  Review.create!(user_id: samp.id, business_id: track.id, rating: 5, body: 'After doing some research, I decided to go with OnTrac. I am very happy with them. They did a great job. Fast efficient and especially on time. Thanks.')
+  Review.create!(user_id: west.id, business_id: track.id, rating: 5, body: 'Best moving experience I\'ve ever had. The crew was quick, friendly, punctual, and extremely helpful. They explained everything they were going to do ahead of time including what I may be charged extra for (materials, etc) so there were no surprises.  It was only 6 hours from when they arrived at our 3 bedroom to when they were done unloading all boxes and staging all furniture in our new house! Will 100% use them if we need to move again and will recommend them to anyone who asks. Thanks Tony and crew for an amazing experience!!')
+  Review.create!(user_id: sams.id, business_id: track.id, rating: 5, body: 'Best experience! This was our first time using movers, so we didn\'t know what to expect. We packed up as much as we could, and Jerome and JoJo took care of the rest. They arrived earlier than their appointment window, and were SO QUICK moving our stuff. My move was multi-point, so we went from my place in SF to my partners spot in Oakland, then to our new spot in Oakland - it was all so seamless and their communication was great. Took about 3.5 hours total. They were also very careful about wrapping up my furniture to avoid damage. 10000% recommend!!!')
+
   #Tags
 
   Tag.create!(name: 'Restaurant')
@@ -362,6 +384,14 @@ Never Again.')
   # Shamb tags
   Tagging.create!(tag_id: home_s.id, business_id: shamb.id)
   Tagging.create!(tag_id: land.id, business_id: shamb.id)
+  
+  # Golden tags
+  Tagging.create!(tag_id: home_s.id, business_id: golden.id)
+  Tagging.create!(tag_id: mover.id, business_id: golden.id)
+  
+  # track tags
+  Tagging.create!(tag_id: home_s.id, business_id: track.id)
+  Tagging.create!(tag_id: mover.id, business_id: track.id)
 
   
 end
