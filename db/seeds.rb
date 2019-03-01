@@ -207,8 +207,16 @@ ActiveRecord::Base.transaction do
   
   Review.create!(user_id: batman.id, business_id: bella.id, rating: 4, body: 'This place really is the gem that everyone is raving about. Super cute date night spot with a very romantic atmosphere.')
   Review.create!(user_id: jane_doe.id, business_id: bella.id, rating: 5, body: 'Such a fancy and small location, but the food is delicious. I got the pasta with salmon and I never thought I\'d enjoy salmon this much (I usually don\'t like eating fish LOL).')
-  Review.create!(user_id: samp.id, business_id: bella.id, rating: 3, body: 'Just a bland belly bomb, rice beans some meat, guacamole etc......all bland and booooooring')
-  Review.create!(user_id: west.id, business_id: bella.id, rating: 5, body: 'Just a bland belly bomb, rice beans some meat, guacamole etc......all bland and booooooring')
+  Review.create!(user_id: samp.id, business_id: bella.id, rating: 3, body: 'A wonderful place, a 5 star rating for sure, except for one annoying thing, which I\'ll start with.  When our bill came, a number of items were a dollar or two more than stated on the menu.  The total added 6 or 7 dollars to the bill, and the meal was certainly worth it, so I didn\'t complain. But if you raise prices, print new menus!
+
+But the food was amazing, the service excellent, and our cozy seat in the corner very romantic.  We finished with the best cup of coffee ever, and we left happy.  Even if it did cost a bit more.')
+  Review.create!(user_id: west.id, business_id: bella.id, rating: 5, body: 'I don\'t like Italian food. But I like this place!
+
+Flavorful al dente noodles. 
+Nice ambience. 
+Good service. 
+Tasty olive oil. 
+Couldn\'t have asked for more ')
   
   Review.create!(user_id: goose.id, business_id: beretta.id, rating: 3, body: 'Povi was our server and she was awesome. The food was good. The wait wasn\'t too bad. We did have to sit outside because my daughters wheelchair would not fit inside. The table we sat at was at the end and the last heater was not working so it got cold really quick. My daughter ended up with bronchitis. In hindsight, we should\'ve gone elsewhere when we realized we would have to sit outside with out the heater but hindsight is 20/20.')
   Review.create!(user_id: jane_doe.id, business_id: beretta.id, rating: 4, body: 'Excellent Italian food in San Francisco with many vegetarian options. Loved the walnut bread, because it was truly unique and unlike anything I\'ve ever had. It was marvelous. The zucchini parm was delicious as well, and the margherita burrata is a must! Service was great, but location is very bar-like.')
