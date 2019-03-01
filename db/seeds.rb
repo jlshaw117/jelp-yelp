@@ -59,23 +59,23 @@ ActiveRecord::Base.transaction do
   jane_doe.photo.attach(io: File.open("./app/assets/images/jane_doe.jpeg"), filename:"jane_doe.jpeg")
 
   # Restaurants
-  Business.create(name: 'Fog Harbor Fish House', lat: 37.809271, long: -122.410119, address: 'Pier 39', city: 'San Fransisco', state: 'CA', zip: '94133', price: '$$', phone_number: '(415) 632-7593', hours: ['17,23', '17,23', '17,23', '17,23', '17,23', '17,23', '17,23'])
-  Business.create(name: 'Liholiho Yacht Club', lat: 37.788291, long: -122.414695, address: '871 Sutter St', city: 'San Fransisco', state: 'CA', zip: '94109', price: '$$$', phone_number: '(415) 845-6384', hours: ['10,21', '11,21', '11,21', '11,21', '11,21', '11,22', '10,22'])
-  Business.create(name: 'The House', lat: 37.798412, long: -122.407058, address: '1230 Grant AVE', city: 'San Fransisco', state: 'CA', zip: '94133', price: '$$$', phone_number: '(415) 623-8956', hours: ['17,22', '12,22', '12,22', '12,22', '12,22', '12,23', '12,23'])
-  Business.create(name: 'El Farolito', lat: 37.752644, long: -122.418105, address: '2779 Mission St', city: 'San Fransisco', state: 'CA', zip: '94110', price: '$', phone_number: '(415) 902-6381', hours: ['10,24', '10,24', '10,24', '10,24', '10,24', '10,24', '10,24'])
-  Business.create(name: 'The Little Chihuahua', lat: 37.771960, long: -122.436854, address: '292 Divisadero St', city: 'San Fransisco', state: 'CA', zip: '94117', price: '$$', phone_number: '(415) 309-3685', hours: ['10,23', '11,23', '11,23', '11,23', '11,23', '11,23', '10,23'])
-  Business.create(name: 'Bella Trattoria', lat: 37.781390, long: -122.460947, address: '3854 Geary Blvd', city: 'San Fransisco', state: 'CA', zip: '94118', price: '$$', phone_number: '(415) 634-8356', hours: ['11,21', '17,22', '17,22', '11,22', '11,22', '11,23', '12,23'])
-  Business.create(name: 'Beretta', lat: 37.753825, long: -122.420582, address: '1199 Valencia St', city: 'San Fransisco', state: 'CA', zip: '94110', price: '$$', phone_number: '(415) 835-9642', hours: ['10,24', '0,0', '0,0', '0,0', '0,0', '0,0', '10,24'])
-  Business.create(name: 'Delfina', lat: 37.763697, long: -122.424297, address: '3621 18th St', city: 'San Fransisco', state: 'CA', zip: '94110', price: '$$$', phone_number: '(415) 883-6734', hours: ['12,22', '12,22', '17,22', '12,22', '12,22', '12,23', '12,22'])
+  Business.create!(name: 'Fog Harbor Fish House', lat: 37.809271, long: -122.410119, address: 'Pier 39', city: 'San Fransisco', state: 'CA', zip: '94133', price: '$$', phone_number: '(415) 632-7593', hours: ['17,23', '17,23', '17,23', '17,23', '17,23', '17,23', '17,23'])
+  Business.create!(name: 'Liholiho Yacht Club', lat: 37.788291, long: -122.414695, address: '871 Sutter St', city: 'San Fransisco', state: 'CA', zip: '94109', price: '$$$', phone_number: '(415) 845-6384', hours: ['10,21', '11,21', '11,21', '11,21', '11,21', '11,22', '10,22'])
+  Business.create!(name: 'The House', lat: 37.798412, long: -122.407058, address: '1230 Grant AVE', city: 'San Fransisco', state: 'CA', zip: '94133', price: '$$$', phone_number: '(415) 623-8956', hours: ['17,22', '12,22', '12,22', '12,22', '12,22', '12,23', '12,23'])
+  Business.create!(name: 'El Farolito', lat: 37.752644, long: -122.418105, address: '2779 Mission St', city: 'San Fransisco', state: 'CA', zip: '94110', price: '$', phone_number: '(415) 902-6381', hours: ['10,24', '10,24', '10,24', '10,24', '10,24', '10,24', '10,24'])
+  Business.create!(name: 'The Little Chihuahua', lat: 37.771960, long: -122.436854, address: '292 Divisadero St', city: 'San Fransisco', state: 'CA', zip: '94117', price: '$$', phone_number: '(415) 309-3685', hours: ['10,23', '11,23', '11,23', '11,23', '11,23', '11,23', '10,23'])
+  Business.create!(name: 'Bella Trattoria', lat: 37.781390, long: -122.460947, address: '3854 Geary Blvd', city: 'San Fransisco', state: 'CA', zip: '94118', price: '$$', phone_number: '(415) 634-8356', hours: ['11,21', '17,22', '17,22', '11,22', '11,22', '11,23', '12,23'])
+  Business.create!(name: 'Beretta', lat: 37.753825, long: -122.420582, address: '1199 Valencia St', city: 'San Fransisco', state: 'CA', zip: '94110', price: '$$', phone_number: '(415) 835-9642', hours: ['10,24', '0,0', '0,0', '0,0', '0,0', '0,0', '10,24'])
+  Business.create!(name: 'Delfina', lat: 37.763697, long: -122.424297, address: '3621 18th St', city: 'San Fransisco', state: 'CA', zip: '94110', price: '$$$', phone_number: '(415) 883-6734', hours: ['12,22', '12,22', '17,22', '12,22', '12,22', '12,23', '12,22'])
   # Home
-  Business.create(name: 'Mizen Construction', lat: 37.781620, long: -122.455999, address: '3410 Geary Blvd', city: 'San Fransisco', state: 'CA', zip: '94118', price: '$$$$', phone_number: '(415) 663-2346', hours: ['0,0', '9,17', '9,17', '9,17', '9,17', '9,17', '9,17'])
-  Business.create(name: 'The Urban Builder', lat: 37.781620, long: -122.491953, address: '1258 33rd Ave', city: 'San Fransisco', state: 'CA', zip: '94110', price: '$$$', phone_number: '(415) 867-5309', hours: ['0,0', '9,17', '9,17', '9,17', '9,17', '9,17', '9,17'])
-  Business.create(name: 'Rick Brown Electrical', lat: 37.782081, long: -122.454811, address: '185 Parker Ave', city: 'San Fransisco', state: 'CA', zip: '94118', price: '$$$', phone_number: '(415) 786-3457', hours: ['0,0', '8,16', '8,16', '8,16', '8,16', '8,16', '0,0'])
-  Business.create(name: 'A 24 Electric Co', lat: 37.776470, long: -122.425221, address: '517 Hayes St,', city: 'San Fransisco', state: 'CA', zip: '94102', price: '$$$', phone_number: '(415) 945-2579', hours: ['0,0', '9,17', '9,17', '9,17', '9,17', '9,17', '0,0'])
-  Business.create(name: 'Ideal Landscape', lat: 37.761916, long: -122.423120, address: '600 Guerrero St,', city: 'San Fransisco', state: 'CA', zip: '94110', price: '$$', phone_number: '(415) 134-6452', hours: ['0,0', '7,17', '7,17', '7,17', '7,17', '7,17', '0,0'])
-  Business.create(name: 'Shambhala Landscapes', lat: 37.754763, long: -122.406232, address: '1001 Potrero Ave', city: 'San Fransisco', state: 'CA', zip: '94110', price: '$$$$', phone_number: '(415) 634-3632', hours: ['0,0', '7,17', '7,17', '7,17', '7,17', '7,17', '0,0'])
-  Business.create(name: 'Golden Bay Movers', lat: 37.778953, long: -122.411647, address: '1160 Mission St', city: 'San Fransisco', state: 'CA', zip: '94103', price: '$$', phone_number: '(415) 345-7521', hours: ['0,0', '8,18', '8,18', '8,18', '8,15', '8,18', '8,14'])
-  Business.create(name: 'Ontrack Moving', lat: 37.792410, long: -122.404674, address: '601 California St', city: 'San Fransisco', state: 'CA', zip: '94108', price: '$$$', phone_number: '(415) 735-2437', hours: ['0,0', '8,18', '8,18', '8,18', '8,18', '8,18', '10,14'])
+  Business.create!(name: 'Mizen Construction', lat: 37.781620, long: -122.455999, address: '3410 Geary Blvd', city: 'San Fransisco', state: 'CA', zip: '94118', price: '$$$$', phone_number: '(415) 663-2346', hours: ['0,0', '9,17', '9,17', '9,17', '9,17', '9,17', '9,17'])
+  Business.create!(name: 'The Urban Builder', lat: 37.781620, long: -122.491953, address: '1258 33rd Ave', city: 'San Fransisco', state: 'CA', zip: '94110', price: '$$$', phone_number: '(415) 867-5309', hours: ['0,0', '9,17', '9,17', '9,17', '9,17', '9,17', '9,17'])
+  Business.create!(name: 'Rick Brown Electrical', lat: 37.782081, long: -122.454811, address: '185 Parker Ave', city: 'San Fransisco', state: 'CA', zip: '94118', price: '$$$', phone_number: '(415) 786-3457', hours: ['0,0', '8,16', '8,16', '8,16', '8,16', '8,16', '0,0'])
+  Business.create!(name: 'A 24 Electric Co', lat: 37.776470, long: -122.425221, address: '517 Hayes St,', city: 'San Fransisco', state: 'CA', zip: '94102', price: '$$$', phone_number: '(415) 945-2579', hours: ['0,0', '9,17', '9,17', '9,17', '9,17', '9,17', '0,0'])
+  Business.create!(name: 'Ideal Landscape', lat: 37.761916, long: -122.423120, address: '600 Guerrero St,', city: 'San Fransisco', state: 'CA', zip: '94110', price: '$$', phone_number: '(415) 134-6452', hours: ['0,0', '7,17', '7,17', '7,17', '7,17', '7,17', '0,0'])
+  Business.create!(name: 'Shambhala Landscapes', lat: 37.754763, long: -122.406232, address: '1001 Potrero Ave', city: 'San Fransisco', state: 'CA', zip: '94110', price: '$$$$', phone_number: '(415) 634-3632', hours: ['0,0', '7,17', '7,17', '7,17', '7,17', '7,17', '0,0'])
+  Business.create!(name: 'Golden Bay Movers', lat: 37.778953, long: -122.411647, address: '1160 Mission St', city: 'San Fransisco', state: 'CA', zip: '94103', price: '$$', phone_number: '(415) 345-7521', hours: ['0,0', '8,18', '8,18', '8,18', '8,15', '8,18', '8,14'])
+  Business.create!(name: 'Ontrack Moving', lat: 37.792410, long: -122.404674, address: '601 California St', city: 'San Fransisco', state: 'CA', zip: '94108', price: '$$$', phone_number: '(415) 735-2437', hours: ['0,0', '8,18', '8,18', '8,18', '8,18', '8,18', '10,14'])
 
   # Restaurants
   fog_harbor = Business.find_by(name: 'Fog Harbor Fish House')
@@ -182,13 +182,12 @@ ActiveRecord::Base.transaction do
   track.images.attach(io: File.open("./app/assets/images/track_2.jpg"), filename:"track_2.jpg")
   track.images.attach(io: File.open("./app/assets/images/track_3.jpg"), filename:"track_3.jpg")
 
+  #Restaurants
 
   Review.create!(user_id: west.id, business_id: fog_harbor.id, rating: 3, body: 'Came here for dinner last night.  Its right on pier 39 overlooking the marina.  Seevice was good.  Our waitress was nice and attentive.  Ambience was inviting.  Food though was sub par, especially for the price.  The seafood was so so.')
   Review.create!(user_id: batman.id, business_id: fog_harbor.id, rating: 5, body: 'Great view of the sunset from the dining room.  Dinner started with fresh sourdough bread.  They buy the dough from Boudin and bake a batch hourly.  The outside is crispy while the inside is fluffy.  There was a strong sour flavor.  I ordered the mixed grill plate.  French fries were crunchy and had a nice potato flavor.  Shrimp were plump, juicy, with a strong bay seasoning flavor.  I liked the shrimp.  Cod was grilled with a slightly spicier seasoning.  I liked this dish but the mild flavor and the cod was hidden by the seasoning.  Salmon was grilled with a seasoning that had a sweet component.  I loved the interplay between the savory salmon and the sweet flavor from the dry rub.
   ')
   Review.create!(user_id: maverick.id, business_id: fog_harbor.id, rating: 5, body: 'I had dinner here for the first time and it was exceptionally scrumptious. I had been here for lunch prior to this visit but wow their dinner had nothing on their brunch. Best in pier 39 ever! Did not disappoint at all! I am so glad I chose to come here over all other restaurants around here.')
-  
-  
   Review.create!(user_id: sams.id, business_id: yacht_club.id, rating: 4, body: 'Finally get a chance to try this place out with a group of friend. Reservation is highly recommended for big party; It is always challenging to get so often you would have to make reservation 2 months in advance. 
   
   The benefit of eating with a big group is you get to try many plates. 
@@ -196,7 +195,6 @@ ActiveRecord::Base.transaction do
   Review.create!(user_id: goose.id, business_id: yacht_club.id, rating: 3, body: 'I\'ve heard more than enough raves and reviews about this place that my expectations were HYPED. UP. But what they say is true - the higher expectations rise, they harder they fall (ish). Not to say that Liholiho was bad or a poor experience, but I found the food just...OK.')
   Review.create!(user_id: maverick.id, business_id: yacht_club.id, rating: 4, body: 'Managed to walk in sans reservation the night before thanksgiving. The bar staff were incredibly  knowledgeable, and the drinks were delicious. I enjoyed every dish we ate - the chicken liver mousse toast was my favourite. Almost gave only 4 stars as the boyfriend didn\'t enjoy the food, but he can write his own review :) 
   Probably wouldn\'t queue for this restaurant, or book ages in advance, but would most definitely eat here again.')
-  #Restaurants
   Review.create!(user_id: sams.id, business_id: the_house.id, rating: 4, body: 'I only leave ratings for restaurants that I would definitely come back to. You can read the gazillion other reviews already on Yelp.')
   Review.create!(user_id: maverick.id, business_id: the_house.id, rating: 5, body: 'Pretty much tried everything on the menu...and the specials too!
   
@@ -219,16 +217,8 @@ ActiveRecord::Base.transaction do
   
   Review.create!(user_id: batman.id, business_id: bella.id, rating: 4, body: 'This place really is the gem that everyone is raving about. Super cute date night spot with a very romantic atmosphere.')
   Review.create!(user_id: jane_doe.id, business_id: bella.id, rating: 5, body: 'Such a fancy and small location, but the food is delicious. I got the pasta with salmon and I never thought I\'d enjoy salmon this much (I usually don\'t like eating fish LOL).')
-  Review.create!(user_id: samp.id, business_id: bella.id, rating: 3, body: 'A wonderful place, a 5 star rating for sure, except for one annoying thing, which I\'ll start with.  When our bill came, a number of items were a dollar or two more than stated on the menu.  The total added 6 or 7 dollars to the bill, and the meal was certainly worth it, so I didn\'t complain. But if you raise prices, print new menus!
-
-But the food was amazing, the service excellent, and our cozy seat in the corner very romantic.  We finished with the best cup of coffee ever, and we left happy.  Even if it did cost a bit more.')
-  Review.create!(user_id: west.id, business_id: bella.id, rating: 5, body: 'I don\'t like Italian food. But I like this place!
-
-Flavorful al dente noodles. 
-Nice ambience. 
-Good service. 
-Tasty olive oil. 
-Couldn\'t have asked for more ')
+  Review.create!(user_id: samp.id, business_id: bella.id, rating: 3, body: 'A wonderful place, a 5 star rating for sure, except for one annoying thing, which I\'ll start with.  When our bill came, a number of items were a dollar or two more than stated on the menu.  The total added 6 or 7 dollars to the bill, and the meal was certainly worth it, so I didn\'t complain. But if you raise prices, print new menus! But the food was amazing, the service excellent, and our cozy seat in the corner very romantic.  We finished with the best cup of coffee ever, and we left happy.  Even if it did cost a bit more.')
+  Review.create!(user_id: west.id, business_id: bella.id, rating: 5, body: 'I don\'t like Italian food. But I like this place! Flavorful al dente noodles. Nice ambience. Good service. Tasty olive oil. Couldn\'t have asked for more ')
   
   Review.create!(user_id: goose.id, business_id: beretta.id, rating: 3, body: 'Povi was our server and she was awesome. The food was good. The wait wasn\'t too bad. We did have to sit outside because my daughters wheelchair would not fit inside. The table we sat at was at the end and the last heater was not working so it got cold really quick. My daughter ended up with bronchitis. In hindsight, we should\'ve gone elsewhere when we realized we would have to sit outside with out the heater but hindsight is 20/20.')
   Review.create!(user_id: jane_doe.id, business_id: beretta.id, rating: 4, body: 'Excellent Italian food in San Francisco with many vegetarian options. Loved the walnut bread, because it was truly unique and unlike anything I\'ve ever had. It was marvelous. The zucchini parm was delicious as well, and the margherita burrata is a must! Service was great, but location is very bar-like.')
